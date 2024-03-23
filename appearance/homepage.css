@@ -1,0 +1,364 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+/* --------------------------------------------------- */
+/* --------------------------------------------------- */
+/* ------------- MEDIA MIN-WIDTH 350PX --------------- */
+/* ------------------ SUP. OU ÉGALE ------------------ */
+/* --------------------------------------------------- */
+@media screen and (min-width: 768px) {
+    html,
+    body {
+        background-color: rgb(218, 218, 218);
+    }
+    
+    body {
+        font-family: "Abordage";
+        font-size: 1.5rem;
+        color: black;
+        min-width: 100vw;
+        min-height: 100vh;
+        text-align: justify;
+
+        p {
+            margin: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+    }
+
+    .navbar {
+        padding: 70px;
+        background-color: rgb(154, 236, 152);
+
+        .custom-btn {
+            font-size: 40px; /* Ajustez la taille du texte selon vos besoins */
+        }
+    }
+
+    #section_one, #section_three {
+        height: 100%;
+        margin: 0 70px;
+    }
+
+    .p_description {
+        margin-top: 50px;
+        font-size: 2.3rem;
+        text-align: justify;
+    }
+
+    .scrolling-text-container {
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .scrolling-text {
+        font-size: 2.3rem;
+        /* display: inline-block; */
+        white-space: nowrap;
+        animation: scrollText 18s linear infinite;
+    }
+    
+    @keyframes scrollText {
+        from { transform: translateX(100%); }
+        to { transform: translateX(-100%); }
+    }
+
+    .bordure {
+        border: 1px solid black;
+    }
+
+    .title {
+        font-family: "Lemon milk";
+        font-weight: 600;
+        font-size: 2.8rem;
+        padding-left: 40px;
+        text-align: left;
+    }
+
+    .circle {
+        width: 70px;
+        height: 70px;
+        background-color: rgb(0, 0, 0); 
+        border-radius: 50%; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2.8rem;
+        font-family: "Lemon milk";
+        font-weight: 600;
+        color: #fff;
+    }
+
+    .stage {
+        display: flex;
+        align-items: center;
+    }
+
+    .corners {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .corner {
+        border-radius: 25px;
+        border: 1px solid #000000;
+        padding: 30px;
+        width: 490px;
+        height: fit-content;
+        font-size: 1.8rem;
+        line-height: 1.7;
+        background-color: white;
+    }
+
+    .list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .toggle-table {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+    }
+    
+    .toggle-table i  {
+        margin-left: auto;
+    }
+    
+    .hidden {
+        display: none;
+    }
+
+    .big-title {
+        display: flex;
+        justify-content: center;
+        font-family: "Lemon Milk";
+        font-weight: 600;
+        font-size: 5rem;
+    }
+
+    .big-title-two {
+        font-family: "Lemon Milk";
+        font-weight: 600;
+        font-size: 5rem;
+    }
+
+    .rectangle {
+        display: flex;
+        justify-content: center;
+    }
+
+    .rectangle-green-one {
+        width: 490px;
+        height: 350px;
+        background-color: rgb(154, 236, 152);
+        border-right: 40px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .rectangle-green-two {
+        width: 490px;
+        height: 350px;
+        background-color: rgb(154, 236, 152);
+        border-left: 40px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .rectangle-gray-one {
+        width: 490px;
+        height: 350px;
+        background-color: rgb(218, 218, 218);
+        border-left: 40px solid black;
+    }
+
+    .rectangle-gray-two {
+        width: 490px;
+        height: 350px;
+        background-color: rgb(218, 218, 218);
+        border-right: 40px solid black;
+    }
+
+    h2 {
+        font-family: "Lemon Milk";
+        font-weight: 600;
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .big-title {
+        font-size: 7rem;
+    }
+
+    .big-title-two {
+        font-family: "Lemon Milk";
+        font-weight: 600;
+        font-size: 6rem;
+    }
+
+    .mail {
+        font-size: 3rem;
+    }
+
+    .text_line span {
+        text-decoration: underline;
+    }
+
+    .logo_partenaires {
+        display: flex;
+        align-items: center; 
+        width: 50px; 
+        height: auto;  
+
+        div {
+            margin-right: 30px;
+        }
+    }
+
+    .RM {
+        width: 100px;
+        height: auto;
+    }
+
+    .AURA {
+        width: 150px;
+        height: auto;
+    }
+
+    .PF {
+        width: 120px;
+        height: auto;
+    }
+
+    .CDD {
+        width: 90px;
+        height: auto;
+    }
+
+    .OU {
+        width: 130px;
+        height: auto;
+    }
+
+}
+
+/* --------------------------------------------------- */
+/* --------------------------------------------------- */
+/* ------------- MEDIA MIN-WIDTH 768PX --------------- */
+/* ----------------- SUP. OU ÉGALE ------------------- */
+/* --------------------------------------------------- */
+@media only screen and (min-width: 1000px) {
+        .corners {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+        .rectangle {
+        display: flex;
+        justify-content: center;
+    }
+
+    .rectangle-green-one {
+        width: 50%;
+        height: 500px;
+        background-color: rgb(154, 236, 152);
+        border-right: 40px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .rectangle-green-two {
+        width: 50%;
+        height: 500px;
+        background-color: rgb(154, 236, 152);
+        border-left: 40px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .rectangle-gray-one {
+        width: 50%;
+        height: 500px;
+        background-color: rgb(218, 218, 218);
+        border-left: 40px solid black;
+    }
+
+    .rectangle-gray-two {
+        width: 50%;
+        height: 500px;
+        background-color: rgb(218, 218, 218);
+        border-right: 40px solid black;
+    }
+
+    .title {
+        font-size: 4rem;
+    }
+
+    .circle {
+        width: 100px;
+        height: 100px;
+        font-size: 3.8rem;
+    }
+
+    h2 {
+        font-family: "Lemon Milk";
+        font-weight: 600;
+        font-size: 3.9rem;
+        text-align: center;
+    }
+
+    .mail {
+        font-size: 3.8rem;
+    }
+
+    .logo_partenaires {
+        display: flex;
+        align-items: center; 
+        height: auto;  
+
+        div {
+            margin-right: 30px;
+        }
+    }
+
+    .RM {
+        width: 140px;
+        height: auto;
+    }
+
+    .AURA {
+        width: 250px;
+        height: auto;
+    }
+
+    .PF {
+        width: 220px;
+        height: auto;
+    }
+
+    .CDD {
+        width: 120px;
+        height: auto;
+    }
+
+    .OU {
+        width: 180px;
+        height: auto;
+    }
+}

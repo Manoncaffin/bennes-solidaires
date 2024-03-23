@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Description"
+        content="Bennes solidaires est un outils dédié à l'économie circulaire des matériaux bio et géo-sourcés">
+    <meta name="Keywords" content="Économie circulaire, plateforme de dons, matériaux bio et géo-sourcés">
+    <meta name="Copyright" content="Bennes solidaires">
+    <meta name="Author" content="Bennes solidaires">
+    <meta name="Revisit-After" content="15 days">
+    <meta name="Robots" content="All">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../appearance/homepage.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=excon@400,900,700,500,300,100,1&display=swap" rel="stylesheet">
+    <link rel="icon" href="../images/BS.webp" type="image/x-icon">
+    <title>Bennes Solidaires</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="header container-fluid">
+            <a href="./homepage.html" class="logo-bs"><img src="../images/Bennes-solidaires.webp"
+                    alt="Bennes solidaires"></a>
+            <button class="navbar-toggler border-0 custom-btn" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Projet</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Fonctionnement</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Déposer une annonce</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Connexion</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Adhésion</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+
+        <section id="section_one">
+
+            <p class="p_description pb-5">Bennes solidaires se positionne comme une plate-forme dédiée à l'économie
+                circulaire des ressources bio et géo-sourcées, où l’excèdent de matière de l'un devient la matière
+                première de l'autre.
+                Cette plateforme est ouverte à toutes et tous : designers, artisan·es, créateur·rices et particuliers.
+            </p>
+
+            <div class="scrolling-text-container">
+                <p class="scrolling-text">que propose Bennes solidaires ?</p>
+                <div class="bordure mb-4"></div>
+            </div>
+
+            <p class="pb-5">L'idée initiale de ce projet découle d'un constat évident : ces matériaux incitent au
+                réemploi et à la création, mais peu d'initiatives sont actuellement déployées en ce sens.
+                Ainsi, cet outil offre une opportunité aux matériaux bio et géo-sourcés de retrouver une valeur et une
+                nouvelle utilité, tout en évitant le recours systématique à la déchetterie et en encourageant des
+                initiatives vertueuses.</p>
+
+            <div class="scrolling-text-container">
+                <p class="scrolling-text">quel est le fonctionnement de Bennes solidaires ?</p>
+                <div class="bordure mb-4"></div>
+            </div>
+
+            <div class="stage pb-4">
+                <div class="circle">
+                    <span>1</span>
+                </div>
+                <p class="title">J'IDENTIFIE</p>
+            </div>
+
+            <p class="pb-5">Vous avez un surplus de matière sur votre lieu de travail, sur votre chantier de rénovation,
+                ou tout simplement parce-que votre matière n’est plus destinée à la vente ? Ici, c’est l’étape qui
+                consiste à identifier l’excédent de matière dont vous disposez.</p>
+            <div class="bordure mb-4"></div>
+
+            <div class="stage pb-4">
+                <div class="circle">
+                    <span>2</span>
+                </div>
+                <p class="title">JE CLASSE</p>
+            </div>
+
+            <p class="pb-5">Les matériaux pouvant être enregistrés sur la plateforme sont issus de sources bio-sourcée
+                ou du géo-sourcée. Ici, vous trouverez deux listes non-exhaustives pour chacune de ses typologies. Si
+                votre matériau n’est pas encore classé : pas de problème, vous pourrez le proposer en créant votre
+                annonce et notre modérateur s’en occupera !</p>
+
+            <!-- FORME TABLEAU DE MATÉRIAUX  -->
+            <div class="corners pb-5">
+                <div class="corner">
+                    <ul class="list">
+                        <li class="toggle-table">Matériaux géo-sourcés
+                            <i class="fa-regular fa-hand-pointer"></i>
+                            <i class="fa-regular fa-hand-point-down hidden"></i>
+                        </li>
+                        <li class="hidden"><i class="fa-solid fa-arrow-right"></i> terre</li>
+                        <li class="hidden"><i class="fa-solid fa-arrow-right"></i> pierre</li>
+                        <li class="hidden"><i class="fa-solid fa-arrow-right"></i> cailloux</li>
+                        <li class="hidden"><i class="fa-solid fa-arrow-right"></i> sable</li>
+                        <li class="hidden"><i class="fa-solid fa-arrow-right"></i> verre</li>
+                        <li class="hidden"><i class="fa-solid fa-arrow-right"></i> céramique</li>
+                    </ul>
+                </div>
+
+                <div class="corner">
+                    <ul class="list">
+                        <li class="toggle-table">Matériaux bio-sourcés
+                            <i class="fa-regular fa-hand-pointer"></i>
+                            <i class="fa-regular fa-hand-point-down hidden"></i>
+                        </li>
+                        <li class="hidden"><i class="fa-solid fa-arrow-right"></i> bois</li>
+                        <li class="hidden"><i class="fa-solid fa-arrow-right"></i> papier</li>
+                        <li class="hidden"><i class="fa-solid fa-arrow-right"></i> papier journal</li>
+                        <li class="hidden"><i class="fa-solid fa-arrow-right"></i> paille</li>
+                        <li class="hidden"><i class="fa-solid fa-arrow-right"></i> canne de Provence</li>
+                        <li class="hidden"><i class="fa-solid fa-arrow-right"></i> bambou</li>
+                        <li class="hidden"><i class="fa-solid fa-arrow-right"></i> sciure de bois</li>
+                        <li class="hidden"><i class="fa-solid fa-arrow-right"></i> liège</li>
+                        <li class="hidden"><i class="fa-solid fa-arrow-right"></i> coquille</li>
+                        <li class="hidden"><i class="fa-solid fa-arrow-right"></i> marc de café</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bordure mb-4"></div>
+
+            <div class="stage pb-4">
+                <div class="circle">
+                    <span>3</span>
+                </div>
+                <p class="title">JE REMPLIE LE FORMULAIRE</p>
+            </div>
+
+            <p class="pb-5">On vous demande le minimum d’informations pour que la transaction se déroule au mieux (type
+                de matériau, volume, adresse de récupération, ...).</p>
+            <div class="bordure mb-4"></div>
+
+            <div class="stage pb-4">
+                <div class="circle">
+                    <span>4</span>
+                </div>
+                <p class="title">JE CARTOGRAPHIE</p>
+            </div>
+
+            <p class="pb-5">Le principe est simple : lorsque vous créerez votre annonce, une adresse de récupération
+                vous sera demandée afin que les autres membres sachent à quel endroit venir chercher le matériau en
+                question.
+                En appliquant sa recherche, un pointeur fixé sur la cartographie indiquera donc où venir le récupérer.
+            </p>
+            <div class="bordure mb-4"></div>
+
+            <div class="stage pb-4">
+                <div class="circle">
+                    <span>5</span>
+                </div>
+                <p class="title">JE POSTE</p>
+            </div>
+
+            <p class="pb-5">Votre annonce est sur le point d’être publiée.</p>
+
+            <div class="bordure mb-4"></div>
+
+        </section>
+
+        <section id="section_two">
+
+            <h1 class="big-title p-5">C'EST PARTI ?</h1>
+
+            <div class="rectangle">
+                <div class="rectangle-gray-one"></div>
+                <div class="rectangle-green-one">
+                    <h2><a href="#">CHERCHER UN MATÉRIAU</a></h2>
+                </div>
+            </div>
+            <div class="rectangle">
+                <div class="rectangle-green-two">
+                    <h2><a href="#">DONNER UN MATÉRIAU</h2></a>
+                </div>
+                <div class="rectangle-gray-two"></div>
+            </div>
+
+            </section>
+
+            <section id="section_three">
+
+            <h1 class="big-title-two pt-5">J'ADHÈRE</h1>
+            <p class="pb-5 text_line">Soutenez l’action de Bennes solidaires en devenant adhérent·e sur la plateforme <span>www.helloasso.com.</span></p>
+
+            <div class="bordure"></div>
+
+            <h1 class="big-title-two pt-5">NOUS ÉCRIRE</h1>
+            <p class="pb-3 mail">bennes-solidaires@contact.com</p>
+
+            <p>ASSOCIATION LOI 1901</p>
+            <p>SIRET 91938174110017</p> 
+            <p class="pb-5">RNA W421005131</p>
+
+            <div class="bordure"></div>
+
+            <h1 class="big-title-two pt-5">PARTENAIRES</h1>
+            <div class="logo_partenaires">
+                <div><img src="../images/Logo-RemueMeninges.png" class="RM" alt="Logo Remue Méninges"></div>
+                <div><img src="../images/Logo-régionAURA.png" class="AURA" alt="Logo Région Auvergnes-Rhône-Alpes"></div>
+                <div><img src="../images/Logo-planforet.png" class="PF" alt="Logo Plan Forêt"></div>
+                <div><img src="../images/Logo-CiteduDesign.png" class="CDD" alt="Logo Cité du design"></div>
+                <div><img src="../images/Logo-Ouestlebeau.png" class="OU" alt="Logo Où est le beau"></div>
+            </div>
+        </div>
+
+        </section>
+
+    </main>
+
+    <script>
+
+document.addEventListener('DOMContentLoaded', function() {
+    const toggleItems = document.querySelectorAll('.toggle-table');
+
+    toggleItems.forEach(function(item) {
+        item.addEventListener('click', function() {
+            const sublistItems = this.parentElement.querySelectorAll('li:not(.toggle-table)');
+            sublistItems.forEach(function(subitem) {
+                subitem.classList.toggle('hidden');
+            });
+
+            const handPointerIcon = this.querySelector('.fa-hand-pointer');
+            const handPointDownIcon = this.querySelector('.fa-hand-point-down');
+            handPointerIcon.classList.toggle('hidden');
+            handPointDownIcon.classList.toggle('hidden');
+        });
+    });
+});
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
