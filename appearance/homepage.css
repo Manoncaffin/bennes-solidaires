@@ -42,7 +42,7 @@
         right: 0;
     }
 
-    .header {
+    #header {
         display: flex;
         justify-content: space-between;
         align-items: end;
@@ -237,6 +237,9 @@
         height: 350px;
         background-color: rgb(232, 232, 232);
         position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .rectangle-gray-two {
@@ -245,6 +248,9 @@
         height: 350px;
         background-color: rgb(232, 232, 232);
         position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .border-container {
@@ -254,6 +260,15 @@
         border-right: 30px solid black; 
         position: relative; 
     }
+    }
+
+    .icon {
+        width: 280px;
+    }
+
+    .arrow-up {
+        display: flex;
+        justify-content: end;
     }
 
     h2 {
@@ -336,7 +351,7 @@
 /* ----------------- SUP. OU ÉGALE ------------------- */
 /* --------------------------------------------------- */
 @media only screen and (min-width: 1000px) {
-    .header {
+    #header {
         flex-direction: column;
         align-items: start;
         background-color: rgb(65, 238, 186);
@@ -415,6 +430,9 @@
         height: 400px;
         background-color: rgb(232, 232, 232);
         position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .rectangle-gray-two {
@@ -423,6 +441,9 @@
         height: 400px;
         background-color: rgb(232, 232, 232);
         position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .border-container {
@@ -431,6 +452,10 @@
         border-left: 30px solid black; 
         border-right: 30px solid black; 
         position: relative; 
+    }
+
+    .icon {
+        width: 400px;
     }
 
     .title {
