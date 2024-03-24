@@ -13,9 +13,54 @@
 @media screen and (min-width: 350px) {
     html,
     body {
-        background-color: rgb(218, 218, 218);
+        background-color: rgb(232, 232, 232);
     }
 
+    body {
+        min-width: 100vw;
+        min-height: 100vh;
+    }
+
+    .loading {
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+    }
+
+    #logo {
+        padding: 70px;
+
+        img {
+            width: 600px;
+        }
+    }
+
+    #loader {
+        font-family: "Lemon Milk";
+        font-size: 4rem;
+        color: black;
+        /* padding-left: 70px; */
+    }
+
+}
 
 
+/* --------------------------------------------------- */
+/* --------------------------------------------------- */
+/* ------------- MEDIA MIN-WIDTH 768PX --------------- */
+/* ----------------- SUP. OU ÉGALE ------------------- */
+/* --------------------------------------------------- */
+@media only screen and (min-width: 1000px) {
+    #logo img {
+        width: 700px;
+    }
+
+    #loader {
+        font-family: "Lemon Milk";
+        font-size: 8rem;
+    }
+
+    .loading {
+        padding: 5px 140px;
+    }
 }

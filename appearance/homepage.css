@@ -17,7 +17,7 @@
 
     body {
         font-family: "Abordage";
-        font-size: 1.5rem;
+        font-size: 1.4rem;
         color: black;
         min-width: 100vw;
         min-height: 100vh;
@@ -46,7 +46,8 @@
         display: flex;
         justify-content: space-between;
         align-items: end;
-        background-color: rgb(154, 236, 152);
+        /* background-color: rgb(154, 236, 152); */
+        background-color: rgb(65, 238, 186);
     }
 
     .logo {
@@ -59,6 +60,10 @@
 
     .navbar {
         padding: 70px;
+
+        button {
+            background-color: rgb(59, 106, 236);;
+        }
     }
 
     #projet,
@@ -92,7 +97,7 @@
 
     .p_description {
         margin-top: 50px;
-        font-size: 2.3rem;
+        font-size: 1.9rem;
         text-align: justify;
     }
 
@@ -102,8 +107,7 @@
     }
 
     .scrolling-text {
-        font-size: 2.3rem;
-        /* display: inline-block; */
+        font-size: 1.9rem;
         white-space: nowrap;
         animation: scrollText 18s linear infinite;
     }
@@ -213,7 +217,8 @@
         box-sizing: border-box;
         width: 50%;
         height: 350px;
-        background-color: rgb(154, 236, 152);
+        /* background-color: rgb(154, 236, 152); */
+        background-color: rgb(65, 238, 186);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -224,7 +229,8 @@
         box-sizing: border-box;
         width: 50%;
         height: 350px;
-        background-color: rgb(154, 236, 152);
+        /* background-color: rgb(154, 236, 152); */
+        background-color: rgb(65, 238, 186);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -255,69 +261,56 @@
 
     .border-container {
         /* width: calc(100% - 20px);  */
-        height: calc(100% - 20px); 
-        border-left: 30px solid black; 
-        border-right: 30px solid black; 
-        position: relative; 
-    }
-    }
-
-    .icon {
-        width: 280px;
-    }
-
-    .arrow-up {
-        display: flex;
-        justify-content: end;
-    }
-
-    h2 {
-        font-family: "Lemon Milk";
-        font-weight: 600;
-        font-size: 3rem;
-        text-align: center;
-    }
-
-    .swipe-text {
-        display: inline-block;
+        height: calc(100% - 20px);
+        border-left: 30px solid black;
+        border-right: 30px solid black;
         position: relative;
-        transition: transform 0.3s ease-in-out;
     }
+}
 
-        .swipe-text:hover {
-        transform: translateX(10px);
+.icon {
+    width: 280px;
+}
+
+.arrow-up {
+    display: flex;
+    justify-content: end;
+}
+
+h2 {
+    font-family: "Lemon Milk";
+    font-weight: 600;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.swipe-text {
+    display: inline-block;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+
+.swipe-text:hover {
+    transform: translateX(10px);
+}
+
+.mail {
+    font-size: 3rem;
+}
+
+.text_line span {
+    text-decoration: underline;
+}
+
+.logo_partenaires {
+    display: flex;
+    align-items: center;
+    width: 50px;
+    height: auto;
+
+    div {
+        margin-right: 30px;
     }
-
-    .big-title {
-        font-size: 7rem;
-        width: 100%;
-        height: 150px;
-        background-color: rgb(232, 232, 232);
-    }
-
-    .big-title-two {
-        font-family: "Lemon Milk";
-        font-weight: 600;
-        font-size: 6rem;
-    }
-
-    .mail {
-        font-size: 3rem;
-    }
-
-    .text_line span {
-        text-decoration: underline;
-    }
-
-    .logo_partenaires {
-        display: flex;
-        align-items: center;
-        width: 50px;
-        height: auto;
-
-        div {
-            margin-right: 30px;
-        }
 
     .RM {
         width: 100px;
@@ -347,10 +340,15 @@
 
 /* --------------------------------------------------- */
 /* --------------------------------------------------- */
-/* ------------- MEDIA MIN-WIDTH 768PX --------------- */
+/* ------------- MEDIA MIN-WIDTH 1000PX --------------- */
 /* ----------------- SUP. OU ÉGALE ------------------- */
 /* --------------------------------------------------- */
 @media only screen and (min-width: 1000px) {
+    body {
+        font-family: "Abordage";
+        font-size: 1.7rem;
+    }
+
     #header {
         flex-direction: column;
         align-items: start;
@@ -361,7 +359,7 @@
         background-color: rgb(65, 238, 186);
 
         img {
-            width: 700px;
+            width: 800px;
         }
     }
 
@@ -392,14 +390,34 @@
         margin: 0 140px;
     }
 
+    .title {
+        font-size: 2rem;
+    }
+
     .credits {
         margin: 0 140px;
     }
 
+    .p_description {
+        font-size: 2.3rem;
+    }
+
+    .scrolling-text {
+        font-size: 2.3rem;
+    }
+
     .corners {
         display: flex;
-        flex-direction: row;
-        justify-content: space-around;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .corner {
+        width: 450px;
+        height: fit-content;
+        font-size: 1.7rem;
     }
 
     .rectangle {
@@ -409,53 +427,79 @@
     }
 
     .rectangle-green-one {
-        box-sizing: border-box;
-        max-width: 50%;
-        height: 400px;
-        background-color: rgb(154, 236, 152);
-        position: relative;
+        height: 315px;
     }
 
     .rectangle-green-two {
-        box-sizing: border-box;
-        max-width: 50%;
-        height: 400px;
-        background-color: rgb(154, 236, 152);
-        position: relative;
+        height: 315px;
     }
 
     .rectangle-gray-one {
-        box-sizing: border-box;
-        max-width: 50%;
-        height: 400px;
-        background-color: rgb(232, 232, 232);
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        height: 315px;
     }
 
     .rectangle-gray-two {
-        box-sizing: border-box;
-        max-width: 50%;
-        height: 400px;
-        background-color: rgb(232, 232, 232);
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .border-container {
-        width: calc(100% - 17px); 
-        height: calc(100% - 20px); 
-        border-left: 30px solid black; 
-        border-right: 30px solid black; 
-        position: relative; 
+        height: 315px;
     }
 
     .icon {
-        width: 400px;
+        width: 300px;
+    }
+
+    .border-container {
+        width: calc(100% - 17px);
+        height: calc(100% - 20px);
+        border-left: 30px solid black;
+        border-right: 30px solid black;
+        position: relative;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .circle {
+        width: 90px;
+        height: 90px;
+        font-size: 2.4rem;
+    }
+
+    .big-title {
+        font-size: 5.5rem;
+    }
+
+    .big-title-two {
+        font-size: 5.5rem;
+    }
+
+    .mail {
+        font-size: 2.8rem;
+    }
+
+    .logo_partenaires {
+        display: flex;
+        align-items: center;
+        height: auto;
+
+        div {
+            margin-right: 30px;
+        }
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+}
+
+
+/* --------------------------------------------------- */
+/* --------------------------------------------------- */
+/* ------------- MEDIA MIN-WIDTH 1200PX --------------- */
+/* ----------------- SUP. OU ÉGALE ------------------- */
+/* --------------------------------------------------- */
+@media only screen and (min-width: 1200px) {
+    h2 {
+        font-size: 5rem;
     }
 
     .title {
@@ -463,16 +507,15 @@
     }
 
     .circle {
-        width: 100px;
-        height: 100px;
-        font-size: 3.8rem;
+        font-size: 4rem;
     }
 
-    h2 {
-        font-family: "Lemon Milk";
-        font-weight: 600;
-        font-size: 3.9rem;
-        text-align: center;
+    .big-title {
+        font-size: 7rem;
+    }
+
+    .big-title-two {
+        font-size: 7rem;
     }
 
     .mail {
@@ -482,35 +525,88 @@
     .logo_partenaires {
         display: flex;
         align-items: center;
+        width: 50px;
         height: auto;
 
         div {
-            margin-right: 100px;
+            margin-right: 30px;
+        }
+
+        .RM {
+            width: 120px;
+            height: auto;
+        }
+
+        .AURA {
+            width: 200px;
+            height: auto;
+        }
+
+        .PF {
+            width: 140px;
+            height: auto;
+        }
+
+        .CDD {
+            width: 110px;
+            height: auto;
+        }
+
+        .OU {
+            width: 150px;
+            height: auto;
         }
     }
 
-    .RM {
-        width: 140px;
-        height: auto;
+    .icon {
+        width: 400px;
     }
 
-    .AURA {
-        width: 250px;
-        height: auto;
+    .logo img {
+            width: 800px;
+        }
+
+    .navbar {
+        padding: 5px 140px;
+        display: flex;
+        justify-content: space-between;
     }
 
-    .PF {
-        width: 220px;
-        height: auto;
+    .logo {
+        padding-left: 140px;
+        padding-right: 140px;
     }
 
-    .CDD {
-        width: 120px;
-        height: auto;
+    #projet,
+    #fonctionnement,
+    #adhesion,
+    #contact,
+    #partenaires {
+        height: 100%;
+        margin: 0 140px;
     }
 
-    .OU {
-        width: 180px;
-        height: auto;
+    .rectangle-green-one {
+        height: 400px;
     }
+
+    .rectangle-green-two {
+        height: 400px;
+    }
+
+    .rectangle-gray-one {
+        height: 400px;
+    }
+
+    .rectangle-gray-two {
+        height: 400px;
+    }
+
+    .corners {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: start;
+    }
+
 }
