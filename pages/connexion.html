@@ -21,129 +21,72 @@
 
 <body>
 
-    <!-- <div id="header">
-        <div class="logo">
-            <a href="./homepage.html" class="logo_bs"><img src="../images/Bennes-solidaires.webp"
-                    alt="Bennes solidaires"></a>
+    <header id="header">
+        <div>
+            <a href="./homepage.html" class="logo_bs"></a><img src="../images/BS.webp" alt="Bennes solidaires"></a>
         </div>
 
-        <div class="container-fluid">
-            <nav class="navbar navbar-dark navbar-expand-xl">
-                <button class="navbar-toggler p-3 bg-black d-block d-xl-none" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="offcanvas offcanvas-end bg-white" tabindex="-1" id="offcanvasDarkNavbar"
-                    aria-labelledby="offcanvasDarkNavbarLabel">
-                    <div class="offcanvas-header">
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-                            aria-label="Close"></button>
-                    </div>
-                    <div class="menu_liste offcanvas-body">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link text-black" href="#projet">PROJET</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-black" href="#fonctionnement">FONCTIONNEMENT</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-black" href="#deposer">DÉPOSER UNE ANNONCE</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-black" href="#connexion">CONNEXION</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-black" href="#adhesion">ADHÉSION</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-black" href="#contact">CONTACT</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
+        <div>
+            <!-- METTRE NAVBAR AVEC BURGER -->
         </div>
+    </header>
+
+    <main>
+
+
+
+        <!-- <div class="container">
+        
+        <form action="/ma-page-de-traitement" method="post" class="form-1">
+            <h1>CONNEXION</h1>
+            <label for="identifier">Identifiant</label>
+            <input type="text" name="identifier" id="identifier" required />
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required />
+            <label for="password">Mot de passe</label>
+            <input type="password" name="password" id="password" required />
+
+            <div id="formFooter">
+                <a class="forgot" href="#">Mot de passe oublié ?</a>
+            </div>
+
+            <input type="submit" class="fourth zero-raduis" value="Se connecter">
+            <p>Vous avez envie de nous rejoindre ?</p>
+            <input type="button" class="fourth zero-raduis pc" value="Créez un compte">
+        </form>
     </div> -->
 
-    <form action="/votre_action" method="post">
-        <label for="nom">Nom :</label>
-        <input type="text" id="nom" name="nom"><br>
-
-        <label for="email">Email :</label>
-        <input type="email" id="email" name="email"><br>
-
-        <label for="pays">Pays :</label>
-        <select id="pays" name="pays">
-            <option value="france">France</option>
-            <option value="espagne">Espagne</option>
-            <option value="italie">Italie</option>
-            <!-- Ajoutez d'autres options de pays au besoin -->
-        </select><br>
-
-        <label for="message">Message :</label><br>
-        <textarea id="message" name="message" rows="4" cols="50"></textarea><br>
-
-        <input type="submit" value="Envoyer">
-    </form>
-
-
-
-    <form class="login" method="post" action="">
-        <div class="login__wrapper">
-            <svg class="login__logo" width="36px" height="36px" role="img" aria-label="Logo">
-                <use href="#logo" />
-            </svg>
-            <div class="login__cta">
-                <div class="login__cta-text">
-                    <h1>Your data is not for sale.</h1>
-                    <p>What happens to your data here, stays here.</p>
+        <form>
+            
+            <div class="wrapper">
+                <h1 class="mb-5">CONNEXION</h1>
+                <div class="mb-3">
+                    <label for="InputIdentifier" class="form-label">Identifiant</label>
+                    <input type="identifier" class="form-control" id="identifier" aria-describedby="identifier">
+                    <div id="identifier" class="form-text"></div>
                 </div>
-                <div class="login__form">
-                    <h2>Log in</h2>
-                    <div class="login__field">
-                        <label class="login__label login__label--sm" for="username">Username</label>
-                        <input class="login__input-text" id="username" type="text" name="username" autocomplete="off">
-                        <div class="login__error">
-                            <svg class="login__icon" width="12px" height="12px" aria-hidden="true">
-                                <use href="#warning" />
-                            </svg>
-                            <span id="username-error" aria-live="assertive"></span>
-                        </div>
-                    </div>
-                    <div class="login__field">
-                        <label class="login__label login__label--sm" for="password">Password</label>
-                        <input class="login__input-password" id="password" type="password" name="password" autocomplete="off">
-                        <div class="login__error">
-                            <svg class="login__icon" width="12px" height="12px" aria-hidden="true">
-                                <use href="#warning" />
-                            </svg>
-                            <span id="password-error" aria-live="assertive"></span>
-                        </div>
-                        <a class="login__forgot" href="#">Forgot password?</a>
-                        <button class="login__button-eye" type="button" title="Show password" data-password-show>
-                            <svg class="login__icon" width="24px" height="24px" data-icon="eye-off" aria-hidden="true">
-                                <use href="#eye-off" />
-                            </svg>
-                            <svg class="login__icon" width="24px" height="24px" data-icon="eye-on" aria-hidden="true" display="none">
-                                <use href="#eye-on" />
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="login__field login__field--sm">
-                        <label class="login__label">
-                            <input class="login__input-checkbox" type="checkbox" name="remember_me">
-                            <span class="login__input-checkbox-label">Remember me</span>
-                        </label>
-                    </div>
-                    <button class="login__button" type="submit" data-login>Log in</button>
-                    <div class="login__or">or</div>
-                    <p>Don’t have an account? <a href="#">Sign up</a>.</p>
+                <div class="mb-3">
+                    <label for="InputEmail" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                    <div id="email" class="form-text"></div>
+                </div>
+                <div class="mb-3">
+                    <label for="InputPassword" class="form-label">Mot de passe</label>
+                    <input type="password" class="form-control" id="password" aria-describedby="password">
+                    <div id="password" class="form-text"></div>
+                </div>
+                <div id="formFooter">
+                    <a class="forgot" href="#">Mot de passe oublié ?</a>
                 </div>
             </div>
-        </div>
-    </form>
+        </form>
+        </section>
+    </main>
+
+</body>
+
+</html>
+
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"

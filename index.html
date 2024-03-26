@@ -17,33 +17,35 @@
     <link rel="icon" href="images/BS.webp" type="image/x-icon">
     <title>Bennes Solidaires</title>
 </head>
+
 <body>
     <main>
         <section class="loading">
             <div id="logo">
-                <img src="./images/Bennes-solidaires.webp" alt="Bennes solidaires" width="1300px" height="auto"></div>
+                <img src="./images/Bennes-solidaires.webp" alt="Bennes solidaires" width="1300px" height="auto">
+            </div>
             <div id="loader">00 %</div>
         </section>
     </main>
 
     <script>
         // loading
-        document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("DOMContentLoaded", function () {
             const loader = document.querySelector("#loader");
             let load = 0;
-            setInterval(function() {
+            setInterval(function () {
                 loader.innerHTML = `${load} %`;
                 if (load < 100) {
                     load++;
                 } else {
-                    setTimeout(function() {
+                    setTimeout(function () {
                         load = 0;
                     }, 2000);
                 }
             }, 50);
 
             // Redirection à la fin de l'animation en simulant une tâche longue
-            setTimeout(function() {
+            setTimeout(function () {
                 document.querySelector(".loading").style.display = "none";
                 window.location.href = "./pages/homepage.html";
             }, 1500);
@@ -53,4 +55,5 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
 </body>
+
 </html>
