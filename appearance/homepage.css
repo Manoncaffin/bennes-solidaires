@@ -9,93 +9,12 @@
 /* ------------- MEDIA MIN-WIDTH 350PX --------------- */
 /* ------------------ SUP. OU ÉGALE ------------------ */
 /* --------------------------------------------------- */
-@media screen and (min-width: 768px) {
-
-    /* NOUVELLE NAVBAR */
-    /* .menu {
-        position: sticky;
-        top: 0;
-        width: 100%;
-        z-index: 999;
-        display: block;
+@media (min-width: 350px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box
     }
-
-    .menu_container li {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        max-width: 900px;
-        margin-inline: auto;
-    }
-
-    .logo_bs {
-        padding: 70px;
-
-        img {
-            width: 600px;
-        }
-    }
-
-    .menu-list {
-        display: flex;
-        align-items: center;
-        list-style: none;
-        padding: 20px;
-        background-color: rgb(59, 106, 236);
-    }
-
-    .menu-list a {
-        text-decoration: none;
-        color: black;
-        padding: 10px 20px;
-    }
-
-    .menu-mobile {
-        width: 100%;
-        position: sticky;
-        top: 0;
-        height: 100px;
-        z-index: 9999;
-        padding-inline: 20px;
-        box-sizing: border-box;
-        display: flex;
-        align-items: center;
-        display: none;
-    }
-
-    @media(max-width: 810px) {
-        .menu {
-            display: none;
-        }
-
-        .menu-mobile {
-            display: flex;
-        }
-
-        .menu_container {
-            width: 100%;
-            height: 100vh;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .menu-list {
-            flex-direction: column;
-        }
-
-        .menu_container li {
-            font-size: 1rem;
-        }
-
-        .menu-list a {
-            box-sizing: border-box;
-            display: block;
-        }
-    } */
-    /* NOUVELLE NAVBAR */
-
-
-
 
     html,
     body {
@@ -121,6 +40,100 @@
         }
     }
 
+    .navbar .burger-menu-button {
+        color: black;
+        cursor: pointer;
+        display: none;
+        display: block;
+    }
+
+    .container_menu {
+        display: flex;
+        justify-content: space-between;
+        padding: 50px;
+    }
+
+    .navbar .links {
+        display: none;
+    }
+
+    .logo img {
+        width: 420px;
+    }
+
+    header {
+        position: relative;
+        background-color: rgb(65, 238, 186);
+    }
+
+    .navbar {
+        display: flex;
+        align-items: end;
+        justify-content: center;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .burger-menu {
+        display: block;
+        height: 0;
+        position: absolute;
+        width: 100%;
+        overflow: hidden;
+        transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        background-color: rgb(65, 238, 186);
+    }
+
+    .burger-menu.open {
+        height: 83.2vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .burger-menu.open a {
+        font-size: 4rem;
+    }
+
+    .links {
+        margin: 0;
+        padding: 0;
+    }
+
+    .burger-menu li {
+        padding: 0.7rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .burger-menu-button i {
+        padding: 15px;
+        /* background-color: rgb(59, 106, 236); */
+        /* border-radius: 5px; */
+        transform: scale(3);
+    }
+
+    .scrolling-text-container {
+        display: none;
+    }
+
+}
+
+
+/* --------------------------------------------------- */
+/* --------------------------------------------------- */
+/* ------------- MEDIA MIN-WIDTH 768PX --------------- */
+/* ------------------ SUP. OU ÉGALE ------------------ */
+/* --------------------------------------------------- */
+@media screen and (min-width: 768px) {
     .container_homepage {
         width: 100%;
         height: 100%;
@@ -129,11 +142,10 @@
         right: 0;
     }
 
-    #header {
+    /* #header {
         display: flex;
         justify-content: space-between;
         align-items: end;
-        /* background-color: rgb(154, 236, 152); */
         background-color: rgb(65, 238, 186);
     }
 
@@ -143,16 +155,16 @@
         img {
             width: 600px;
         }
-    }
+    } */
 
-    .navbar {
+    /* .navbar {
         padding: 70px;
 
         button {
             background-color: rgb(59, 106, 236);
             ;
         }
-    }
+    } */
 
     #projet,
     #fonctionnement,
@@ -160,7 +172,7 @@
     #contact,
     #partenaires {
         height: 100%;
-        margin: 0 70px;
+        margin: 0 50px;
     }
 
     #deposer {
@@ -176,7 +188,7 @@
     }
 
     .credits {
-        margin: 0 70px;
+        margin: 0 50px;
     }
 
     .copyright {
@@ -305,7 +317,6 @@
         box-sizing: border-box;
         width: 50%;
         height: 350px;
-        /* background-color: rgb(154, 236, 152); */
         background-color: rgb(65, 238, 186);
         display: flex;
         justify-content: center;
@@ -317,7 +328,6 @@
         box-sizing: border-box;
         width: 50%;
         height: 350px;
-        /* background-color: rgb(154, 236, 152); */
         background-color: rgb(65, 238, 186);
         display: flex;
         justify-content: center;
@@ -423,7 +433,38 @@ h2 {
         width: 130px;
         height: auto;
     }
+
+    /* NOUVELLE NAVBAR */
+    .navbar {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 15px;
+        background-color: rgb(59, 106, 236);
+    }
+
+    .navbar .burger-menu-button {
+        display: none;
+    }
+
+    .burger-menu {
+        display: none;
+    }
+
+    .container_menu {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .logo img {
+        width: 700px;
+        padding: 70px;
+    }
 }
+
+/* NOUVELLE NAVBAR */
+
 
 /* --------------------------------------------------- */
 /* --------------------------------------------------- */
@@ -433,10 +474,10 @@ h2 {
 @media only screen and (min-width: 1000px) {
     body {
         font-family: "Abordage";
-        font-size: 1.7rem;
+        font-size: 1.5rem;
     }
 
-    #header {
+    /* #header {
         flex-direction: column;
         align-items: start;
         background-color: rgb(65, 238, 186);
@@ -459,14 +500,12 @@ h2 {
     .container-fluid {
         width: 100vw;
         background-color: rgb(59, 106, 236);
-        /* background-color: rgb(165, 116, 245); */
-        /* background-color: rgb(0, 249, 37); */
     }
 
     .logo {
         padding-left: 140px;
         padding-right: 140px;
-    }
+    } */
 
     #projet,
     #fonctionnement,
@@ -474,23 +513,23 @@ h2 {
     #contact,
     #partenaires {
         height: 100%;
-        margin: 0 140px;
+        margin: 0 110px;
     }
 
     .title {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .credits {
-        margin: 0 140px;
+        margin: 0 110px;
     }
 
     .p_description {
-        font-size: 2.3rem;
+        font-size: 1.8rem;
     }
 
     .scrolling-text {
-        font-size: 2.3rem;
+        font-size: 2rem;
     }
 
     .corners {
@@ -504,7 +543,7 @@ h2 {
     .corner {
         width: 450px;
         height: fit-content;
-        font-size: 1.7rem;
+        font-size: 1.6rem;
     }
 
     .rectangle {
@@ -542,25 +581,25 @@ h2 {
     }
 
     .title {
-        font-size: 2.5rem;
+        font-size: 2.3rem;
     }
 
     .circle {
-        width: 90px;
-        height: 90px;
-        font-size: 2.4rem;
+        width: 60px;
+        height: 60px;
+        font-size: 2.2rem;
     }
 
     .big-title {
-        font-size: 5.5rem;
+        font-size: 5.3rem;
     }
 
     .big-title-two {
-        font-size: 5.5rem;
+        font-size: 5.3rem;
     }
 
     .mail {
-        font-size: 2.8rem;
+        font-size: 2.6rem;
     }
 
     .logo_partenaires {
@@ -576,6 +615,45 @@ h2 {
     h2 {
         font-size: 3rem;
     }
+
+    /* NOUVELLE NAVBAR */
+    .navbar {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 15px 110px 15px 110px;
+        background-color: rgb(59, 106, 236);
+    }
+
+    .navbar .burger-menu-button {
+        display: none;
+    }
+
+    .navbar .links {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .burger-menu {
+        display: none;
+    }
+
+    .links {
+        font-size: 1rem;
+    }
+
+    .container_menu {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .logo img {
+        width: 850px;
+        padding: 70px 110px 70px 110px;
+    }
+
+    /* NOUVELLE NAVBAR */
 }
 
 
@@ -586,7 +664,7 @@ h2 {
 /* --------------------------------------------------- */
 @media only screen and (min-width: 1200px) {
     h2 {
-        font-size: 5rem;
+        font-size: 4rem;
     }
 
     .title {
@@ -594,6 +672,8 @@ h2 {
     }
 
     .circle {
+        width: 90px;
+        height: 90px;
         font-size: 4rem;
     }
 
@@ -649,7 +729,7 @@ h2 {
         width: 400px;
     }
 
-    .logo img {
+    /* .logo img {
         width: 800px;
     }
 
@@ -662,7 +742,7 @@ h2 {
     .logo {
         padding-left: 140px;
         padding-right: 140px;
-    }
+    } */
 
     #projet,
     #fonctionnement,
@@ -670,6 +750,10 @@ h2 {
     #contact,
     #partenaires {
         height: 100%;
+        margin: 0 140px;
+    }
+
+    .credits {
         margin: 0 140px;
     }
 
@@ -696,4 +780,43 @@ h2 {
         align-items: start;
     }
 
+    /* NOUVELLE NAVBAR  */
+    .navbar {
+        padding: 20px;
+    }
+
+    .navbar .links {
+        display: flex;
+        gap: 5rem;
+    }
+
+    .links {
+        font-size: 1.8rem;
+    }
+
+    .logo img {
+        width: 1070px;
+        padding: 70px 140px 70px 140px;
+    }
+}
+/* NOUVELLE NAVBAR  */
+
+/* --------------------------------------------------- */
+/* --------------------------------------------------- */
+/* ------------- MEDIA MIN-WIDTH 1200PX --------------- */
+/* ----------------- SUP. OU ÉGALE ------------------- */
+/* --------------------------------------------------- */
+@media only screen and (min-width: 1500px) {
+    h2 {
+        font-size: 4.6rem;
+    }
+
+    .icon {
+        width: 500px;
+    }
+
+    .navbar .links {
+        display: flex;
+        gap: 6rem;
+    }
 }
