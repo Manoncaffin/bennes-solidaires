@@ -10,10 +10,11 @@
     <meta name="Author" content="Bennes solidaires">
     <meta name="Revisit-After" content="15 days">
     <meta name="Robots" content="All">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="../appearance/connexion.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link href="https://api.fontshare.com/v2/css?f[]=excon@400,900,700,500,300,100,1&display=swap" rel="stylesheet">
     <link rel="icon" href="../images/BS.webp" type="image/x-icon">
     <title>Bennes Solidaires</title>
@@ -22,70 +23,81 @@
 <body>
 
     <header id="header">
-        <div>
-            <a href="./homepage.html" class="logo_bs"></a><img src="../images/BS.webp" alt="Bennes solidaires"></a>
+        <div class="container_menu">
+            <div>
+                <a href="./homepage.html" class="logo"><img src="../images/BS.webp" alt="Bennes solidaires"></a>
+            </div>
+            <div class="navbar">
+                <ul class="links">
+                    <li><a href="#projet">PROJET</a></li>
+                    <li><a href="#fonctionement">FONCTIONNEMENT</a></li>
+                    <li><a href="#deposer">DÉPOSER UNE ANNONCE</a></li>
+                    <li><a href="#connexion">CONNEXION</a></li>
+                    <li><a href="#adhesion">ADHÉSION</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+
+                <div class="burger-menu-button">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
         </div>
 
-        <div>
-            <!-- METTRE NAVBAR AVEC BURGER -->
+        <div class="burger-menu">
+            <ul class="links">
+                <li><a href="./homepage.html">PROJET</a></li>
+                <li><a href="./homepage.html#fonctionnement">FONCTIONNEMENT</a></li>
+                <li><a href="#deposer">DÉPOSER UNE ANNONCE</a></li>
+                <li><a href="#connexion">CONNEXION</a></li>
+                <li><a href="#adhesion">ADHÉSION</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
         </div>
     </header>
+    <!-- NOUVELLE NAVBAR -->
+
+
+
 
     <main>
 
-
-
-        <!-- <div class="container">
-        
-        <form action="/ma-page-de-traitement" method="post" class="form-1">
+        <div class="container">
             <h1>CONNEXION</h1>
-            <label for="identifier">Identifiant</label>
-            <input type="text" name="identifier" id="identifier" required />
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" required />
-            <label for="password">Mot de passe</label>
-            <input type="password" name="password" id="password" required />
-
-            <div id="formFooter">
-                <a class="forgot" href="#">Mot de passe oublié ?</a>
+            <form action="/action_page.php">
+              <label for="identifier">Identifiant</label>
+              <input type="text" id="identifier" name="identifier" placeholder="Votre Identifiant">
+          
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="Votre adresse email">
+          
+              <label for="password">Mot de passe</label>
+              <input id="password" type="password" name="password" placeholder="Votre mot de passe">
+              <a href="#">Mot de passe oublié ?</a>
+          
+              <div class="foot_form">
+              <input type="submit" value="Envoyer">
+              <a href="#">Envie de nous rejoindre ?</a>
+              <a href="#">Créez un compte</a>
             </div>
+            </form>
+          </div>
 
-            <input type="submit" class="fourth zero-raduis" value="Se connecter">
-            <p>Vous avez envie de nous rejoindre ?</p>
-            <input type="button" class="fourth zero-raduis pc" value="Créez un compte">
-        </form>
-    </div> -->
 
-        <form>
-            
-            <div class="wrapper">
-                <h1 class="mb-5">CONNEXION</h1>
-                <div class="mb-3">
-                    <label for="InputIdentifier" class="form-label">Identifiant</label>
-                    <input type="identifier" class="form-control" id="identifier" aria-describedby="identifier">
-                    <div id="identifier" class="form-text"></div>
-                </div>
-                <div class="mb-3">
-                    <label for="InputEmail" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
-                    <div id="email" class="form-text"></div>
-                </div>
-                <div class="mb-3">
-                    <label for="InputPassword" class="form-label">Mot de passe</label>
-                    <input type="password" class="form-control" id="password" aria-describedby="password">
-                    <div id="password" class="form-text"></div>
-                </div>
-                <div id="formFooter">
-                    <a class="forgot" href="#">Mot de passe oublié ?</a>
-                </div>
-            </div>
-        </form>
-        </section>
     </main>
 
-</body>
+    <script>
+        // SCRIPT NOUVELLE NAVBAR
+        const burgerMenuButton = document.querySelector('.burger-menu-button')
+        const burgerMenuButtonIcon = document.querySelector('.burger-menu-button i')
+        const burgerMenu = document.querySelector('.burger-menu')
 
-</html>
+        burgerMenuButton.onclick = function () {
+            burgerMenu.classList.toggle('open')
+            const isOpen = burgerMenu.classList.contains('open')
+            burgerMenuButtonIcon.classList = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'
+        }
+        // SCRIPT NOUVELLE NAVBAR
+    </script>
 
 
 </body>

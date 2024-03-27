@@ -10,12 +10,6 @@
 /* ------------------ SUP. OU ÉGALE ------------------ */
 /* --------------------------------------------------- */
 @media (min-width: 350px) {
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box
-    }
-
     html,
     body {
         background-color: rgb(232, 232, 232);
@@ -74,11 +68,6 @@
 
     li {
         list-style: none;
-    }
-
-    a {
-        text-decoration: none;
-        color: black;
     }
 
     .burger-menu {
@@ -141,30 +130,6 @@
         left: 0;
         right: 0;
     }
-
-    /* #header {
-        display: flex;
-        justify-content: space-between;
-        align-items: end;
-        background-color: rgb(65, 238, 186);
-    }
-
-    .logo {
-        padding: 70px;
-
-        img {
-            width: 600px;
-        }
-    } */
-
-    /* .navbar {
-        padding: 70px;
-
-        button {
-            background-color: rgb(59, 106, 236);
-            ;
-        }
-    } */
 
     #projet,
     #fonctionnement,
@@ -433,37 +398,7 @@ h2 {
         width: 130px;
         height: auto;
     }
-
-    /* NOUVELLE NAVBAR */
-    .navbar {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        padding: 15px;
-        background-color: rgb(59, 106, 236);
-    }
-
-    .navbar .burger-menu-button {
-        display: none;
-    }
-
-    .burger-menu {
-        display: none;
-    }
-
-    .container_menu {
-        display: flex;
-        flex-direction: column;
-        padding: 0;
-    }
-
-    .logo img {
-        width: 700px;
-        padding: 70px;
-    }
 }
-
-/* NOUVELLE NAVBAR */
 
 
 /* --------------------------------------------------- */
@@ -476,36 +411,6 @@ h2 {
         font-family: "Abordage";
         font-size: 1.5rem;
     }
-
-    /* #header {
-        flex-direction: column;
-        align-items: start;
-        background-color: rgb(65, 238, 186);
-    }
-
-    .logo {
-        background-color: rgb(65, 238, 186);
-
-        img {
-            width: 800px;
-        }
-    }
-
-    .navbar {
-        padding: 5px 140px;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .container-fluid {
-        width: 100vw;
-        background-color: rgb(59, 106, 236);
-    }
-
-    .logo {
-        padding-left: 140px;
-        padding-right: 140px;
-    } */
 
     #projet,
     #fonctionnement,
@@ -631,7 +536,7 @@ h2 {
 
     .navbar .links {
         display: flex;
-        gap: 2rem;
+        gap: 3rem;
     }
 
     .burger-menu {
@@ -639,7 +544,7 @@ h2 {
     }
 
     .links {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 
     .container_menu {
@@ -652,7 +557,6 @@ h2 {
         width: 850px;
         padding: 70px 110px 70px 110px;
     }
-
     /* NOUVELLE NAVBAR */
 }
 
@@ -729,21 +633,6 @@ h2 {
         width: 400px;
     }
 
-    /* .logo img {
-        width: 800px;
-    }
-
-    .navbar {
-        padding: 5px 140px;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .logo {
-        padding-left: 140px;
-        padding-right: 140px;
-    } */
-
     #projet,
     #fonctionnement,
     #adhesion,
@@ -791,7 +680,7 @@ h2 {
     }
 
     .links {
-        font-size: 1.8rem;
+        font-size: 1.9rem;
     }
 
     .logo img {
@@ -803,7 +692,7 @@ h2 {
 
 /* --------------------------------------------------- */
 /* --------------------------------------------------- */
-/* ------------- MEDIA MIN-WIDTH 1200PX --------------- */
+/* ------------- MEDIA MIN-WIDTH 1500PX --------------- */
 /* ----------------- SUP. OU ÉGALE ------------------- */
 /* --------------------------------------------------- */
 @media only screen and (min-width: 1500px) {
@@ -818,5 +707,9 @@ h2 {
     .navbar .links {
         display: flex;
         gap: 6rem;
+    }
+
+    .p_description {
+        font-size: 2.4rem;
     }
 }

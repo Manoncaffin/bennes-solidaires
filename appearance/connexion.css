@@ -9,7 +9,7 @@
 /* ------------- MEDIA MIN-WIDTH 350PX --------------- */
 /* ------------------ SUP. OU ÉGALE ------------------ */
 /* --------------------------------------------------- */
-@media screen and (min-width: 768px) {
+@media (min-width: 350px) {
 
     html,
     body {
@@ -18,153 +18,289 @@
 
     body {
         font-family: "Abordage";
-        font-size: 1.5rem;
+        font-size: 1.4rem;
         color: black;
         min-width: 100vw;
         min-height: 100vh;
+        text-align: justify;
+        overflow-x: hidden;
 
         p {
-            margin-top: 20px;
-            margin-bottom: 5px;
-            text-align: center;
-            font-size: 1rem;
+            margin: 0;
         }
 
         a {
             text-decoration: none;
             color: black;
-            font-size: 1rem;
         }
     }
 
-    #header {
+    .navbar .burger-menu-button {
+        color: black;
+        cursor: pointer;
+        display: none;
+        display: block;
+    }
+
+    .container_menu {
         display: flex;
-        background-color: rgb(65, 238, 186);
-        padding: 25px;
+        justify-content: space-between;
+        padding: 50px;
     }
 
-    h1 {
-        font-size: 2rem;
-        font-family: "Lemon Milk";
-        font-weight: 600;
-        text-align: center;
-        margin-top: 5px;
+    .navbar .links {
+        display: none;
     }
 
-    .container_forgot {
-        display: flex;
+    .logo img {
+        width: 150px;
     }
 
-    .forgot {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        text-align: center;
-        margin-top: 20px;
-        margin-bottom: 5px;
-    }
-
-    .container {
-        height: 100vh;
-        width: 100vw;
-        /* margin: 0 auto;
+    header {
         position: relative;
-        /* background-color: rgb(232, 232, 232);  */
+        background-color: rgb(65, 238, 186);
+    }
+
+    .navbar {
         display: flex;
+        align-items: end;
         justify-content: center;
-        align-items: center;
     }
 
-    .container .form-1 {
-        display: flex;
-        flex-direction: column;
+    li {
+        list-style: none;
+    }
+
+    .burger-menu {
+        display: block;
+        height: 0;
         position: absolute;
-        top: 40%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background: #fff;
-        width: 50%;
-        box-shadow: 0 0 10px rgb(255, 255, 255);
-        border-radius: 20px;
+        width: 100%;
+        overflow: hidden;
+        transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        background-color: rgb(65, 238, 186);
     }
 
-    */ .form-1 h1 {
-        text-align: center;
-        margin-top: 0.7rem;
-        margin-bottom: 1.5rem;
+    .burger-menu.open {
+        height: 83.2vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
-    input[type="email"],
-    input[type="password"],
-    input[type="indeitifer"] {
+    .burger-menu.open a {
+        font-size: 4rem;
+    }
+
+    .links {
+        margin: 0;
+        padding: 0;
+    }
+
+    .burger-menu li {
+        padding: 0.7rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .burger-menu-button i {
+        padding: 15px;
+        transform: scale(3);
+    }
+
+    input[type=text],
+    input[type=email],
+    input[type=password] {
+        width: 100%;
+        padding: 12px;
         border: none;
         outline: none;
-        border-bottom: 1px solid;
-        background: none;
-        margin: 0.9rem 2rem;
-        font-size: 1.4rem;
+        border-bottom: 1px solid rgb(92, 91, 91); /* Ajout de la bordure inférieure */
+        border-radius: 0; /* Suppression des coins arrondis */
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        margin-right: 0px;
+        margin-left: 0px;
+        resize: vertical;
     }
 
     label {
-        margin: 0 2rem;
-        font-size: 1.4rem;
+        margin-right: 0px;
+        margin-left: 0px;
+        width: 100%;
     }
 
-    input[type="submit"],
-    input[type="button"] {
-        border-radius: 20px;
-        border: none;
+    input[type=submit] {
         background-color: rgb(65, 238, 186);
-        margin: 0 150px;
-        font-size: 1.2rem;
-        height: 40px;
+        color: black;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 15px;
+        cursor: pointer;
     }
 
+    .foot_form {
+    padding: 10px;
+    display: flex;
+    justify-content: center!important;
+    flex-direction: column;
+    text-align: center;
+}
 
-/* __________________________________ */
-
-
-    .form-control {
-        width: 350px;
+    input[type=submit]:hover {
+        background-color: rgb(232, 232, 232);
     }
 
-    form {
+    .container {
+        box-sizing: border-box;
+        border-radius: 5px;
+        padding: 50px;
+        width: 100%;
+        max-width: 530px;
+        margin: 0 auto;
+    }
+
+    h1 {
+        padding: 20px;
+        font-family: "Lemon Milk";
+        font-weight: 600;
         display: flex;
         justify-content: center;
+        width: 100%;
     }
 
-    .wrapper {
-        padding-top: 100px;
-
-    }
-
-    .padding {
-        padding-top: 50px;
-    }
-
-    .form-check {
-        width: 150px;
+    .container a {
+        padding-bottom: 5px;
+        display: flex;
         justify-content: center;
-    }
-
-    input[type="email"],
-    input[type="password"],
-    input[type="identifier"] {
-        border: none;
-        outline: none;
-        border-bottom: 1px solid;
-        background: none;
-        margin: 0.9rem 2rem;
-        font-size: 1.4rem;
+        font-size: 1rem;
     }
 }
 
 
-/* @media (max-width: 860px) { */
-        /* form {
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-    } */
-/* } */
+/* --------------------------------------------------- */
+/* --------------------------------------------------- */
+/* ------------- MEDIA MIN-WIDTH 768PX --------------- */
+/* ------------------ SUP. OU ÉGALE ------------------ */
+/* --------------------------------------------------- */
+@media screen and (min-width: 768px) {
+    #footer {
+        background-color: #000000;
+        color: white;
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .credits {
+        margin: 0 50px;
+    }
+
+    .copyright {
+        font-family: "Lemon Milk";
+    }
+}
+
+
+/* --------------------------------------------------- */
+/* --------------------------------------------------- */
+/* ------------- MEDIA MIN-WIDTH 1000PX --------------- */
+/* ----------------- SUP. OU ÉGALE ------------------- */
+/* --------------------------------------------------- */
+@media only screen and (min-width: 1000px) {
+    body {
+        font-family: "Abordage";
+        font-size: 1.5rem;
+    }
+
+    /* NOUVELLE NAVBAR */
+    .navbar {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 10px 110px 10px 110px;
+        background-color: rgb(59, 106, 236);
+    }
+
+    .navbar .burger-menu-button {
+        display: none;
+    }
+
+    .navbar .links {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .burger-menu {
+        display: none;
+    }
+
+    .links {
+        width: 100%;
+        font-size: 1.2rem;
+    }
+
+    .container_menu {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .logo img {
+        width: 350px;
+        padding: 40px 110px 40px 110px;
+    }
+
+    /* NOUVELLE NAVBAR */
+}
+
+
+/* --------------------------------------------------- */
+/* --------------------------------------------------- */
+/* ------------- MEDIA MIN-WIDTH 1200PX --------------- */
+/* ----------------- SUP. OU ÉGALE ------------------- */
+/* --------------------------------------------------- */
+@media only screen and (min-width: 1200px) {
+
+    /* NOUVELLE NAVBAR  */
+    .navbar {
+        padding: 10px 140px 10px 140px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .navbar .links {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .links {
+        font-size: 1.3rem;
+    }
+
+    .logo img {
+        width: 400px;
+        padding: 50px 140px 50px 140px;
+    }
+}
+
+/* NOUVELLE NAVBAR  */
+
+/* --------------------------------------------------- */
+/* --------------------------------------------------- */
+/* ------------- MEDIA MIN-WIDTH 1500PX --------------- */
+/* ----------------- SUP. OU ÉGALE ------------------- */
+/* --------------------------------------------------- */
+@media only screen and (min-width: 1500px) {
+    .navbar {
+        display: flex;
+        justify-content: center;
+    }
+
+    .navbar .links {
+        display: flex;
+        justify-content: space-between;
+    }
+
+}
