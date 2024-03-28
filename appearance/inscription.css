@@ -10,7 +10,6 @@
 /* ------------------ SUP. OU ÉGALE ------------------ */
 /* --------------------------------------------------- */
 @media (min-width: 350px) {
-
     html,
     body {
         background-color: rgb(232, 232, 232);
@@ -35,6 +34,7 @@
         }
     }
 
+    /* NAVBAR */
     .navbar .burger-menu-button {
         color: black;
         cursor: pointer;
@@ -108,7 +108,9 @@
         padding: 15px;
         transform: scale(3);
     }
+    /* NAVBAR */
 
+    /* FORM  */
     input[type=text],
     input[type=email],
     input[type=password] {
@@ -124,14 +126,14 @@
         margin-right: 0px;
         margin-left: 0px;
         resize: vertical;
-        font-size: 1.3rem;
+        font-size: 1.7rem;
     }
 
     label {
         margin-right: 0px;
         margin-left: 0px;
         width: 100%;
-        font-size: 1.3rem;
+        font-size: 1.7rem;
     }
 
     input[type=submit] {
@@ -142,15 +144,15 @@
         border-radius: 15px;
         cursor: pointer;
         margin-bottom: 10px;
-        font-size: 1.3rem;
+        margin-top: 40px;
+        font-size: 1.7rem;
     }
 
     .foot_form {
-    /* display: flex; */
-    justify-content: center!important;
-    flex-direction: column;
-    text-align: center;
-}
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+    }
 
     input[type=submit]:hover {
         background-color: rgb(232, 232, 232);
@@ -161,24 +163,63 @@
         border-radius: 5px;
         padding: 50px;
         width: 100%;
-        max-width: 530px;
+        min-width: 980px;
+        max-width: 900px;
         margin: 0 auto;
-    }
-
-    h1 {
-        padding: 20px;
-        font-family: "Lemon Milk";
-        font-weight: 600;
-        display: flex;
-        justify-content: center;
-        width: 100%;
     }
 
     .container a {
         padding-bottom: 5px;
         display: flex;
         justify-content: center;
-        font-size: 1rem;
+        font-size: 1.3rem;
+    }
+
+    #activity-select {
+        width: 100%;
+        border: none;
+        outline: none;
+        padding: 12px;
+        border-bottom: 1px solid rgb(92, 91, 91); 
+        border-radius: 0; 
+        box-sizing: border-box;
+        margin-bottom: 16px;
+        margin-right: 0px;
+        margin-left: 0px;
+        resize: vertical;
+        font-size: 1.7rem;
+        color: rgb(123, 122, 122); 
+    }
+
+    .activity-select {
+        margin-top: 50px;
+    }
+
+    .checkbox {
+        display: flex;
+    }
+
+    input[type=radio] {
+        margin-right: 20px;
+        width: 20px;
+    }
+    /* FORM  */
+
+    .scrolling-text {
+        display: block;
+    }
+
+    /* .no-scrolling-text {
+        font-size: 1.9rem;
+    } */
+
+    .bordure {
+        border: 1px solid black;
+    }
+
+    .text_rgpd {
+        width: 500px;
+        font-size: 10px;
     }
 }
 
@@ -189,6 +230,36 @@
 /* ------------------ SUP. OU ÉGALE ------------------ */
 /* --------------------------------------------------- */
 @media screen and (min-width: 768px) {
+    .no-scrolling-text {
+        display: none;
+    }
+
+    .scrolling-text {
+        display: block;
+        margin-right: 500px;
+    }
+
+    .scrolling-text-container {
+        min-width: 100%;
+        overflow: hidden;
+    }
+
+    .scrolling-text {
+        font-size: 1.9rem;
+        white-space: nowrap;
+        animation: scrollText 10s linear infinite;
+    }
+
+    @keyframes scrollText {
+        from {
+            transform: translateX(100%);
+        }
+
+        to {
+            transform: translateX(-100%);
+        }
+    }
+
     #footer {
         background-color: #000000;
         color: white;
@@ -217,7 +288,7 @@
         font-size: 1.5rem;
     }
 
-    /* NOUVELLE NAVBAR */
+    /* NAVBAR */
     .navbar {
         width: 100%;
         display: flex;
@@ -251,11 +322,44 @@
     }
 
     .logo img {
-        width: 350px;
+        width: 265px;
+        padding: 10px 110px 10px 110px;
+    }
+    /* NAVBAR */
+
+    /* FORM */
+    .container {
+        box-sizing: border-box;
+        border-radius: 5px;
         padding: 40px 110px 40px 110px;
+        width: 100%;
+        min-width: 1000px;
+        max-width: 1500px;
+        margin: 0;
     }
 
-    /* NOUVELLE NAVBAR */
+    input[type=submit] {
+        margin-top: 20px;
+    }
+    
+    #activity-select {
+        width: 100%;
+        border: none;
+        outline: none;
+        padding: 12px;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid rgb(92, 91, 91); 
+        border-radius: 0; 
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        margin-right: 0px;
+        margin-left: 0px;
+        resize: vertical;
+        font-size: 1.7rem;
+    }
+    /* FORM */
 }
 
 
@@ -265,8 +369,7 @@
 /* ----------------- SUP. OU ÉGALE ------------------- */
 /* --------------------------------------------------- */
 @media only screen and (min-width: 1200px) {
-
-    /* NOUVELLE NAVBAR  */
+    /* NAVBAR  */
     .navbar {
         padding: 10px 140px 10px 140px;
         display: flex;
@@ -283,12 +386,23 @@
     }
 
     .logo img {
-        width: 400px;
-        padding: 50px 140px 50px 140px;
+        width: 330px;
+        padding: 10px 140px 10px 140px;
     }
+
+    .container {
+        box-sizing: border-box;
+        border-radius: 5px;
+        padding: 50px 140px 50px 140px;
+        width: 100%;
+        min-width: 980px;
+        max-width: 2000px;
+        margin: 0;
+    }
+    /* NAVBAR  */
 }
 
-/* NOUVELLE NAVBAR  */
+
 
 /* --------------------------------------------------- */
 /* --------------------------------------------------- */
@@ -296,6 +410,7 @@
 /* ----------------- SUP. OU ÉGALE ------------------- */
 /* --------------------------------------------------- */
 @media only screen and (min-width: 1500px) {
+    /* NAVBAR */
     .navbar {
         display: flex;
         justify-content: center;
@@ -305,5 +420,5 @@
         display: flex;
         justify-content: space-between;
     }
-
+    /* NAVBAR */
 }

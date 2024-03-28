@@ -61,23 +61,23 @@
         <div class="container">
             <h1>CONNEXION</h1>
             <form action="/action_page.php">
-              <label for="identifier">Identifiant</label>
-              <input type="text" id="identifier" name="identifier" placeholder="Votre Identifiant">
-          
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="Votre adresse email">
-          
-              <label for="password">Mot de passe</label>
-              <input id="password" type="password" name="password" placeholder="Votre mot de passe">
-              <a href="#">Mot de passe oublié ?</a>
-          
-              <div class="foot_form">
-              <input type="submit" value="Envoyer">
-              <a href="#">Envie de nous rejoindre ?</a>
-              <a href="#">Créez un compte</a>
-            </div>
+                <label for="identifier">Identifiant</label>
+                <input type="text" id="identifier" name="identifier" placeholder="Votre Identifiant">
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Votre adresse email">
+
+                <label for="password">Mot de passe</label>
+                <input id="password" type="password" name="password" placeholder="Votre mot de passe">
+                <a href="#">Mot de passe oublié ?</a>
+
+                <div class="foot_form">
+                    <input type="submit" value="Valider">
+                    <a href="#">Envie de nous rejoindre ?</a>
+                    <a href="#">Créez un compte</a>
+                </div>
             </form>
-          </div>
+        </div>
 
 
     </main>
@@ -97,7 +97,7 @@
 
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
-                burgerMenu.classList.remove('open'); 
+                burgerMenu.classList.remove('open');
                 burgerMenuButtonIcon.classList = 'fa-solid fa-bars';
             });
         });
