@@ -124,12 +124,14 @@
         margin-right: 0px;
         margin-left: 0px;
         resize: vertical;
+        font-size: 1.3rem;
     }
 
     label {
         margin-right: 0px;
         margin-left: 0px;
         width: 100%;
+        font-size: 1.3rem;
     }
 
     input[type=submit] {
@@ -139,10 +141,11 @@
         border: none;
         border-radius: 15px;
         cursor: pointer;
+        margin-bottom: 10px;
+        font-size: 1.3rem;
     }
 
     .foot_form {
-    padding: 10px;
     display: flex;
     justify-content: center!important;
     flex-direction: column;
