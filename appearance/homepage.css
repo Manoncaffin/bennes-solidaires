@@ -81,7 +81,7 @@
     }
 
     .burger-menu.open {
-        height: 83.2vh;
+        height: 100vh;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -110,10 +110,9 @@
         transform: scale(3);
     }
 
-    .scrolling-text-container {
+    .hide-on-menu-open {
         display: none;
     }
-
 }
 
 
@@ -434,7 +433,7 @@ h2 {
     }
 
     .scrolling-text {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .corners {

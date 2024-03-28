@@ -83,7 +83,7 @@
     }
 
     .burger-menu.open {
-        height: 83.2vh;
+        height: 100vh;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -113,31 +113,11 @@
     /* NAVBAR */
 
     /* FORM  */
-    input[type=text],
-    input[type=textarea],
-    input[type=password] {
-        width: 100%;
-        padding: 12px;
-        border: none;
-        outline: none;
-        border-bottom: 1px solid rgb(92, 91, 91);
-        /* Ajout de la bordure inférieure */
-        border-radius: 0;
-        /* Suppression des coins arrondis */
-        box-sizing: border-box;
-        margin-top: 6px;
-        margin-bottom: 16px;
-        margin-right: 0px;
-        margin-left: 0px;
-        resize: vertical;
-        font-size: 1.7rem;
-    }
-
     label {
         margin-right: 0px;
         margin-left: 0px;
-        width: 100%;
-        font-size: 1.7rem;
+        /* width: 100%; */
+        font-size: 1.4rem;
     }
 
     input[type=submit] {
@@ -149,7 +129,7 @@
         cursor: pointer;
         margin-bottom: 10px;
         margin-top: 40px;
-        font-size: 1.7rem;
+        font-size: 1.4rem;
     }
 
     .foot_form {
@@ -176,14 +156,13 @@
         padding-bottom: 5px;
         display: flex;
         justify-content: center;
-        font-size: 1.3rem;
     }
 
     #materiau-bio-select,
     #materiau-geo-select,
     #classification-select,
     #quantity-select,
-    #value-select {
+    #value-select, #description {
         width: 100%;
         border: none;
         outline: none;
@@ -195,24 +174,36 @@
         margin-right: 0px;
         margin-left: 0px;
         resize: vertical;
-        font-size: 1.7rem;
         color: rgb(123, 122, 122);
+        background-color: transparent;
+        font-size: 1.4rem;
     }
 
     .file {
         display: flex;
     }
 
-    .quantity {
-        display: flex;
+    #file {
+        font-size: 1.4rem;
+        margin-left: 40px;
+        margin-bottom: 16px;
+        padding: 8px;
     }
 
-    .quantity select {
-        margin: 0px 50px 0px 50px;
+    .quantity {
+        display: flex;
+        width: 880px;
+        padding-bottom: 20px;
+        font-size: 1.4rem;
+    }
+
+    .quantity-select {
+        margin: 0px 40px 0px 0px;
     }
 
     .value-select {
-        margin-left: 100px;
+        margin-left: 50px;
+        margin-right: 40px;
     }
 
     .checkbox {
@@ -223,37 +214,7 @@
         margin-right: 20px;
         width: 20px;
     }
-
     /* FORM  */
-
-    .scrolling-text {
-        display: block;
-    }
-
-    /* .no-scrolling-text {
-        font-size: 1.9rem;
-    } */
-
-    .bordure {
-        border: 1px solid black;
-    }
-
-    .text_rgpd {
-        width: 500px;
-        font-size: 10px;
-    }
-}
-
-
-/* --------------------------------------------------- */
-/* --------------------------------------------------- */
-/* ------------- MEDIA MIN-WIDTH 768PX --------------- */
-/* ------------------ SUP. OU ÉGALE ------------------ */
-/* --------------------------------------------------- */
-@media screen and (min-width: 768px) {
-    .no-scrolling-text {
-        display: none;
-    }
 
     .scrolling-text {
         display: block;
@@ -263,6 +224,7 @@
     .scrolling-text-container {
         min-width: 100%;
         overflow: hidden;
+        display: flex;
     }
 
     .scrolling-text {
@@ -281,6 +243,27 @@
         }
     }
 
+    .hide-on-menu-open .scrolling-text {
+        display: none;
+    }
+
+    .bordure {
+        border: 1px solid black;
+    }
+
+    .text_rgpd {
+        width: 500px;
+        font-size: 10px;
+    }
+}
+
+
+/* --------------------------------------------------- */
+/* --------------------------------------------------- */
+/* ------------- MEDIA MIN-WIDTH 768PX --------------- */
+/* ------------------ SUP. OU ÉGALE ------------------ */
+/* --------------------------------------------------- */
+@media screen and (min-width: 768px) {
     #footer {
         background-color: #000000;
         color: white;

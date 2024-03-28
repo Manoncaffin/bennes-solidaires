@@ -22,7 +22,6 @@
 
 <body>
 
-    <!-- NAVBAR -->
     <header id="header">
         <div class="container_menu">
             <div>
@@ -31,8 +30,9 @@
             </div>
             <div class="navbar">
                 <ul class="links">
-                    <li><a href="#projet">PROJET</a></li>
-                    <li><a href="#fonctionement">FONCTIONNEMENT</a></li>
+                    <li><a href="#projet">ACCUEIL</a></li>
+                    <!-- <li><a href="#projet">PROJET</a></li>
+                    <li><a href="#fonctionement">FONCTIONNEMENT</a></li> -->
                     <li><a href="#deposer">DÉPOSER UNE ANNONCE</a></li>
                     <li><a href="#connexion">CONNEXION</a></li>
                     <li><a href="#adhesion">ADHÉSION</a></li>
@@ -47,8 +47,9 @@
 
         <div class="burger-menu" id="nav-menu">
             <ul class="links">
-                <li><a href="#projet">PROJET</a></li>
-                <li><a href="#fonctionnement">FONCTIONNEMENT</a></li>
+                <li><a href="#projet">ACCUEIL</a></li>
+                <!-- <li><a href="#projet">PROJET</a></li>
+                <li><a href="#fonctionnement">FONCTIONNEMENT</a></li> -->
                 <li><a href="#deposer">DÉPOSER UNE ANNONCE</a></li>
                 <li><a href="#connexion">CONNEXION</a></li>
                 <li><a href="#adhesion">ADHÉSION</a></li>
@@ -62,7 +63,7 @@
         <div class="container_homepage">
             <section id="projet">
 
-                <p class="p_description pb-1">Bennes solidaires se positionne comme une plate-forme dédiée à l'économie
+                <p class="p_description pb-5">Bennes solidaires se positionne comme une plate-forme dédiée à l'économie
                     circulaire des ressources bio et géo-sourcées, où l’excèdent de matière de l'un devient la matière
                     première de l'autre.
                     Cette plateforme est ouverte à toutes et tous : designers, artisan·es, créateur·rices et
@@ -81,7 +82,7 @@
                     une
                     nouvelle utilité, tout en évitant le recours systématique à la déchetterie et en encourageant des
                     initiatives vertueuses.</p>
-            
+
             </section>
 
             <section id="fonctionnement">
@@ -314,11 +315,31 @@
 
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
-                burgerMenu.classList.remove('open'); 
+                burgerMenu.classList.remove('open');
                 burgerMenuButtonIcon.classList = 'fa-solid fa-bars';
             });
+
+            // SCRIPT NAVBAR
+
+            // SCRIPT HIDDEN SCROLLING WHEN BURGER OUVERT
+            const burgerMenuButton = document.querySelector('.burger-menu-button');
+            const scrollingTextContainers = document.querySelectorAll('.scrolling-text-container');
+
+            burgerMenuButton.addEventListener('click', function () {
+                // Toggle the 'open' class on the burger menu
+                burgerMenu.classList.toggle('open');
+
+                // Check if the burger menu is open
+                const isOpen = burgerMenu.classList.contains('open');
+
+                // Add or remove the class to hide the scrolling text container based on the menu state
+                scrollingTextContainers.forEach(container => {
+                    container.classList.toggle('hide-on-menu-open', isOpen);
+                });
+            });
         });
-        // SCRIPT NAVBAR
+        // SCRIPT HIDDEN SCROLLING WHEN BURGER OUVERT
+
 
     </script>
 

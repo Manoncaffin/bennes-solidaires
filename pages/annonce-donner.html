@@ -29,12 +29,13 @@
             </div>
             <div class="navbar">
                 <ul class="links">
-                    <li><a href="#projet">PROJET</a></li>
-                    <li><a href="#fonctionement">FONCTIONNEMENT</a></li>
-                    <li><a href="#deposer">DÉPOSER UNE ANNONCE</a></li>
-                    <li><a href="#connexion">CONNEXION</a></li>
-                    <li><a href="#adhesion">ADHÉSION</a></li>
-                    <li><a href="#contact">CONTACT</a></li>
+                    <li><a href="./homepage.html">ACCUEIL</a></li>
+                    <!-- <li><a href="#projet">PROJET</a></li>
+                    <li><a href="#fonctionement">FONCTIONNEMENT</a></li> -->
+                    <li><a href="./homepage.html#deposer">DÉPOSER UNE ANNONCE</a></li>
+                    <li><a href="./connexion.html">CONNEXION</a></li>
+                    <li><a href="./homepage.html#adhesion">ADHÉSION</a></li>
+                    <li><a href="./homepage.html#contact">CONTACT</a></li>
                 </ul>
 
                 <div class="burger-menu-button" id="nav-toggle">
@@ -45,13 +46,14 @@
 
         <div class="burger-menu" id="nav-menu">
             <ul class="links">
-                <li><a href="#projet">PROJET</a></li>
-                <li><a href="#fonctionnement">FONCTIONNEMENT</a></li>
-                <li><a href="#deposer">DÉPOSER UNE ANNONCE</a></li>
-                <li><a href="#connexion">CONNEXION</a></li>
-                <li><a href="#adhesion">ADHÉSION</a></li>
-                <li><a href="#contact">CONTACT</a></li>
-            </ul>
+                <li><a href="./homepage.html">ACCUEIL</a></li>
+                    <!-- <li><a href="#projet">PROJET</a></li>
+                    <li><a href="#fonctionement">FONCTIONNEMENT</a></li> -->
+                    <li><a href="./homepage.html#deposer">DÉPOSER UNE ANNONCE</a></li>
+                    <li><a href="./connexion.html">CONNEXION</a></li>
+                    <li><a href="./homepage.html#adhesion">ADHÉSION</a></li>
+                    <li><a href="./homepage.html#contact">CONTACT</a></li>
+                </ul>
         </div>
     </header>
 
@@ -60,7 +62,7 @@
 
         <div class="container">
             <section id="inscription">
-                <div class="scrolling-text-container d-flex">
+                <div class="scrolling-text-container">
                     <p class="scrolling-text">Je donne un matériau</p>
                     <p class="scrolling-text">Je donne un matériau</p>
                     <p class="scrolling-text">Je donne un matériau</p>
@@ -75,8 +77,9 @@
                         <option value="Matériau bio-sourcé">Matériau bio-sourcé</option>
                         <option value="Matériau géo-sourcé">Matériau géo-sourcé</option>
                     </select>
-                    
-                    <label for="materiau-geo-select" class="materiau-select-geo" style="display: none;">Matériaux</label>
+
+                    <label for="materiau-geo-select" class="materiau-select-geo"
+                        style="display: none;">Matériaux</label>
                     <select name="materiau-geo-select" id="materiau-geo-select" style="display: none;" required>
                         <option value="">--</option>
                         <option value="materiau geo-source">terre</option>
@@ -86,8 +89,9 @@
                         <option value="materiau geo-source">verre</option>
                         <option value="materiau geo-source">céramique</option>
                     </select>
-                    
-                    <label for="materiau-bio-select" class="materiau-select-bio" style="display: none;">Matériaux</label>
+
+                    <label for="materiau-bio-select" class="materiau-select-bio"
+                        style="display: none;">Matériaux</label>
                     <select name="materiau-bio-select" id="materiau-bio-select" style="display: none;" required>
                         <option value="">--</option>
                         <option value="materiau bio-source">bois</option>
@@ -119,7 +123,7 @@
                             <option value="sceau">seau(x)</option>
                             <option value="metres">mètre(s) linéaire(s)</option>
                             <option value="metres carres">mètre(s) carré(s)</option>
-                            <option value="metres cubes">mètre(s) cube(s)</option>    
+                            <option value="metres cubes">mètre(s) cube(s)</option>
                         </select>
                     </div>
 
@@ -132,6 +136,11 @@
                     <input id="description" type="textarea" name="description" placeholder="Tapez votre description ici"
                         required>
 
+                    <div class="checkbox pt-3 pb-4">
+                        <input type="radio" id="registration" name="user-type" value="registration">
+                        <label for="registration">Je souhaite m’enregistrer pour une prochaine fois</label>
+                    </div>
+
                     <div class="foot_form">
                         <input type="submit" value="Valider mon annonce">
                     </div>
@@ -142,16 +151,22 @@
     </main>
 
     <script>
-        // SCRIPT NOUVELLE NAVBAR
-        const burgerMenuButton = document.querySelector('.burger-menu-button')
-        const burgerMenuButtonIcon = document.querySelector('.burger-menu-button i')
-        const burgerMenu = document.querySelector('.burger-menu')
-        const navLinks = document.querySelectorAll('.links a')
+        // SCRIPT NAVBAR / OPEN-BURGER AND HIDDEN SCROLLING-TEXT
+        const burgerMenuButton = document.querySelector('.burger-menu-button');
+        const burgerMenuButtonIcon = document.querySelector('.burger-menu-button i');
+        const burgerMenu = document.querySelector('.burger-menu');
+        const navLinks = document.querySelectorAll('.links a');
+        const scrollingTextContainers = document.querySelectorAll('.scrolling-text-container');
 
         burgerMenuButton.onclick = function () {
-            burgerMenu.classList.toggle('open')
-            const isOpen = burgerMenu.classList.contains('open')
-            burgerMenuButtonIcon.classList = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'
+            burgerMenu.classList.toggle('open');
+            const isOpen = burgerMenu.classList.contains('open');
+            burgerMenuButtonIcon.classList = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
+
+            // Add or remove the class to hide the scrolling text containers based on the menu state
+            scrollingTextContainers.forEach(container => {
+                container.classList.toggle('hide-on-menu-open', isOpen);
+            });
         }
 
         navLinks.forEach(link => {
@@ -160,46 +175,46 @@
                 burgerMenuButtonIcon.classList = 'fa-solid fa-bars';
             });
         });
-        // SCRIPT NOUVELLE NAVBAR
+        // SCRIPT NAVBAR / OPEN-BURGER AND HIDDEN SCROLLING-TEXT
 
         // SCRIPT SELECT MATÉRIAU
-    const classificationSelect = document.getElementById('classification-select');
-const materiauGeoSelect = document.getElementById('materiau-geo-select');
-const materiauBioSelect = document.getElementById('materiau-bio-select');
-const materiauGeoLabel = document.querySelector('.materiau-select-geo');
-const materiauBioLabel = document.querySelector('.materiau-select-bio');
+        const classificationSelect = document.getElementById('classification-select');
+        const materiauGeoSelect = document.getElementById('materiau-geo-select');
+        const materiauBioSelect = document.getElementById('materiau-bio-select');
+        const materiauGeoLabel = document.querySelector('.materiau-select-geo');
+        const materiauBioLabel = document.querySelector('.materiau-select-bio');
 
-classificationSelect.addEventListener('change', function () {
-    if (this.value === 'Matériau géo-sourcé') {
-        materiauGeoSelect.style.display = 'block';
-        materiauBioSelect.style.display = 'none';
-        materiauGeoLabel.style.display = 'block'; 
-        materiauBioLabel.style.display = 'none'; 
-    } else if (this.value === 'Matériau bio-sourcé') {
-        materiauGeoSelect.style.display = 'none';
-        materiauBioSelect.style.display = 'block';
-        materiauGeoLabel.style.display = 'none'; 
-        materiauBioLabel.style.display = 'block'; 
-    } else {
-        materiauGeoSelect.style.display = 'none';
-        materiauBioSelect.style.display = 'none';
-        materiauGeoLabel.style.display = 'none';
-        materiauBioLabel.style.display = 'none';
-    }
-});
-// SCRIPT SELECT MATÉRIAU
+        classificationSelect.addEventListener('change', function () {
+            if (this.value === 'Matériau géo-sourcé') {
+                materiauGeoSelect.style.display = 'block';
+                materiauBioSelect.style.display = 'none';
+                materiauGeoLabel.style.display = 'block';
+                materiauBioLabel.style.display = 'none';
+            } else if (this.value === 'Matériau bio-sourcé') {
+                materiauGeoSelect.style.display = 'none';
+                materiauBioSelect.style.display = 'block';
+                materiauGeoLabel.style.display = 'none';
+                materiauBioLabel.style.display = 'block';
+            } else {
+                materiauGeoSelect.style.display = 'none';
+                materiauBioSelect.style.display = 'none';
+                materiauGeoLabel.style.display = 'none';
+                materiauBioLabel.style.display = 'none';
+            }
+        });
+        // SCRIPT SELECT MATÉRIAU
 
-// SCRIPT QUANTITY
-const select = document.getElementById("quantity-select");
-    const maxNumber = 1000; // Spécifiez ici le nombre maximum souhaité
+        // SCRIPT QUANTITY
+        const select = document.getElementById("quantity-select");
+        const maxNumber = 1000; // Spécifiez ici le nombre maximum souhaité
 
-    for (let i = 1; i <= maxNumber; i++) {
-        const option = document.createElement("option");
-        option.text = i;
-        option.value = i;
-        select.appendChild(option);
-    }
-// SCRIPT QUANTITY
+        for (let i = 1; i <= maxNumber; i++) {
+            const option = document.createElement("option");
+            option.text = i;
+            option.value = i;
+            select.appendChild(option);
+        }
+        // SCRIPT QUANTITY
     </script>
 
 </body>

@@ -82,7 +82,7 @@
     }
 
     .burger-menu.open {
-        height: 83.2vh;
+        height: 100vh;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -126,7 +126,7 @@
         margin-right: 0px;
         margin-left: 0px;
         resize: vertical;
-        font-size: 1.7rem;
+        background-color: transparent;
     }
 
     label {
@@ -203,35 +203,6 @@
 
     .scrolling-text {
         display: block;
-    }
-
-    /* .no-scrolling-text {
-        font-size: 1.9rem;
-    } */
-
-    .bordure {
-        border: 1px solid black;
-    }
-
-    .text_rgpd {
-        width: 500px;
-        font-size: 10px;
-    }
-}
-
-
-/* --------------------------------------------------- */
-/* --------------------------------------------------- */
-/* ------------- MEDIA MIN-WIDTH 768PX --------------- */
-/* ------------------ SUP. OU ÉGALE ------------------ */
-/* --------------------------------------------------- */
-@media screen and (min-width: 768px) {
-    .no-scrolling-text {
-        display: none;
-    }
-
-    .scrolling-text {
-        display: block;
         margin-right: 500px;
     }
 
@@ -256,6 +227,27 @@
         }
     }
 
+    .hide-on-menu-open .scrolling-text {
+        display: none;
+    }
+
+    .bordure {
+        border: 1px solid black;
+    }
+
+    .text_rgpd {
+        width: 500px;
+        font-size: 10px;
+    }
+}
+
+
+/* --------------------------------------------------- */
+/* --------------------------------------------------- */
+/* ------------- MEDIA MIN-WIDTH 768PX --------------- */
+/* ------------------ SUP. OU ÉGALE ------------------ */
+/* --------------------------------------------------- */
+@media screen and (min-width: 768px) {
     #footer {
         background-color: #000000;
         color: white;

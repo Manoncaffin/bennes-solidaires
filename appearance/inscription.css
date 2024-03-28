@@ -82,7 +82,7 @@
     }
 
     .burger-menu.open {
-        height: 83.2vh;
+        height: 100vh;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -126,13 +126,13 @@
         margin-right: 0px;
         margin-left: 0px;
         resize: vertical;
-        font-size: 1.7rem;
+        background-color: transparent;
     }
 
     label {
         margin-right: 0px;
         margin-left: 0px;
-        width: 100%;
+        /* width: 100%; */
         font-size: 1.7rem;
     }
 
@@ -189,6 +189,7 @@
         resize: vertical;
         font-size: 1.7rem;
         color: rgb(123, 122, 122); 
+        background-color: transparent;
     }
 
     .checkbox {
@@ -201,13 +202,34 @@
     }
     /* FORM  */
 
-    .scrolling-text {
-        display: block;
+    .scrolling-text-container {
+        display: flex;
+        min-width: 100%;
+        overflow: hidden;
     }
 
-    /* .no-scrolling-text {
+    .scrolling-text {
+        display: block;
+        margin-right: 500px;
         font-size: 1.9rem;
-    } */
+        white-space: nowrap;
+        animation: scrollText 10s linear infinite;
+    }
+
+    @keyframes scrollText {
+        from {
+            transform: translateX(100%);
+        }
+
+        to {
+            transform: translateX(-100%);
+        }
+    }
+
+    .hide-on-menu-open .scrolling-text {
+        display: none;
+    }
+    
 
     .bordure {
         border: 1px solid black;
@@ -226,36 +248,6 @@
 /* ------------------ SUP. OU ÉGALE ------------------ */
 /* --------------------------------------------------- */
 @media screen and (min-width: 768px) {
-    .no-scrolling-text {
-        display: none;
-    }
-
-    .scrolling-text {
-        display: block;
-        margin-right: 500px;
-    }
-
-    .scrolling-text-container {
-        min-width: 100%;
-        overflow: hidden;
-    }
-
-    .scrolling-text {
-        font-size: 1.9rem;
-        white-space: nowrap;
-        animation: scrollText 10s linear infinite;
-    }
-
-    @keyframes scrollText {
-        from {
-            transform: translateX(100%);
-        }
-
-        to {
-            transform: translateX(-100%);
-        }
-    }
-
     #footer {
         background-color: #000000;
         color: white;

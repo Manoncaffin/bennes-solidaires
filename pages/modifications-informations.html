@@ -29,12 +29,13 @@
             </div>
             <div class="navbar">
                 <ul class="links">
-                    <li><a href="#projet">PROJET</a></li>
-                    <li><a href="#fonctionement">FONCTIONNEMENT</a></li>
-                    <li><a href="#deposer">DÉPOSER UNE ANNONCE</a></li>
-                    <li><a href="#connexion">CONNEXION</a></li>
-                    <li><a href="#adhesion">ADHÉSION</a></li>
-                    <li><a href="#contact">CONTACT</a></li>
+                    <li><a href="./homepage.html">ACCUEIL</a></li>
+                    <!-- <li><a href="#projet">PROJET</a></li>
+                    <li><a href="#fonctionement">FONCTIONNEMENT</a></li> -->
+                    <li><a href="./homepage.html#deposer">DÉPOSER UNE ANNONCE</a></li>
+                    <li><a href="./connexion.html">CONNEXION</a></li>
+                    <li><a href="./homepage.html#adhesion">ADHÉSION</a></li>
+                    <li><a href="./homepage.html#contact">CONTACT</a></li>
                 </ul>
 
                 <div class="burger-menu-button" id="nav-toggle">
@@ -45,12 +46,13 @@
 
         <div class="burger-menu" id="nav-menu">
             <ul class="links">
-                <li><a href="#projet">PROJET</a></li>
-                <li><a href="#fonctionnement">FONCTIONNEMENT</a></li>
-                <li><a href="#deposer">DÉPOSER UNE ANNONCE</a></li>
-                <li><a href="#connexion">CONNEXION</a></li>
-                <li><a href="#adhesion">ADHÉSION</a></li>
-                <li><a href="#contact">CONTACT</a></li>
+                <li><a href="./homepage.html">ACCUEIL</a></li>
+                <!-- <li><a href="#projet">PROJET</a></li>
+                <li><a href="#fonctionnement">FONCTIONNEMENT</a></li> -->
+                <li><a href="./homepage.html#deposer">DÉPOSER UNE ANNONCE</a></li>
+                <li><a href="./connexion.html">CONNEXION</a></li>
+                <li><a href="./homepage.html#adhesion">ADHÉSION</a></li>
+                <li><a href="./homepage.html#contact">CONTACT</a></li>
             </ul>
         </div>
     </header>
@@ -145,16 +147,22 @@
     </main>
 
     <script>
-        // SCRIPT NOUVELLE NAVBAR
-        const burgerMenuButton = document.querySelector('.burger-menu-button')
-        const burgerMenuButtonIcon = document.querySelector('.burger-menu-button i')
-        const burgerMenu = document.querySelector('.burger-menu')
-        const navLinks = document.querySelectorAll('.links a')
+        // SCRIPT NAVBAR / OPEN-BURGER AND HIDDEN SCROLLING-TEXT
+        const burgerMenuButton = document.querySelector('.burger-menu-button');
+        const burgerMenuButtonIcon = document.querySelector('.burger-menu-button i');
+        const burgerMenu = document.querySelector('.burger-menu');
+        const navLinks = document.querySelectorAll('.links a');
+        const scrollingTextContainers = document.querySelectorAll('.scrolling-text-container');
 
         burgerMenuButton.onclick = function () {
-            burgerMenu.classList.toggle('open')
-            const isOpen = burgerMenu.classList.contains('open')
-            burgerMenuButtonIcon.classList = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'
+            burgerMenu.classList.toggle('open');
+            const isOpen = burgerMenu.classList.contains('open');
+            burgerMenuButtonIcon.classList = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
+
+            // Add or remove the class to hide the scrolling text containers based on the menu state
+            scrollingTextContainers.forEach(container => {
+                container.classList.toggle('hide-on-menu-open', isOpen);
+            });
         }
 
         navLinks.forEach(link => {
@@ -163,7 +171,7 @@
                 burgerMenuButtonIcon.classList = 'fa-solid fa-bars';
             });
         });
-        // SCRIPT NOUVELLE NAVBAR
+        // SCRIPT NAVBAR / OPEN-BURGER AND HIDDEN SCROLLING-TEXT
 
         // AFFICHAGE TEXTE RGPD
         // Sélection des boutons radio
