@@ -10,6 +10,7 @@
 /* ------------------ SUP. OU ÉGALE ------------------ */
 /* --------------------------------------------------- */
 @media (min-width: 350px) {
+
     html,
     body {
         background-color: rgb(232, 232, 232);
@@ -45,7 +46,7 @@
     .container_menu {
         display: flex;
         justify-content: space-between;
-        padding: 50px;
+        padding: 20px 50px 20px 50px;
     }
 
     .navbar .links {
@@ -53,7 +54,7 @@
     }
 
     .logo img {
-        width: 150px;
+        width: 250px;
     }
 
     header {
@@ -108,6 +109,7 @@
         padding: 15px;
         transform: scale(3);
     }
+
     /* NAVBAR */
 
     /* FORM  */
@@ -118,8 +120,10 @@
         padding: 8px;
         border: none;
         outline: none;
-        border-bottom: 1px solid rgb(92, 91, 91); /* Ajout de la bordure inférieure */
-        border-radius: 0; /* Suppression des coins arrondis */
+        border-bottom: 1px solid rgb(92, 91, 91);
+        /* Ajout de la bordure inférieure */
+        border-radius: 0;
+        /* Suppression des coins arrondis */
         box-sizing: border-box;
         margin-top: 6px;
         margin-bottom: 16px;
@@ -180,15 +184,15 @@
         border: none;
         outline: none;
         padding: 8px;
-        border-bottom: 1px solid rgb(92, 91, 91); 
-        border-radius: 0; 
+        border-bottom: 1px solid rgb(92, 91, 91);
+        border-radius: 0;
         box-sizing: border-box;
         margin-bottom: 16px;
         margin-right: 0px;
         margin-left: 0px;
         resize: vertical;
         font-size: 1.7rem;
-        color: rgb(123, 122, 122); 
+        color: rgb(123, 122, 122);
     }
 
     .checkbox {
@@ -199,6 +203,7 @@
         margin-right: 20px;
         width: 20px;
     }
+
     /* FORM  */
 
     .scrolling-text {
@@ -310,9 +315,10 @@
     }
 
     .logo img {
-        width: 265px;
-        padding: 10px 110px 10px 110px;
+        width: 400px;
+        padding: 15px 110px 15px 110px;
     }
+
     /* NAVBAR */
 
     /* FORM */
@@ -329,7 +335,7 @@
     input[type=submit] {
         margin-top: 20px;
     }
-    
+
     #activity-select {
         width: 100%;
         border: none;
@@ -337,8 +343,8 @@
         padding: 8px;
         border: none;
         outline: none;
-        border-bottom: 1px solid rgb(92, 91, 91); 
-        border-radius: 0; 
+        border-bottom: 1px solid rgb(92, 91, 91);
+        border-radius: 0;
         box-sizing: border-box;
         margin-top: 6px;
         margin-bottom: 16px;
@@ -347,6 +353,7 @@
         resize: vertical;
         font-size: 1.7rem;
     }
+
     /* FORM */
 }
 
@@ -357,6 +364,7 @@
 /* ----------------- SUP. OU ÉGALE ------------------- */
 /* --------------------------------------------------- */
 @media only screen and (min-width: 1200px) {
+
     /* NAVBAR  */
     .navbar {
         padding: 10px 140px 10px 140px;
@@ -374,8 +382,8 @@
     }
 
     .logo img {
-        width: 330px;
-        padding: 10px 140px 10px 140px;
+        width: 500px;
+        padding: 20px 140px 20px 140px;
     }
 
     .container {
@@ -387,6 +395,7 @@
         max-width: 2000px;
         margin: 0;
     }
+
     /* NAVBAR  */
 }
 
@@ -398,6 +407,7 @@
 /* ----------------- SUP. OU ÉGALE ------------------- */
 /* --------------------------------------------------- */
 @media only screen and (min-width: 1500px) {
+
     /* NAVBAR */
     .navbar {
         display: flex;
@@ -408,5 +418,6 @@
         display: flex;
         justify-content: space-between;
     }
+
     /* NAVBAR */
 }

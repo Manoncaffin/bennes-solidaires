@@ -35,8 +35,8 @@
         }
     }
 
-    /* NAVBAR */
-    .navbar .burger-menu-button {
+     /* NAVBAR */
+     .navbar .burger-menu-button {
         color: black;
         cursor: pointer;
         display: none;
@@ -46,7 +46,7 @@
     .container_menu {
         display: flex;
         justify-content: space-between;
-        padding: 50px;
+        padding: 20px 50px 20px 50px;
     }
 
     .navbar .links {
@@ -54,7 +54,7 @@
     }
 
     .logo img {
-        width: 150px;
+        width: 250px;
     }
 
     header {
@@ -109,7 +109,6 @@
         padding: 15px;
         transform: scale(3);
     }
-
     /* NAVBAR */
 
     /* FORM  */
@@ -292,8 +291,8 @@
         font-size: 1.5rem;
     }
 
-    /* NAVBAR */
-    .navbar {
+     /* NAVBAR */
+     .navbar {
         width: 100%;
         display: flex;
         justify-content: center;
@@ -326,10 +325,9 @@
     }
 
     .logo img {
-        width: 265px;
-        padding: 10px 110px 10px 110px;
+        width: 400px;
+        padding: 15px 110px 15px 110px;
     }
-
     /* NAVBAR */
 
     /* FORM */
@@ -375,7 +373,6 @@
 /* ----------------- SUP. OU ÉGALE ------------------- */
 /* --------------------------------------------------- */
 @media only screen and (min-width: 1200px) {
-
     /* NAVBAR  */
     .navbar {
         padding: 10px 140px 10px 140px;
@@ -393,8 +390,8 @@
     }
 
     .logo img {
-        width: 330px;
-        padding: 10px 140px 10px 140px;
+        width: 500px;
+        padding: 20px 140px 20px 140px;
     }
 
     .container {
@@ -406,7 +403,6 @@
         max-width: 2000px;
         margin: 0;
     }
-
     /* NAVBAR  */
 }
 
@@ -418,17 +414,15 @@
 /* ----------------- SUP. OU ÉGALE ------------------- */
 /* --------------------------------------------------- */
 @media only screen and (min-width: 1500px) {
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: center;
+}
 
-    /* NAVBAR */
-    .navbar {
-        display: flex;
-        justify-content: center;
-    }
-
-    .navbar .links {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    /* NAVBAR */
+.navbar .links {
+    display: flex;
+    justify-content: space-between;
+}
+/* NAVBAR */
 }

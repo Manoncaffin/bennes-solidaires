@@ -9,7 +9,7 @@
 /* ------------- MEDIA MIN-WIDTH 350PX --------------- */
 /* ------------------ SUP. OU ÉGALE ------------------ */
 /* --------------------------------------------------- */
-@media (min-width: 350px) {
+@media screen and (min-width: 350px) {
     html,
     body {
         background-color: rgb(232, 232, 232);
@@ -34,7 +34,8 @@
         }
     }
 
-    .navbar .burger-menu-button {
+     /* NAVBAR */
+     .navbar .burger-menu-button {
         color: black;
         cursor: pointer;
         display: none;
@@ -44,7 +45,7 @@
     .container_menu {
         display: flex;
         justify-content: space-between;
-        padding: 50px;
+        padding: 20px 50px 20px 50px;
     }
 
     .navbar .links {
@@ -52,7 +53,7 @@
     }
 
     .logo img {
-        width: 420px;
+        width: 250px;
     }
 
     header {
@@ -105,10 +106,9 @@
 
     .burger-menu-button i {
         padding: 15px;
-        /* background-color: rgb(59, 106, 236); */
-        /* border-radius: 5px; */
         transform: scale(3);
     }
+    /* NAVBAR */
 
     .hide-on-menu-open {
         display: none;
@@ -520,12 +520,12 @@ h2 {
         font-size: 3rem;
     }
 
-    /* NOUVELLE NAVBAR */
+    /* NAVBAR */
     .navbar {
         width: 100%;
         display: flex;
         justify-content: center;
-        padding: 15px 110px 15px 110px;
+        padding: 10px 110px 10px 110px;
         background-color: rgb(59, 106, 236);
     }
 
@@ -535,7 +535,7 @@ h2 {
 
     .navbar .links {
         display: flex;
-        gap: 3rem;
+        justify-content: space-between;
     }
 
     .burger-menu {
@@ -543,6 +543,7 @@ h2 {
     }
 
     .links {
+        width: 100%;
         font-size: 1.2rem;
     }
 
@@ -553,10 +554,9 @@ h2 {
     }
 
     .logo img {
-        width: 850px;
-        padding: 70px 110px 70px 110px;
+        width: 800px;
     }
-    /* NOUVELLE NAVBAR */
+    /* NAVBAR */
 }
 
 
@@ -668,26 +668,37 @@ h2 {
         align-items: start;
     }
 
-    /* NOUVELLE NAVBAR  */
+    /* NAVBAR  */
     .navbar {
-        padding: 20px;
+        padding: 10px 140px 10px 140px;
+        display: flex;
+        justify-content: center;
     }
 
     .navbar .links {
         display: flex;
-        gap: 5rem;
+        justify-content: space-between;
     }
 
     .links {
-        font-size: 1.9rem;
+        font-size: 1.3rem;
     }
 
     .logo img {
-        width: 1070px;
-        padding: 70px 140px 70px 140px;
+        width: 1000px;
+        padding: 40px 140px 40px 140px;
     }
+
+    .container {
+        box-sizing: border-box;
+        border-radius: 5px;
+        width: 100%;
+        min-width: 980px;
+        max-width: 2000px;
+        margin: 0;
+    }
+    /* NAVBAR  */
 }
-/* NOUVELLE NAVBAR  */
 
 /* --------------------------------------------------- */
 /* --------------------------------------------------- */
