@@ -35,8 +35,8 @@
         }
     }
 
-    /* NAVBAR */
-    .navbar .burger-menu-button {
+     /* NAVBAR */
+     .navbar .burger-menu-button {
         color: black;
         cursor: pointer;
         display: none;
@@ -109,33 +109,12 @@
         padding: 15px;
         transform: scale(3);
     }
-
     /* NAVBAR */
 
     /* FORM  */
-    input[type=text],
-    input[type=email],
-    input[type=password] {
-        width: 100%;
-        padding: 8px;
-        border: none;
-        outline: none;
-        border-bottom: 1px solid rgb(92, 91, 91);
-        border-radius: 0;
-        box-sizing: border-box;
-        margin-top: 6px;
-        margin-bottom: 16px;
-        margin-right: 0px;
-        margin-left: 0px;
-        resize: vertical;
-        background-color: transparent;
-        font-size: 1.3rem;
-    }
-
     label {
         margin-right: 0px;
         margin-left: 0px;
-        width: 100%;
         font-size: 1.3rem;
     }
 
@@ -147,19 +126,24 @@
         border-radius: 15px;
         cursor: pointer;
         margin-bottom: 10px;
-        margin-top: 40px;
+        margin-top: 5px;
         font-size: 1.4rem;
+    }
+
+    .foot_form {
+        margin-top: 20px;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        font-size: 1.2rem;
     }
 
     input[type=submit]:hover {
         background-color: rgb(232, 232, 232);
     }
 
-    .foot_form {
-        justify-content: center;
-        flex-direction: column;
-        text-align: center;
-        font-size: 1.2rem;
+    .links_form {
+        font-size: 1rem;
     }
 
     .container {
@@ -178,7 +162,10 @@
         justify-content: center;
     }
 
-    #activity-select {
+    #materiau-bio-select,
+    #materiau-geo-select,
+    #classification-select,
+    #geographical {
         width: 100%;
         border: none;
         outline: none;
@@ -190,19 +177,10 @@
         margin-right: 0px;
         margin-left: 0px;
         resize: vertical;
-        font-size: 1.4rem;
         color: rgb(123, 122, 122);
+        background-color: transparent;
+        font-size: 1.3rem;
     }
-
-    .checkbox {
-        display: flex;
-    }
-
-    input[type=radio] {
-        margin-right: 20px;
-        width: 20px;
-    }
-
     /* FORM  */
 
     .scrolling-text {
@@ -213,12 +191,15 @@
     .scrolling-text-container {
         min-width: 100%;
         overflow: hidden;
+        display: flex;
     }
 
     .scrolling-text {
         font-size: 1.9rem;
         white-space: nowrap;
         animation: scrollText 10s linear infinite;
+        animation-direction: alternate-reverse;
+        
     }
 
     @keyframes scrollText {
@@ -237,11 +218,6 @@
 
     .bordure {
         border: 1px solid black;
-    }
-
-    .text_rgpd {
-        width: 500px;
-        font-size: 10px;
     }
 }
 
@@ -280,8 +256,8 @@
         font-size: 1.5rem;
     }
 
-    /* NAVBAR */
-    .navbar {
+     /* NAVBAR */
+     .navbar {
         width: 100%;
         display: flex;
         justify-content: center;
@@ -317,7 +293,6 @@
         width: 400px;
         padding: 15px 110px 15px 110px;
     }
-
     /* NAVBAR */
 
     /* FORM */
@@ -330,29 +305,6 @@
         max-width: 1500px;
         margin: 0;
     }
-
-    input[type=submit] {
-        margin-top: 20px;
-    }
-
-    #activity-select {
-        width: 100%;
-        border: none;
-        outline: none;
-        padding: 8px;
-        border: none;
-        outline: none;
-        border-bottom: 1px solid rgb(92, 91, 91);
-        border-radius: 0;
-        box-sizing: border-box;
-        margin-top: 6px;
-        margin-bottom: 16px;
-        margin-right: 0px;
-        margin-left: 0px;
-        resize: vertical;
-        font-size: 1.7rem;
-    }
-
     /* FORM */
 }
 
@@ -363,7 +315,6 @@
 /* ----------------- SUP. OU ÉGALE ------------------- */
 /* --------------------------------------------------- */
 @media only screen and (min-width: 1200px) {
-
     /* NAVBAR  */
     .navbar {
         padding: 10px 140px 10px 140px;
@@ -394,7 +345,6 @@
         max-width: 2000px;
         margin: 0;
     }
-
     /* NAVBAR  */
 }
 
@@ -406,17 +356,15 @@
 /* ----------------- SUP. OU ÉGALE ------------------- */
 /* --------------------------------------------------- */
 @media only screen and (min-width: 1500px) {
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: center;
+}
 
-    /* NAVBAR */
-    .navbar {
-        display: flex;
-        justify-content: center;
-    }
-
-    .navbar .links {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    /* NAVBAR */
+.navbar .links {
+    display: flex;
+    justify-content: space-between;
+}
+/* NAVBAR */
 }

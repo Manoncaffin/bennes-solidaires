@@ -12,7 +12,7 @@
     <meta name="Robots" content="All">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="../appearance/annonce-donner.css">
+    <link rel="stylesheet" href="../appearance/annonce-chercher.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link href="https://api.fontshare.com/v2/css?f[]=excon@400,900,700,500,300,100,1&display=swap" rel="stylesheet">
@@ -60,10 +60,10 @@
         <div class="container">
             <section id="inscription">
                 <div class="scrolling-text-container">
-                    <p class="scrolling-text">Je donne un matériau</p>
-                    <p class="scrolling-text">Je donne un matériau</p>
-                    <p class="scrolling-text">Je donne un matériau</p>
-                    <p class="scrolling-text">Je donne un matériau</p>
+                    <p class="scrolling-text">Je cherche un matériau</p>
+                    <p class="scrolling-text">Je cherche un matériau</p>
+                    <p class="scrolling-text">Je cherche un matériau</p>
+                    <p class="scrolling-text">Je cherche un matériau</p>
                 </div>
                 <div class="bordure mb-5"></div>
 
@@ -74,6 +74,7 @@
                         <option value="Matériau bio-sourcé">Matériau bio-sourcé</option>
                         <option value="Matériau géo-sourcé">Matériau géo-sourcé</option>
                     </select>
+                
 
                     <label for="materiau-geo-select" class="materiau-select-geo"
                         style="display: none;">Matériaux</label>
@@ -104,119 +105,75 @@
                         <option value="materiau bio-source">marc de café</option>
                     </select>
 
-                    <div class="quantity">
-                        <label for="number" class="quantity-select">Quantité</label>
-                        <select name="number-select" id="quantity-select" required>
-                            <option value="">--</option>
-                            <option value=""></option>
-                            <option value=""></option>
-                        </select>
+                    <label for="geographical">Région</label>
+                    <input id="geographical" type="text" name="geographical"
+                        placeholder="Choisissez une région" required>
 
-                        <label for="value" class="value-select">Valeur</label>
-                        <select name="value" id="value-select" required>
-                            <option value="">--</option>
-                            <option value="kg">kg</option>
-                            <option value="kg">tonnes</option>
-                            <option value="sceau">seau(x)</option>
-                            <option value="metres">mètre(s) linéaire(s)</option>
-                            <option value="metres carres">mètre(s) carré(s)</option>
-                            <option value="metres cubes">mètre(s) cube(s)</option>
-                        </select>
-                    </div>
-
-                    <div class="file">
-                        <label for="file">Joindre des photos</label>
-                        <input id="file" type="file" name="file" placeholder="Choisir un fichier" required>
-                    </div>
-
-                    <label for="description">Description</label>
-                    <input id="description" type="textarea" name="description"
-                        placeholder="Entrez votre description ici" required>
-
-                    <label for="geographical">Localisation</label>
-                    <input id="geographical" type="text" name="geographical" placeholder="Entrez un code postal"
-                        required>
-
-                    <div class="checkbox pt-3 pb-4">
-                        <input type="radio" id="registration" name="user-type" value="registration">
-                        <label for="registration">Je souhaite m’enregistrer pour une prochaine fois</label>
-                    </div>
-
-                    <div class="foot_form">
-                        <input type="submit" value="Valider mon annonce">
-                    </div>
+                        <div class="foot_form">
+                            <a href="#">Vous n'avez pas trouvé ce que vous cherchiez ?</a>
+                            <input type="submit" value="Postez cette annonce">
+                            
+                        </div>
                 </form>
             </section>
         </div>
 
-    </main>
+                </main>
 
-    <script>
-        // SCRIPT NAVBAR / OPEN-BURGER AND HIDDEN SCROLLING-TEXT
-        const burgerMenuButton = document.querySelector('.burger-menu-button');
-        const burgerMenuButtonIcon = document.querySelector('.burger-menu-button i');
-        const burgerMenu = document.querySelector('.burger-menu');
-        const navLinks = document.querySelectorAll('.links a');
-        const scrollingTextContainers = document.querySelectorAll('.scrolling-text-container');
-
-        burgerMenuButton.onclick = function () {
-            burgerMenu.classList.toggle('open');
-            const isOpen = burgerMenu.classList.contains('open');
-            burgerMenuButtonIcon.classList = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
-
-            // Add or remove the class to hide the scrolling text containers based on the menu state
-            scrollingTextContainers.forEach(container => {
-                container.classList.toggle('hide-on-menu-open', isOpen);
-            });
-        }
-
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                burgerMenu.classList.remove('open');
-                burgerMenuButtonIcon.classList = 'fa-solid fa-bars';
-            });
-        });
-        // SCRIPT NAVBAR / OPEN-BURGER AND HIDDEN SCROLLING-TEXT
-
-        // SCRIPT SELECT MATÉRIAU
-        const classificationSelect = document.getElementById('classification-select');
-        const materiauGeoSelect = document.getElementById('materiau-geo-select');
-        const materiauBioSelect = document.getElementById('materiau-bio-select');
-        const materiauGeoLabel = document.querySelector('.materiau-select-geo');
-        const materiauBioLabel = document.querySelector('.materiau-select-bio');
-
-        classificationSelect.addEventListener('change', function () {
-            if (this.value === 'Matériau géo-sourcé') {
-                materiauGeoSelect.style.display = 'block';
-                materiauBioSelect.style.display = 'none';
-                materiauGeoLabel.style.display = 'block';
-                materiauBioLabel.style.display = 'none';
-            } else if (this.value === 'Matériau bio-sourcé') {
-                materiauGeoSelect.style.display = 'none';
-                materiauBioSelect.style.display = 'block';
-                materiauGeoLabel.style.display = 'none';
-                materiauBioLabel.style.display = 'block';
-            } else {
-                materiauGeoSelect.style.display = 'none';
-                materiauBioSelect.style.display = 'none';
-                materiauGeoLabel.style.display = 'none';
-                materiauBioLabel.style.display = 'none';
-            }
-        });
-        // SCRIPT SELECT MATÉRIAU
-
-        // SCRIPT QUANTITY
-        const select = document.getElementById("quantity-select");
-        const maxNumber = 1000; // Spécifiez ici le nombre maximum souhaité
-
-        for (let i = 1; i <= maxNumber; i++) {
-            const option = document.createElement("option");
-            option.text = i;
-            option.value = i;
-            select.appendChild(option);
-        }
-        // SCRIPT QUANTITY
-    </script>
+                <script>
+                    // SCRIPT NAVBAR / OPEN-BURGER AND HIDDEN SCROLLING-TEXT
+                    const burgerMenuButton = document.querySelector('.burger-menu-button');
+                    const burgerMenuButtonIcon = document.querySelector('.burger-menu-button i');
+                    const burgerMenu = document.querySelector('.burger-menu');
+                    const navLinks = document.querySelectorAll('.links a');
+                    const scrollingTextContainers = document.querySelectorAll('.scrolling-text-container');
+            
+                    burgerMenuButton.onclick = function () {
+                        burgerMenu.classList.toggle('open');
+                        const isOpen = burgerMenu.classList.contains('open');
+                        burgerMenuButtonIcon.classList = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
+            
+                        // Add or remove the class to hide the scrolling text containers based on the menu state
+                        scrollingTextContainers.forEach(container => {
+                            container.classList.toggle('hide-on-menu-open', isOpen);
+                        });
+                    }
+            
+                    navLinks.forEach(link => {
+                        link.addEventListener('click', () => {
+                            burgerMenu.classList.remove('open');
+                            burgerMenuButtonIcon.classList = 'fa-solid fa-bars';
+                        });
+                    });
+                    // SCRIPT NAVBAR / OPEN-BURGER AND HIDDEN SCROLLING-TEXT
+            
+                    // SCRIPT SELECT MATÉRIAU
+                    const classificationSelect = document.getElementById('classification-select');
+                    const materiauGeoSelect = document.getElementById('materiau-geo-select');
+                    const materiauBioSelect = document.getElementById('materiau-bio-select');
+                    const materiauGeoLabel = document.querySelector('.materiau-select-geo');
+                    const materiauBioLabel = document.querySelector('.materiau-select-bio');
+            
+                    classificationSelect.addEventListener('change', function () {
+                        if (this.value === 'Matériau géo-sourcé') {
+                            materiauGeoSelect.style.display = 'block';
+                            materiauBioSelect.style.display = 'none';
+                            materiauGeoLabel.style.display = 'block';
+                            materiauBioLabel.style.display = 'none';
+                        } else if (this.value === 'Matériau bio-sourcé') {
+                            materiauGeoSelect.style.display = 'none';
+                            materiauBioSelect.style.display = 'block';
+                            materiauGeoLabel.style.display = 'none';
+                            materiauBioLabel.style.display = 'block';
+                        } else {
+                            materiauGeoSelect.style.display = 'none';
+                            materiauBioSelect.style.display = 'none';
+                            materiauGeoLabel.style.display = 'none';
+                            materiauBioLabel.style.display = 'none';
+                        }
+                    });
+                    // SCRIPT SELECT MATÉRIAU
+                </script>
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"

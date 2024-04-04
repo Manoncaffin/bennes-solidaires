@@ -151,10 +151,10 @@
     }
 
     .foot_form {
-        /* display: flex; */
         justify-content: center !important;
         flex-direction: column;
         text-align: center;
+        font-size: 1.2rem;
     }
 
     input[type=submit]:hover {
@@ -163,15 +163,17 @@
 
     .container {
         box-sizing: border-box;
-        border-radius: 5px;
-        padding: 50px;
+        border-radius: 60px;
+        padding: 30px 50px 30px 50px;
         width: 100%;
         max-width: 530px;
-        margin: 0 auto;
+        margin-top: 40px;
+        /* background-color: rgb(212, 212, 212); */
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     }
 
     h1 {
-        padding: 20px;
+        padding: 20px 20px 40px 20px;
         font-family: "Lemon Milk";
         font-weight: 600;
         display: flex;
