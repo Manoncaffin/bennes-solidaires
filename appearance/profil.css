@@ -1,0 +1,335 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* --------------------------------------------------- */
+/* --------------------------------------------------- */
+/* ------------- MEDIA MIN-WIDTH 350PX --------------- */
+/* ------------------ SUP. OU ÉGALE ------------------ */
+/* --------------------------------------------------- */
+@media (min-width: 350px) {
+
+    html,
+    body {
+        background-color: rgb(232, 232, 232);
+    }
+
+    body {
+        font-family: "Abordage";
+        font-size: 1.3rem;
+        color: black;
+        min-width: 100vw;
+        min-height: 100vh;
+        text-align: justify;
+        overflow-x: hidden;
+
+        p {
+            margin: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+    }
+
+     /* NAVBAR */
+    .navbar .burger-menu-button {
+        color: black;
+        cursor: pointer;
+        display: none;
+        display: block;
+    }
+
+    .container_menu {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 50px 20px 50px;
+    }
+
+    .navbar .links {
+        display: none;
+    }
+
+    .logo img {
+        width: 250px;
+    }
+
+    header {
+        position: relative;
+        background-color: rgb(65, 238, 186);
+    }
+
+    .navbar {
+        display: flex;
+        align-items: end;
+        justify-content: center;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    .burger-menu {
+        display: block;
+        height: 0;
+        position: absolute;
+        width: 100%;
+        overflow: hidden;
+        transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        background-color: rgb(65, 238, 186);
+    }
+
+    .burger-menu.open {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .burger-menu.open a {
+        font-size: 4rem;
+    }
+
+    .links {
+        margin: 0;
+        padding: 0;
+    }
+
+    .burger-menu li {
+        padding: 0.7rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .burger-menu-button i {
+        padding: 15px;
+        transform: scale(3);
+    }
+    /* NAVBAR */
+
+    .foot_form {
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+    .container {
+        box-sizing: border-box;
+        border-radius: 5px;
+        padding: 50px;
+        width: 100%;
+        min-width: 980px;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .hide-on-menu-open .scrolling-text {
+        display: none;
+    }
+}
+
+
+
+/* --------------------------------------------------- */
+/* --------------------------------------------------- */
+/* ------------- MEDIA MIN-WIDTH 1000PX --------------- */
+/* ----------------- SUP. OU ÉGALE ------------------- */
+/* --------------------------------------------------- */
+@media only screen and (min-width: 1000px) {
+    body {
+        font-family: "Abordage";
+        font-size: 1.5rem;
+    }
+
+     /* NAVBAR */
+    .navbar {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 10px 110px 10px 110px;
+        background-color: rgb(59, 106, 236);
+    }
+
+    .navbar .burger-menu-button {
+        display: none;
+    }
+
+    .navbar .links {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .burger-menu {
+        display: none;
+    }
+
+    .links {
+        width: 100%;
+        font-size: 1.2rem;
+    }
+
+    .container_menu {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .logo img {
+        width: 400px;
+        padding: 15px 110px 15px 110px;
+    }
+    /* NAVBAR */
+}
+
+
+/* --------------------------------------------------- */
+/* --------------------------------------------------- */
+/* ------------- MEDIA MIN-WIDTH 1200PX --------------- */
+/* ----------------- SUP. OU ÉGALE ------------------- */
+/* --------------------------------------------------- */
+@media only screen and (min-width: 1200px) {
+    /* NAVBAR  */
+    .navbar {
+        padding: 10px 140px 10px 140px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .navbar .links {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .links {
+        font-size: 1.3rem;
+    }
+
+    .logo img {
+        width: 500px;
+        padding: 20px 140px 20px 140px;
+    }
+
+    .container {
+        box-sizing: border-box;
+        border-radius: 5px;
+        padding: 20px 140px 20px 140px;
+        width: 100%;
+        min-width: 980px;
+        max-width: 2000px;
+        margin: 0;
+    }
+    /* NAVBAR  */
+
+    .top {
+        display: flex;
+        justify-content:space-between;
+    }
+
+    .form_profil {
+        width: fit-content;
+        padding: 15px;
+        height: 50px;
+        border-radius: 20px;
+        background-color: white;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+
+    }
+
+    .form_circle {
+        width: 130px;
+        height: 130px;
+        border-radius: 100%;
+        background-color: rgb(65, 238, 186);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 60px;
+    }
+
+    h1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 4rem;
+        font-family: "Lemon Milk";
+    }
+
+    /* REVOIR */
+    .icon {
+        margin-top: 100px;
+    }
+
+    .form_profil_large_one {
+        margin-top: 40px;
+        width: 100%;
+        padding: 15px;
+        height: 180px;
+        border-radius: 40px;
+        background-color: white;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        display: flex;
+        align-items: center;
+    }
+
+    .form_profil_large_two {
+        margin-top: 40px;
+        width: 100%;
+        padding: 15px;
+        height: 200px;
+        border-radius: 40px;
+        background-color: white;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    span {
+        text-decoration: underline;
+    }
+
+    .form_medium {
+        margin-top: 40px;
+        width: 30%;
+        padding: 35px 20px 30px 20px;
+        height: 150px;
+        border-radius: 40px;
+        background-color: white;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .form_medium_all {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    p {
+        font-size: 1.3rem;
+    }
+}
+
+
+
+/* --------------------------------------------------- */
+/* --------------------------------------------------- */
+/* ------------- MEDIA MIN-WIDTH 1500PX --------------- */
+/* ----------------- SUP. OU ÉGALE ------------------- */
+/* --------------------------------------------------- */
+@media only screen and (min-width: 1500px) {
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar .links {
+    display: flex;
+    justify-content: space-between;
+}
+/* NAVBAR */
+}
