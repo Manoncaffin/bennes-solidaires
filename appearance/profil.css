@@ -129,10 +129,6 @@
         margin: 0 auto;
     }
 
-    .hide-on-menu-open .scrolling-text {
-        display: none;
-    }
-
     .top {
         display: flex;
         justify-content: space-between;
