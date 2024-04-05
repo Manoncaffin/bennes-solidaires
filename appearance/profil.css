@@ -35,7 +35,7 @@
         }
     }
 
-     /* NAVBAR */
+    /* NAVBAR */
     .navbar .burger-menu-button {
         color: black;
         cursor: pointer;
@@ -109,6 +109,7 @@
         padding: 15px;
         transform: scale(3);
     }
+
     /* NAVBAR */
 
     .foot_form {
@@ -131,6 +132,112 @@
     .hide-on-menu-open .scrolling-text {
         display: none;
     }
+
+    .top {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .form_profil {
+        width: fit-content;
+        padding: 20px;
+        height: 50px;
+        border-radius: 20px;
+        background-color: white;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .form_circle {
+        width: 130px;
+        height: 130px;
+        border-radius: 100%;
+        background-color: rgb(65, 238, 186);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 60px;
+    }
+
+    h1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 5rem;
+        font-family: "Lemon Milk";
+    }
+
+    /* REVOIR */
+    /* .icon {
+        margin-top: 100px;
+        transform: scale(2);
+    } */
+
+    .fa-regular.fa-pen-to-square,
+    .fa-regular.fa-folder,
+    .fa-regular.fa-message {
+        font-size: 80px;
+    }
+
+    .form_profil_large_one {
+        margin-top: 40px;
+        width: 100%;
+        padding: 35px 40px 30px 40px;
+        height: 180px;
+        border-radius: 40px;
+        background-color: white;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        display: flex;
+        align-items: center;
+    }
+
+    .form_profil_large_two {
+        margin-top: 40px;
+        width: 100%;
+        padding: 35px 40px 30px 40px;
+        height: 350px;
+        border-radius: 40px;
+        background-color: white;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    span {
+        text-decoration: underline;
+    }
+
+    .form_medium {
+        display: flex;
+        margin-top: 40px;
+        width: 100%;
+        padding: 35px 40px 30px 40px;
+        height: 170px;
+        border-radius: 40px;
+        background-color: white;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        align-items: center;
+    }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        margin-left: 60px;
+    }
+
+    .form_medium_all {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    p {
+        font-size: 1.8rem;
+    }
 }
 
 
@@ -146,7 +253,7 @@
         font-size: 1.5rem;
     }
 
-     /* NAVBAR */
+    /* NAVBAR */
     .navbar {
         width: 100%;
         display: flex;
@@ -183,7 +290,17 @@
         width: 400px;
         padding: 15px 110px 15px 110px;
     }
+
     /* NAVBAR */
+
+    .text {
+        margin-top: 5px;
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+        font-size: 1rem;
+        margin-left: 60px;
+    }
 }
 
 
@@ -193,6 +310,7 @@
 /* ----------------- SUP. OU ÉGALE ------------------- */
 /* --------------------------------------------------- */
 @media only screen and (min-width: 1200px) {
+
     /* NAVBAR  */
     .navbar {
         padding: 10px 140px 10px 140px;
@@ -223,21 +341,22 @@
         max-width: 2000px;
         margin: 0;
     }
+
     /* NAVBAR  */
 
     .top {
         display: flex;
-        justify-content:space-between;
+        justify-content: start;
+    }
+
+    .fa-regular.fa-pen-to-square,
+    .fa-regular.fa-folder,
+    .fa-regular.fa-message {
+        font-size: 40px;
     }
 
     .form_profil {
-        width: fit-content;
-        padding: 15px;
-        height: 50px;
-        border-radius: 20px;
-        background-color: white;
-        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-
+        margin-right: 40px;
     }
 
     .form_circle {
@@ -264,52 +383,52 @@
         margin-top: 100px;
     }
 
+    .form_profil_large_one,
+    .form_profil_large_two {
+        margin-top: 35px;
+        padding: 20px 30px 20px 30px;
+    }
+
     .form_profil_large_one {
-        margin-top: 40px;
-        width: 100%;
-        padding: 15px;
         height: 180px;
-        border-radius: 40px;
-        background-color: white;
-        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-        display: flex;
-        align-items: center;
     }
 
     .form_profil_large_two {
-        margin-top: 40px;
-        width: 100%;
-        padding: 15px;
         height: 200px;
-        border-radius: 40px;
-        background-color: white;
-        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-    }
-
-    span {
-        text-decoration: underline;
-    }
-
-    .form_medium {
-        margin-top: 40px;
-        width: 30%;
-        padding: 35px 20px 30px 20px;
-        height: 150px;
-        border-radius: 40px;
-        background-color: white;
-        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     }
 
     .form_medium_all {
         display: flex;
         justify-content: space-between;
+        flex-direction: row;
+    }
+
+    .form_medium {
+        display: flex;
+        justify-content: start;
+        flex-direction: column;
+        align-items: start;
+        width: 30%;
+        margin-top: 35px;
+        margin-right: 0;
+        padding: 35px 30px 30px 30px;
+    }
+
+    .text {
+        margin-top: 5px;
+        display: flex;
+        flex-direction: column;
+        margin-left: 0;
+        text-align: start;
+        margin-top: 10px;
+
+        p {
+            font-size: 1.1rem;
+        }
     }
 
     p {
-        font-size: 1.3rem;
+        font-size: 1.27rem;
     }
 }
 
@@ -321,15 +440,64 @@
 /* ----------------- SUP. OU ÉGALE ------------------- */
 /* --------------------------------------------------- */
 @media only screen and (min-width: 1500px) {
-/* NAVBAR */
-.navbar {
-    display: flex;
-    justify-content: center;
-}
 
-.navbar .links {
-    display: flex;
-    justify-content: space-between;
-}
-/* NAVBAR */
+    /* NAVBAR */
+    .navbar {
+        display: flex;
+        justify-content: center;
+    }
+
+    .navbar .links {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /* NAVBAR */
+
+    .top {
+        display: flex;
+        justify-content: start;
+    }
+
+    .form_profil_large_one {
+        height: 170px;
+    }
+
+    .form_profil_large_two {
+        height: 180px;
+    }
+
+    .form_medium_all {
+        height: 170px;
+    }
+
+    h1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 5rem;
+        font-family: "Lemon Milk";
+    }
+
+    /* REVOIR */
+    .icon {
+        margin-top: 100px;
+    }
+
+    .text {
+        margin-top: 5px;
+        display: flex;
+        flex-direction: column;
+        margin-left: 0;
+        text-align: start;
+        margin-top: 10px;
+
+        p {
+            font-size: 1.4rem;
+        }
+    }
+
+    p {
+        font-size: 1.4rem;
+    }
 }
