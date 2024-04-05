@@ -558,6 +558,10 @@ h2 {
         width: 800px;
     }
     /* NAVBAR */
+
+    .logo img {
+        padding: 40px 110px 40px 110px;
+    }
 }
 
 
@@ -721,6 +725,6 @@ h2 {
     }
 
     .p_description {
-        font-size: 2.4rem;
+        font-size: 2.5rem;
     }
 }
