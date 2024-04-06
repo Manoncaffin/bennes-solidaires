@@ -35,8 +35,8 @@
         }
     }
 
-     /* NAVBAR */
-     .navbar .burger-menu-button {
+    /* NAVBAR */
+    .navbar .burger-menu-button {
         color: black;
         cursor: pointer;
         display: none;
@@ -109,6 +109,7 @@
         padding: 15px;
         transform: scale(3);
     }
+
     /* NAVBAR */
 
     /* FORM  */
@@ -127,7 +128,33 @@
         cursor: pointer;
         margin-bottom: 10px;
         margin-top: 5px;
-        font-size: 1.4rem;
+        font-size: 1.3rem;
+    }
+
+    button {
+        background-color: rgb(65, 238, 186);
+        color: black;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 15px;
+        cursor: pointer;
+        margin-bottom: 5px;
+        margin-top: 5px;
+        font-size: 1.3rem;
+    }
+
+    #map {
+        margin-top: 5px;
+    }
+
+    .search {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    button:hover {
+        background-color: rgb(232, 232, 232);
     }
 
     .foot_form {
@@ -135,7 +162,7 @@
         justify-content: center;
         flex-direction: column;
         text-align: center;
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     input[type=submit]:hover {
@@ -165,7 +192,7 @@
     #materiau-bio-select,
     #materiau-geo-select,
     #classification-select,
-    #geographical {
+    #address-input {
         width: 100%;
         border: none;
         outline: none;
@@ -181,7 +208,12 @@
         background-color: transparent;
         font-size: 1.3rem;
     }
+
     /* FORM  */
+
+    #map {
+        height: 400px;
+    }
 
     .scrolling-text {
         display: block;
@@ -199,7 +231,7 @@
         white-space: nowrap;
         animation: scrollText 10s linear infinite;
         animation-direction: alternate-reverse;
-        
+
     }
 
     @keyframes scrollText {
@@ -256,8 +288,8 @@
         font-size: 1.5rem;
     }
 
-     /* NAVBAR */
-     .navbar {
+    /* NAVBAR */
+    .navbar {
         width: 100%;
         display: flex;
         justify-content: center;
@@ -293,6 +325,7 @@
         width: 400px;
         padding: 15px 110px 15px 110px;
     }
+
     /* NAVBAR */
 
     /* FORM */
@@ -305,6 +338,28 @@
         max-width: 1500px;
         margin: 0;
     }
+
+    input[type=text] {
+        font-size: 1.1rem;
+    }
+
+    #classification-select,
+    #materiau-geo-select,
+    #materiau-bio-select
+    #geographical_map {
+        font-size: 1.1rem;
+    }
+
+    input[type=submit] {
+        padding: 12px 20px;
+        font-size: 1.2rem;
+    }
+
+    .foot_form {
+        margin-top: 20px;
+        font-size: 1rem;
+    }
+
     /* FORM */
 }
 
@@ -315,6 +370,7 @@
 /* ----------------- SUP. OU ÉGALE ------------------- */
 /* --------------------------------------------------- */
 @media only screen and (min-width: 1200px) {
+
     /* NAVBAR  */
     .navbar {
         padding: 10px 140px 10px 140px;
@@ -345,6 +401,7 @@
         max-width: 2000px;
         margin: 0;
     }
+
     /* NAVBAR  */
 }
 
@@ -356,15 +413,45 @@
 /* ----------------- SUP. OU ÉGALE ------------------- */
 /* --------------------------------------------------- */
 @media only screen and (min-width: 1500px) {
-/* NAVBAR */
-.navbar {
-    display: flex;
-    justify-content: center;
-}
 
-.navbar .links {
-    display: flex;
-    justify-content: space-between;
-}
-/* NAVBAR */
+    /* NAVBAR */
+    .navbar {
+        display: flex;
+        justify-content: center;
+    }
+
+    .navbar .links {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /* NAVBAR */
+
+    /* FORM */
+
+    input[type=text] {
+        font-size: 1.4rem;
+    }
+
+    #classification-select,
+    #materiau-geo-select,
+    #materiau-bio-select {
+        font-size: 1.4rem;
+    }
+
+    input[type=submit] {
+        padding: 12px 20px;
+        font-size: 1.4rem;
+    }
+
+    .foot_form {
+        margin-top: 20px;
+        font-size: 1rem;
+    }
+
+    label {
+        font-size: 1.3rem;
+    }
+
+    /* FORM */
 }
