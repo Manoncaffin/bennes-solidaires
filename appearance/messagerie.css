@@ -147,7 +147,7 @@
         border-radius: 15px;
         cursor: pointer;
         margin-bottom: 10px;
-        font-size: 1.4rem;
+        font-size: 1.3rem;
     }
 
     .searcher label {
@@ -187,14 +187,14 @@
         padding: 30px 50px 30px 50px;
         width: 100%;
         max-width: 530px;
-        margin-top: 40px;
+        margin-top: 35px;
         /* background-color: rgb(212, 212, 212); */
         background-color: white;
         box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     }
 
     h1 {
-        padding: 20px 20px 40px 20px;
+        padding: 10px 20px 10px 20px;
         font-family: "Lemon Milk";
         font-weight: 600;
         display: flex;
@@ -208,6 +208,8 @@
         justify-content: center;
         font-size: 1rem;
     }
+
+    /* FORM */
 }
 
 
@@ -284,6 +286,46 @@
     }
 
     /* NAVBAR */
+
+    /* FORM */
+    input[type=text],
+    input[type=textarea] {
+        padding: 5px;
+        font-size: 1.1rem;
+    }
+
+    label {
+        font-size: 1.1rem;
+    }
+
+    input[type=submit] {
+        padding: 5px 20px;
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+
+    .foot_form {
+        justify-content: center !important;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .message_enter {
+        height: 120px;
+        margin-bottom: 5px;
+    }
+
+    .container {
+        padding: 30px 50px 30px 50px;
+        height: 500px;
+    }
+
+    h1 {
+        padding: 0px 20px 10px 20px;
+        font-size: 2rem;
+    }
+
+    /* FORM */
 }
 
 
@@ -316,6 +358,7 @@
     }
 
     /* NAVBAR  */
+
 }
 
 
@@ -339,4 +382,34 @@
     }
 
     /* NAVBAR */
+
+    /* FORM */
+    input[type=text],
+    input[type=textarea] {
+        font-size: 1.3rem;
+    }
+
+    label {
+        font-size: 1.3rem;
+    }
+
+    input[type=submit] {
+        font-size: 1.4rem;
+        margin-top: 15px;
+    }
+
+    .message_enter {
+        height: 140px;
+    }
+
+    .container {
+        padding: 30px 50px 30px 50px;
+        height: 550px;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    /* FORM */
 }

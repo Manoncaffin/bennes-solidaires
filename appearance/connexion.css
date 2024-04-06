@@ -161,25 +161,20 @@
         background-color: rgb(232, 232, 232);
     }
 
-    /* REVOIR */
-    input:focus {
-        color: rgb(65, 238, 186);
-    }
-
     .container {
         box-sizing: border-box;
         border-radius: 60px;
         padding: 30px 50px 30px 50px;
         width: 100%;
         max-width: 530px;
-        margin-top: 40px;
+        margin-top: 35px;
         /* background-color: rgb(212, 212, 212); */
         background-color: white;
         box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     }
 
     h1 {
-        padding: 20px 20px 40px 20px;
+        padding: 10px 20px 10px 20px;
         font-family: "Lemon Milk";
         font-weight: 600;
         display: flex;
@@ -202,6 +197,7 @@
 /* ------------------ SUP. OU ÉGALE ------------------ */
 /* --------------------------------------------------- */
 @media screen and (min-width: 768px) {
+
     #footer {
         background-color: #000000;
         color: white;
@@ -227,7 +223,7 @@
 @media only screen and (min-width: 1000px) {
     body {
         font-family: "Abordage";
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
 
     /* NAVBAR */
@@ -269,6 +265,42 @@
     }
 
     /* NAVBAR */
+
+    /* FORM */
+    input[type=text],
+    input[type=email],
+    input[type=password] {
+        padding: 5px;
+        font-size: 1.1rem;
+    }
+
+    label {
+        font-size: 1.1rem;
+    }
+
+    input[type=submit] {
+        padding: 5px 20px;
+        font-size: 1.2rem;
+    }
+
+    .container {
+        padding: 30px 50px 30px 50px;
+        height: 500px;
+    }
+
+    h1 {
+        padding: 0px 20px 10px 20px;
+        font-size: 2rem;
+    }
+
+    .container a {
+        padding-bottom: 5px;
+        display: flex;
+        justify-content: center;
+        font-size: 0.8rem;
+    }
+
+    /* FORM */
 }
 
 
@@ -324,4 +356,34 @@
     }
 
     /* NAVBAR */
+
+    /* FORM */
+    input[type=text],
+    input[type=email],
+    input[type=password] {
+        font-size: 1.3rem;
+    }
+
+    label {
+        font-size: 1.3rem;
+    }
+
+    input[type=submit] {
+        font-size: 1.4rem;
+    }
+
+    .container {
+        height: 550px;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    .container a {
+        padding-bottom: 10px;
+        display: flex;
+        justify-content: center;
+        font-size: 1rem;
+    }
 }
