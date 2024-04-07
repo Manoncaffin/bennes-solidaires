@@ -301,10 +301,8 @@
                         subitem.classList.toggle('hidden');
                     });
 
-                    const handPointerIcon = this.querySelector('.fa-hand-pointer');
-                    const handPointDownIcon = this.querySelector('.fa-hand-point-down');
-                    handPointerIcon.classList.toggle('hidden');
-                    handPointDownIcon.classList.toggle('hidden');
+                    // Ajouter ou supprimer la classe show-pointer pour basculer entre les icônes
+                    this.classList.toggle('show-pointer');
                 });
             });
         });

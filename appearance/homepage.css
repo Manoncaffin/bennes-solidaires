@@ -141,6 +141,22 @@
     .hide-on-menu-open {
         display: none;
     }
+
+    .fa-hand-pointer {
+        display: none;
+    }
+    
+    .toggle-table .fa-hand-pointer {
+        display: none;
+    }
+    
+    .toggle-table.show-pointer .fa-hand-pointer {
+        display: inline-block;
+    }
+    
+    .toggle-table.show-pointer .fa-hand-point-down {
+        display: none;
+    }
 }
 
 
