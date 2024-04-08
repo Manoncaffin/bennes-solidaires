@@ -135,6 +135,7 @@
         display: flex;
         justify-content: space-between;
     }
+
     /* INFOS TOP */
 
     /* ANNOUNCE */
@@ -163,7 +164,7 @@
     .announce {
         margin-top: 40px;
         width: 70%;
-        padding: 35px 40px 30px 40px;
+        padding: 15px 30px 30px 30px;
         height: fit-content;
         border-radius: 40px;
         background-color: white;
@@ -205,7 +206,7 @@
         border-radius: 15px;
         cursor: pointer;
         margin-bottom: 10px;
-        margin-top: 40px;
+        margin-top: 20px;
         font-size: 1.4rem;
     }
 
@@ -216,10 +217,19 @@
     p {
         font-size: 1.27rem;
     }
+
     /* ANNOUNCE */
 
     /* CAROUSEL */
+
+
+    .carousel.hide-carousel {
+        opacity: 0;
+        pointer-events: none;
+    }
+
     .carousel {
+        display: block;
         position: relative;
         height: 400px;
         width: 600px;
@@ -291,7 +301,7 @@
     .carousel__nav {
         display: flex;
         justify-content: center;
-        padding: 20px 0;
+        padding: 10px 0;
         gap: 1rem;
     }
 
@@ -311,6 +321,7 @@
     .is-hidden {
         display: none;
     }
+
     /* CAROUSEL */
 }
 
@@ -432,14 +443,39 @@
 
 
     /* CAROUSEL */
+    p {
+        font-size: 1.2rem;
+    }
+
+    .container {
+        box-sizing: border-box;
+        border-radius: 5px;
+        padding-bottom: 0px;
+    }
+
+    /* ANNOUNCE */
+    .announce_all {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .announce {
+        margin-top: 30px;
+        width: 500px;
+        height: fit-content;
+    }
+    /* ANNOUNCE */
+
+    /* CAROUSEL */
     .carousel {
-        position: relative;
         height: 600px;
-        width: 700px;
-        margin: 70px 30px 70px 0;
-        margin-top: 70px;
-        margin-bottom: 70px;
-        max-width: 700px;
+        width: 760px;
+        margin: 30px 0px 70px 0;
+        max-width: 760px;
+    }
+
+    .carousel__images {
+        max-width: 760px;
     }
 
     .carousel__images {
@@ -453,6 +489,7 @@
 
     .bordure {
         border: 1px solid black;
+        margin: 30px 60px 20px 60px;
     }
 }
 
@@ -479,35 +516,39 @@
     /* NAVBAR */
 
     p {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
 
-        /* CAROUSEL */
-        .announce_all {
-            display: flex;
-            justify-content: space-between;
-        }
+    .container {
+        box-sizing: border-box;
+        border-radius: 5px;
+        padding-bottom: 0px;
+    }
 
-        .announce {
-            width: 700px;
-        }
+    /* ANNOUNCE */
 
-        .carousel {
-            position: relative;
-            height: 600px;
-            width: 700px;
-            margin: 70px 100px 70px 0;
-            margin-top: 70px;
-            margin-bottom: 70px;
-            max-width: 700px;
-        }
-    
-        .carousel__images {
-            max-width: 700px;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    
-        /* CAROUSEL */
+    .announce {
+        margin-top: 30px;
+        width: 760px;
+        height: fit-content;
+    }
+    /* ANNOUNCE */
+
+    /* CAROUSEL */
+    .carousel {
+        position: relative;
+        height: 600px;
+        width: 760px;
+        margin: 30px 0px 70px 0;
+        max-width: 760px;
+    }
+
+    .carousel__images {
+        max-width: 760px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* CAROUSEL */
 }
