@@ -163,7 +163,10 @@
     #materiau-geo-select,
     #classification-select,
     #quantity-select,
-    #value-select, #description, #geographical {
+    #value-select, 
+    #description, 
+    #geographical, 
+    #new-material {
         width: 100%;
         border: none;
         outline: none;

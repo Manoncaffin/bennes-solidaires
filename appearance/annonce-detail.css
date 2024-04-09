@@ -119,6 +119,24 @@
         font-size: 1.2rem;
     }
 
+    .send_message {
+        background-color: rgb(65, 238, 186);
+        color: black;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 15px;
+        cursor: pointer;
+        margin-bottom: 10px;
+        margin-top: 25px;
+        font-size: 1.3rem;
+        width: 100%;
+    }
+
+    .send_message:hover {
+        background-color: black;
+        color: white;
+    }
+
     .container {
         box-sizing: border-box;
         border-radius: 5px;
@@ -153,7 +171,7 @@
     }
 
     .form_profil p {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 
     .announce_all {
@@ -200,23 +218,6 @@
     .text {
         display: flex;
         flex-direction: column;
-    }
-
-    input[type=submit] {
-        background-color: rgb(65, 238, 186);
-        color: black;
-        padding: 12px 20px;
-        border: none;
-        border-radius: 15px;
-        cursor: pointer;
-        margin-top: 25px;
-        font-size: 1.4rem;
-        width: 100%;
-    }
-
-    input[type=submit]:hover {
-        background-color: black;
-        color: white;
     }
 
     p {

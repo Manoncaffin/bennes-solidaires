@@ -70,7 +70,7 @@
                     <p>SAMIA</p>
                 </div>
                 <div class="form_profil">
-                    <p>1 MESSAGE NON LU</p>
+                    <p>0 MESSAGE NON LU</p>
                 </div>
             </div>
 
@@ -112,10 +112,10 @@
                                 <p><span>2 ANNONCES</span></p>
                             </div>
                             <a href="#" class="link_announce_member">
-                            <div class="icon">
-                                <i class="fa-solid fa-chevron-right"></i>
-                            </div>
-                        </a>
+                                <div class="icon">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </div>
+                            </a>
                         </div>
 
                         <div class="location">
@@ -146,7 +146,9 @@
                         </div>
 
                         <div class="foot_form">
-                            <input type="submit" value="Message">
+                            <a href="./messagerie.html">
+                                <button class="send_message">Message</button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -253,15 +255,15 @@
 
         // CAROUSEL HIDDEN WHEN BURGER MENU OPEN 
         document.addEventListener('DOMContentLoaded', function () {
-    const menuToggle = document.getElementById('nav-toggle');
-    const navMenu = document.getElementById('nav-menu');
+            const menuToggle = document.getElementById('nav-toggle');
+            const navMenu = document.getElementById('nav-menu');
 
-    menuToggle.addEventListener('click', function () {
-        navMenu.classList.toggle('active');
-        const carousel = document.querySelector('.carousel');
-        carousel.classList.toggle('hide-carousel'); // Ajoute ou supprime la classe 'hide-carousel' du carousel lorsque le menu burger est cliqué
-    });
-});
+            menuToggle.addEventListener('click', function () {
+                navMenu.classList.toggle('active');
+                const carousel = document.querySelector('.carousel');
+                carousel.classList.toggle('hide-carousel'); // Ajoute ou supprime la classe 'hide-carousel' du carousel lorsque le menu burger est cliqué
+            });
+        });
         // CAROUSEL HIDDEN WHEN BURGER MENU OPEN
     </script>
 

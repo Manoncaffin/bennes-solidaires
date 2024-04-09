@@ -114,6 +114,7 @@
         padding: 10px;
         width: 170px;
         background-color: rgb(59, 106, 236);
+        list-style: none;
     }
 
     .dropdown:hover .dropdown-menu_one {
@@ -128,6 +129,7 @@
         padding: 10px;
         width: 170px;
         background-color: rgb(59, 106, 236);
+        list-style: none;
     }
 
     .dropdown:hover .dropdown-menu_two {

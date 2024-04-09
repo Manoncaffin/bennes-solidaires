@@ -70,7 +70,7 @@
 
                 <form action="#" method="POST">
                     <label for="classification-select" class="classification-select">Classification</label>
-                    <select name="classification" id="classification-select" required>
+                    <select name="classification" id="classification-select" required onchange="toggleMaterialSelect()">
                         <option value="">--</option>
                         <option value="Matériau bio-sourcé">Matériau bio-sourcé</option>
                         <option value="Matériau géo-sourcé">Matériau géo-sourcé</option>
@@ -80,30 +80,35 @@
                         style="display: none;">Matériaux</label>
                     <select name="materiau-geo-select" id="materiau-geo-select" style="display: none;" required>
                         <option value="">--</option>
-                        <option value="materiau geo-source">terre</option>
-                        <option value="materiau geo-source">pierre</option>
-                        <option value="materiau geo-source">gravier</option>
-                        <option value="materiau geo-source">sable</option>
-                        <option value="materiau geo-source">verre</option>
-                        <option value="materiau geo-source">céramique</option>
+                        <option value="materiau geo-source">Terre</option>
+                        <option value="materiau geo-source">Pierre</option>
+                        <option value="materiau geo-source">Gravier</option>
+                        <option value="materiau geo-source">Sable</option>
+                        <option value="materiau geo-source">Verre</option>
+                        <option value="materiau geo-source">Céramique</option>
+                        <option value="ajouter-un-materiau-geo">Ajouter un matériau</option>
                     </select>
 
                     <label for="materiau-bio-select" class="materiau-select-bio"
                         style="display: none;">Matériaux</label>
                     <select name="materiau-bio-select" id="materiau-bio-select" style="display: none;" required>
                         <option value="">--</option>
-                        <option value="materiau bio-source">bois</option>
-                        <option value="materiau bio-source">papier</option>
-                        <option value="materiau bio-source">papier-journal</option>
-                        <option value="materiau bio-source">paille</option>
-                        <option value="materiau bio-source">canne-de-provence</option>
-                        <option value="materiau bio-source">bambou</option>
-                        <option value="materiau bio-source">sciure de bois</option>
-                        <option value="materiau bio-source">liège</option>
-                        <option value="materiau bio-source">coquille d'huître</option>
-                        <option value="materiau bio-source">coquille d'escargot</option>
-                        <option value="materiau bio-source">marc de café</option>
+                        <option value="materiau bio-source">Bois</option>
+                        <option value="materiau bio-source">Papier</option>
+                        <option value="materiau bio-source">Papier-journal</option>
+                        <option value="materiau bio-source">Paille</option>
+                        <option value="materiau bio-source">Canne-de-provence</option>
+                        <option value="materiau bio-source">Cambou</option>
+                        <option value="materiau bio-source">Sciure de bois</option>
+                        <option value="materiau bio-source">Liège</option>
+                        <option value="materiau bio-source">Coquille d'huître</option>
+                        <option value="materiau bio-source">Coquille d'escargot</option>
+                        <option value="materiau bio-source">Marc de café</option>
+                        <option value="ajouter-un-materiau-bio">Ajouter un matériau</option>
                     </select>
+
+                    <!-- Champ d'entrée pour ajouter un matériau personnalisé -->
+                    <input type="text" id="new-material" placeholder="Entrez un nouveau matériau" style="display: none;">
 
                     <div class="quantity">
                         <label for="number" class="quantity-select">Quantité</label>
@@ -218,47 +223,87 @@
         }
         // SCRIPT QUANTITY
 
+        // AJOUTER UN MATÉRIAU
+        // Fonction pour basculer entre les options de matériaux bio-sourcés et géo-sourcés
+    function toggleMaterialSelect() {
+        var classificationSelect = document.getElementById("classification-select");
+        var materiauBioSelect = document.getElementById("materiau-bio-select");
+        var materiauGeoSelect = document.getElementById("materiau-geo-select");
+        var newMaterialInput = document.getElementById("new-material");
+
+        if (classificationSelect.value === "Matériau bio-sourcé") {
+            materiauBioSelect.style.display = "block";
+            materiauGeoSelect.style.display = "none";
+        } else if (classificationSelect.value === "Matériau géo-sourcé") {
+            materiauBioSelect.style.display = "none";
+            materiauGeoSelect.style.display = "block";
+        }
+
+        // Cacher le champ d'entrée de matériau personnalisé
+        newMaterialInput.style.display = "none";
+    }
+
+    // Ajouter des écouteurs d'événements pour les options "Ajouter un matériau"
+    materiauBioSelect.addEventListener("change", function() {
+        if (materiauBioSelect.value === "ajouter-un-materiau-bio") {
+            showCustomMaterialInput();
+        }
+    });
+
+    materiauGeoSelect.addEventListener("change", function() {
+        if (materiauGeoSelect.value === "ajouter-un-materiau-geo") {
+            showCustomMaterialInput();
+        }
+    });
+
+    // Fonction pour afficher le champ d'entrée pour ajouter un nouveau matériau
+    function showCustomMaterialInput() {
+        var newMaterialInput = document.getElementById("new-material");
+        newMaterialInput.style.display = "block";
+    }
+        // AJOUTER UN MATÉRIAU
+
         // SEARCH CITY
         let searchTimeout;
 
-    document.getElementById("geographical").addEventListener("input", function() {
-        const postalCode = this.value.trim();
-        clearTimeout(searchTimeout); // Pour éviter les requêtes multiples pendant la saisie
+        document.getElementById("geographical").addEventListener("input", function () {
+            const postalCode = this.value.trim();
+            clearTimeout(searchTimeout); // Pour éviter les requêtes multiples pendant la saisie
 
-        // Attendez un court délai après la saisie avant de déclencher la recherche
-        searchTimeout = setTimeout(() => {
-            if (postalCode.length === 5 && /^\d+$/.test(postalCode)) { // Vérifie si le code postal est valide
-                const url = 'https://nominatim.openstreetmap.org/search?format=json&postalcode=' + encodeURIComponent(postalCode);
+            // Attendez un court délai après la saisie avant de déclencher la recherche
+            searchTimeout = setTimeout(() => {
+                if (postalCode.length === 5 && /^\d+$/.test(postalCode)) { // Vérifie si le code postal est valide
+                    const url = 'https://nominatim.openstreetmap.org/search?format=json&postalcode=' + encodeURIComponent(postalCode);
 
-                fetch(url)
-                .then(response => response.json())
-                .then(data => {
-                    if (data && data.length > 0) {
-                        const city = data[0].display_name;
-                        // Remplir le champ avec la ville trouvée
-                        document.getElementById("geographical").value = city;
-                    } else {
-                        alert("Aucune ville trouvée pour ce code postal");
-                    }
-                })
-                .catch(error => {
-                    console.error('Erreur lors de la recherche de ville par code postal :', error);
-                    alert("Une erreur s'est produite lors de la recherche de ville par code postal");
-                });
-            } else {
-                // Code postal invalide, afficher un prompt d'erreur
-                alert("Veuillez entrer un code postal valide (5 chiffres).");
-            }
-        }, 500); // Délai de 500 millisecondes avant de déclencher la recherche
-    });
-    // SEARCH CITY
+                    fetch(url)
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data && data.length > 0) {
+                                const city = data[0].display_name;
+                                // Remplir le champ avec la ville trouvée
+                                document.getElementById("geographical").value = city;
+                            } else {
+                                alert("Aucune ville trouvée pour ce code postal");
+                            }
+                        })
+                        .catch(error => {
+                            console.error('Erreur lors de la recherche de ville par code postal :', error);
+                            alert("Une erreur s'est produite lors de la recherche de ville par code postal");
+                        });
+                } else {
+                    // Code postal invalide, afficher un prompt d'erreur
+                    alert("Veuillez entrer un code postal valide (5 chiffres).");
+                }
+            }, 500); // Délai de 500 millisecondes avant de déclencher la recherche
+        });
+        // SEARCH CITY
     </script>
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=VOTRE_CLE_API&libraries=places"></script>
 </body>
 

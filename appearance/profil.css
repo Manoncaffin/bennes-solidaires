@@ -225,8 +225,12 @@
         flex-direction: column;
     }
 
+    .form_profil p {
+        font-size: 1.2rem;
+    }
+
     p {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
 }
 

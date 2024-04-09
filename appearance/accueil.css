@@ -18,7 +18,7 @@
 
     body {
         font-family: "Abordage";
-        font-size: 1.4rem;
+        font-size: 2.3rem;
         color: black;
         min-width: 100vw;
         min-height: 100vh;
@@ -140,6 +140,14 @@
 
     /* NAVBAR */
 
+    .title {
+        font-family: "Lemon milk";
+        font-weight: 600;
+        font-size: 2.9rem;
+        padding-left: 40px;
+        text-align: left;
+    }
+
     .hide-on-menu-open {
         display: none;
     }
@@ -160,6 +168,68 @@
         display: none;
     }
 
+    .corners {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .corner {
+        border-radius: 25px;
+        border: 2px solid #000000;
+        padding: 30px;
+        width: 490px;
+        height: fit-content;
+        font-size: 2.1rem;
+        line-height: 1.7;
+        background-color: white;
+        box-shadow: 0px 0px 10px 5px rgb(255, 255, 255);
+    }
+
+    .p_description {
+        margin-top: 50px;
+        font-size: 2.6rem;
+        text-align: justify;
+    }
+
+    .scrolling-text-container {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .scrolling-text {
+        font-size: 2.8rem;
+        white-space: nowrap;
+        animation: scrollText 18s linear infinite;
+        /* animation-direction: alternate-reverse; */
+    }
+
+    @keyframes scrollText {
+        from {
+            transform: translateX(100%);
+        }
+
+        to {
+            transform: translateX(-100%);
+        }
+    }
+
+    .big-title {
+        display: flex;
+        justify-content: center;
+        font-family: "Lemon Milk";
+        font-weight: 600;
+        font-size: 6rem;
+    }
+
+    .big-title-two {
+        font-family: "Lemon Milk";
+        font-weight: 600;
+        font-size: 6rem;
+    }
+
     /* FOOTER */
     #footer {
         display: flex;
@@ -167,19 +237,20 @@
         background-color: #000000;
         color: white;
         width: 100%;
-        font-size: 0.6rem;
+        font-size: 0.8rem;
     }
 
     .confidential {
-        margin: 0 50px;
+        margin: 0 50px 0 0;
         display: flex;
-        align-items: start;
+        align-items: self-end;
+        justify-content: end;
         text-decoration: underline;
     }
 
     .confidential a {
         color: white;
-        font-size: 0.6rem;
+        font-size: 0.8rem;
     }
 
     .credits {
@@ -222,44 +293,8 @@
         height: 100%;
     }
 
-    .p_description {
-        margin-top: 50px;
-        font-size: 1.9rem;
-        text-align: justify;
-    }
-
-    .scrolling-text-container {
-        width: 100%;
-        overflow: hidden;
-    }
-
-    .scrolling-text {
-        font-size: 1.9rem;
-        white-space: nowrap;
-        animation: scrollText 18s linear infinite;
-        /* animation-direction: alternate-reverse; */
-    }
-
-    @keyframes scrollText {
-        from {
-            transform: translateX(100%);
-        }
-
-        to {
-            transform: translateX(-100%);
-        }
-    }
-
     .bordure {
         border: 1px solid black;
-    }
-
-    .title {
-        font-family: "Lemon milk";
-        font-weight: 600;
-        font-size: 2.4rem;
-        padding-left: 40px;
-        text-align: left;
     }
 
     .circle {
@@ -279,26 +314,6 @@
     .stage {
         display: flex;
         align-items: center;
-    }
-
-    .corners {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        gap: 50px;
-    }
-
-    .corner {
-        border-radius: 25px;
-        border: 2px solid #000000;
-        padding: 30px;
-        width: 490px;
-        height: fit-content;
-        font-size: 1.8rem;
-        line-height: 1.7;
-        background-color: white;
-        box-shadow: 0px 0px 10px 5px rgb(255, 255, 255);
     }
 
     .fa-regular.fa-hand-point-down,
@@ -324,20 +339,6 @@
 
     .hidden {
         display: none;
-    }
-
-    .big-title {
-        display: flex;
-        justify-content: center;
-        font-family: "Lemon Milk";
-        font-weight: 600;
-        font-size: 5rem;
-    }
-
-    .big-title-two {
-        font-family: "Lemon Milk";
-        font-weight: 600;
-        font-size: 5rem;
     }
 
     .rectangle {
@@ -489,17 +490,13 @@ h2 {
         margin: 0 110px;
     }
 
-    .title {
-        font-size: 1.8rem;
-    }
-
     /* FOOTER */
     #footer {
         font-size: 1rem;
     }
 
     .confidential {
-        margin: 0 110px;
+        margin: 0 110px 0 0;
     }
 
     .confidential a {
@@ -569,7 +566,7 @@ h2 {
     }
 
     .title {
-        font-size: 2.3rem;
+        font-size: 2.1rem;
     }
 
     .circle {
@@ -653,11 +650,11 @@ h2 {
 /* --------------------------------------------------- */
 @media only screen and (min-width: 1200px) {
     h2 {
-        font-size: 4rem;
+        font-size: 3.8rem;
     }
 
     .title {
-        font-size: 4rem;
+        font-size: 3.3rem;
     }
 
     .circle {
@@ -732,9 +729,9 @@ h2 {
     }
 
     .confidential {
-        margin: 0 140px;
+        margin: 0 140px 0 0;
         display: flex;
-        justify-content: start;
+        justify-content: end;
         align-items: self-end;
     }
 
