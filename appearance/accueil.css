@@ -639,13 +639,10 @@ h2 {
 
     .logo img {
         width: 800px;
+        padding: 40px 110px 40px 110px;
     }
 
     /* NAVBAR */
-
-    .logo img {
-        padding: 40px 110px 40px 110px;
-    }
 }
 
 
