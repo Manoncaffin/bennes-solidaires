@@ -149,10 +149,12 @@
         margin-bottom: 10px;
         margin-top: 40px;
         font-size: 1.4rem;
+        width: 100%;
     }
 
     input[type=submit]:hover {
-        background-color: rgb(232, 232, 232);
+        background-color: black;
+        color: white;
     }
 
     .foot_form {
@@ -333,6 +335,7 @@
 
     input[type=submit] {
         margin-top: 20px;
+        width: 40%;
     }
 
     #activity-select {

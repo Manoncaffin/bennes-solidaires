@@ -148,6 +148,12 @@
         cursor: pointer;
         margin-bottom: 10px;
         font-size: 1.3rem;
+        width: 100%;
+    }
+
+    input[type=submit]:hover {
+        background-color: black;
+        color: white;
     }
 
     .foot_form {
@@ -155,10 +161,6 @@
         flex-direction: column;
         text-align: center;
         font-size: 1.2rem;
-    }
-
-    input[type=submit]:hover {
-        background-color: rgb(232, 232, 232);
     }
 
     .container {

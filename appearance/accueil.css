@@ -10,6 +10,7 @@
 /* ------------------ SUP. OU ÉGALE ------------------ */
 /* --------------------------------------------------- */
 @media screen and (min-width: 350px) {
+
     html,
     body {
         background-color: rgb(232, 232, 232);
@@ -34,8 +35,8 @@
         }
     }
 
-     /* NAVBAR */
-     .navbar .burger-menu-button {
+    /* NAVBAR */
+    .navbar .burger-menu-button {
         color: black;
         cursor: pointer;
         display: none;
@@ -118,7 +119,7 @@
         width: 170px;
         background-color: rgb(59, 106, 236);
     }
-    
+
     .dropdown:hover .dropdown-menu_one {
         display: block;
     }
@@ -132,10 +133,11 @@
         width: 170px;
         background-color: rgb(59, 106, 236);
     }
-    
+
     .dropdown:hover .dropdown-menu_two {
         display: block;
     }
+
     /* NAVBAR */
 
     .hide-on-menu-open {
@@ -145,18 +147,50 @@
     .fa-hand-pointer {
         display: none;
     }
-    
+
     .toggle-table .fa-hand-pointer {
         display: none;
     }
-    
+
     .toggle-table.show-pointer .fa-hand-pointer {
         display: inline-block;
     }
-    
+
     .toggle-table.show-pointer .fa-hand-point-down {
         display: none;
     }
+
+    /* FOOTER */
+    #footer {
+        display: flex;
+        justify-content: space-between;
+        background-color: #000000;
+        color: white;
+        width: 100%;
+        font-size: 0.6rem;
+    }
+
+    .confidential {
+        margin: 0 50px;
+        display: flex;
+        align-items: start;
+        text-decoration: underline;
+    }
+
+    .confidential a {
+        color: white;
+        font-size: 0.6rem;
+    }
+
+    .credits {
+        margin: 0 50px;
+    }
+
+    .copyright {
+        font-family: "Lemon Milk";
+    }
+
+    /* FOOTER */
 }
 
 
@@ -186,21 +220,6 @@
     #deposer {
         width: 100%;
         height: 100%;
-    }
-
-    #footer {
-        background-color: #000000;
-        color: white;
-        width: 100%;
-        font-size: 1rem;
-    }
-
-    .credits {
-        margin: 0 50px;
-    }
-
-    .copyright {
-        font-family: "Lemon Milk";
     }
 
     .p_description {
@@ -474,9 +493,24 @@ h2 {
         font-size: 1.8rem;
     }
 
+    /* FOOTER */
+    #footer {
+        font-size: 1rem;
+    }
+
+    .confidential {
+        margin: 0 110px;
+    }
+
+    .confidential a {
+        font-size: 1rem;
+    }
+
     .credits {
         margin: 0 110px;
     }
+
+    /* FOOTER */
 
     .p_description {
         font-size: 1.8rem;
@@ -606,6 +640,7 @@ h2 {
     .logo img {
         width: 800px;
     }
+
     /* NAVBAR */
 
     .logo img {
@@ -699,6 +734,13 @@ h2 {
         margin: 0 140px;
     }
 
+    .confidential {
+        margin: 0 140px;
+        display: flex;
+        justify-content: start;
+        align-items: self-end;
+    }
+
     .rectangle-green-one {
         height: 300px;
     }
@@ -751,6 +793,7 @@ h2 {
         max-width: 2000px;
         margin: 0;
     }
+
     /* NAVBAR  */
 }
 
