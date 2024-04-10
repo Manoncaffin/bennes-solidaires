@@ -171,7 +171,7 @@
     }
 
     .form_profil p {
-        font-size: 1.2rem;
+        font-size: 1.6rem;
     }
 
     .announce_all {
@@ -246,7 +246,6 @@
     }
 
     .carousel__images {
-        max-width: 600px;
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -382,11 +381,14 @@
 
     /* NAVBAR */
 
-
     .image {
         width: 30%;
         margin-top: 40px;
         border-radius: 40px;
+    }
+
+    .announce_all {
+        margin-bottom: 30px;
     }
 }
 
@@ -467,25 +469,26 @@
         margin-top: 30px;
         width: 500px;
     }
+
     /* ANNOUNCE */
 
     /* CAROUSEL */
     .carousel {
-        width: 600px;
-        margin: 30px 0px 70px 0;
-        max-width: 700px;
+        margin-top: 30px;
+        width: 800px; /* Réduire la largeur du carousel pour les grands écrans */
+        max-width: 100%; /* Assurez-vous que le carousel ne dépasse pas la largeur de l'écran */
     }
 
     .carousel__images {
-        width: 700px;
-        height: 500px;
+        width: 100%; /* Les images occupent 100% de la largeur du carousel */
+        height: auto; /* Ajustez la hauteur en fonction de la largeur pour maintenir les proportions */
+        object-fit: cover; /* Ajustez les images pour couvrir toute la zone disponible */
     }
-
     /* CAROUSEL */
 
     .bordure {
         border: 1px solid black;
-        margin: 30px 60px 0px 60px;
+        margin: 35px 60px 0px 60px;
     }
 }
 
@@ -528,22 +531,16 @@
     }
     /* ANNOUNCE */
 
-    /* CAROUSEL */
     .carousel {
-        position: relative;
-        height: 580px;
-        width: 750px;
-        margin: 30px 0px 40px 0;
-        max-width: 760px;
+        width: 900px; 
+        height: auto;
     }
 
     .carousel__images {
-        max-width: 760px;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+        width: 100%; 
+        height: auto; 
+        object-fit: cover; 
     }
-
     /* CAROUSEL */
 
     .bordure {

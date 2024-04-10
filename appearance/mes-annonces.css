@@ -18,7 +18,7 @@
 
     body {
         font-family: "Abordage";
-        font-size: 1.3rem;
+        font-size: 2rem;
         color: black;
         min-width: 100vw;
         min-height: 100vh;
@@ -117,6 +117,24 @@
         flex-direction: column;
         text-align: center;
         font-size: 1.2rem;
+        margin-top: 40px;
+    }
+
+    .send_message {
+        background-color: rgb(65, 238, 186);
+        color: black;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 15px;
+        cursor: pointer;
+        margin-bottom: 25px;
+        font-size: 2rem;
+        width: 100%;
+    }
+
+    .send_message:hover {
+        background-color: black;
+        color: white;
     }
 
     .container {
@@ -129,9 +147,28 @@
         margin: 0 auto;
     }
 
-    .top {
+    /* INFOS TOP */
+    .top_all {
+        width: 100%;
         display: flex;
         justify-content: space-between;
+    }
+
+    /* INFOS TOP */
+
+    /* ANNOUNCE */
+
+    .form_profil_large_one {
+        margin-top: 40px;
+        width: 100%;
+        padding: 35px 40px 30px 40px;
+        height: fit-content;
+        border-radius: 40px;
+        background-color: white;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        display: flex;
+        align-items: center;
+        text-decoration: underline;
     }
 
     .form_profil {
@@ -144,93 +181,40 @@
         display: flex;
         justify-content: center;
         align-items: center;
-
-    }
-
-    .form_circle {
-        width: 130px;
-        height: 130px;
-        border-radius: 100%;
-        background-color: rgb(65, 238, 186);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-right: 60px;
-    }
-
-    h1 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 5rem;
-        font-family: "Lemon Milk";
-    }
-
-    .fa-regular.fa-pen-to-square,
-    .fa-regular.fa-folder,
-    .fa-regular.fa-message {
-        font-size: 80px;
-    }
-
-    .form_profil_large_one {
-        margin-top: 40px;
-        width: 100%;
-        padding: 35px 40px 30px 40px;
-        height: 180px;
-        border-radius: 40px;
-        background-color: white;
-        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-        display: flex;
-        align-items: center;
-    }
-
-    .form_profil_large_two {
-        margin-top: 40px;
-        width: 100%;
-        padding: 35px 40px 30px 40px;
-        height: 350px;
-        border-radius: 40px;
-        background-color: white;
-        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-    }
-
-    span {
-        text-decoration: underline;
-    }
-
-    .form_medium {
-        display: flex;
-        margin-top: 40px;
-        width: 100%;
-        padding: 35px 40px 30px 40px;
-        height: 170px;
-        border-radius: 40px;
-        background-color: white;
-        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-        align-items: center;
-    }
-
-    .text {
-        display: flex;
-        flex-direction: column;
-        margin-left: 60px;
-    }
-
-    .form_medium_all {
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
     }
 
     .form_profil p {
-        font-size: 1.3rem;
+        font-size: 1.6rem;
     }
 
-    p {
-        font-size: 2rem;
+    .form_profil_large_one {
+        margin-top: 70px;
+            width: 100%;
+            padding: 35px 40px 30px 40px;
+            height: fit-content;
+            border-radius: 40px;
+            background-color: white;
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            text-decoration: underline;
+        
+    }
+
+    .announce_inline {
+        width: 100%;
+        height: 100%;
+        margin-bottom: 15px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        
+        img {
+            max-height: 430px;
+            width: 70%;
+            object-fit: cover;
+            border-radius: 20px;
+        }
     }
 }
 
@@ -242,10 +226,6 @@
 /* ----------------- SUP. OU ÉGALE ------------------- */
 /* --------------------------------------------------- */
 @media only screen and (min-width: 1000px) {
-    body {
-        font-family: "Abordage";
-        font-size: 1.5rem;
-    }
 
     /* NAVBAR */
     .navbar {
@@ -287,13 +267,12 @@
 
     /* NAVBAR */
 
-    .text {
-        margin-top: 5px;
-        display: flex;
-        flex-direction: column;
-        text-align: start;
-        font-size: 1rem;
-        margin-left: 60px;
+    .form_profil p {
+        font-size: 1.5rem;
+    }
+
+    .form_profil_large_one p {
+        font-size: 2rem;
     }
 }
 
@@ -338,91 +317,45 @@
 
     /* NAVBAR  */
 
-    .top {
-        display: flex;
-        justify-content: start;
-    }
-
-    .fa-regular.fa-pen-to-square,
-    .fa-regular.fa-folder,
-    .fa-regular.fa-message {
-        font-size: 40px;
-    }
-
-    .form_profil {
-        margin-right: 40px;
-    }
-
-    .form_circle {
-        width: 130px;
-        height: 130px;
-        border-radius: 100%;
-        background-color: rgb(65, 238, 186);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-right: 60px;
-    }
-
-    h1 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 4rem;
-        font-family: "Lemon Milk";
-    }
-
-    /* REVOIR */
-    .icon {
-        margin-top: 100px;
-    }
-
-    .form_profil_large_one,
-    .form_profil_large_two {
-        margin-top: 35px;
-        padding: 20px 30px 20px 30px;
-    }
-
-    .form_profil_large_one {
-        height: 180px;
-    }
-
-    .form_profil_large_two {
-        height: 200px;
-    }
-
-    .form_medium_all {
+    /* INFOS TOP */
+    .top_all {
+        width: 100%;
         display: flex;
         justify-content: space-between;
-        flex-direction: row;
-    }
-
-    .form_medium {
-        display: flex;
-        justify-content: start;
-        flex-direction: column;
-        align-items: start;
-        width: 30%;
-        margin-top: 35px;
-        margin-right: 0;
-        padding: 35px 30px 30px 30px;
-    }
-
-    .text {
-        margin-top: 5px;
-        display: flex;
-        flex-direction: column;
-        margin-left: 0;
-        text-align: start;
-        margin-top: 10px;
-
-        p {
-            font-size: 1.1rem;
-        }
     }
 
     p {
-        font-size: 1.27rem;
+        font-size: 1.1rem;
+    }
+
+    .form_profil p {
+        font-size: 1.7rem;
+    }
+
+    /* INFOS TOP */
+
+
+    .form_profil_large_one p {
+        font-size: 1.3rem;
+    }
+
+    .announce_inline {
+        display: flex;
+        justify-content: center;
+        
+        img {
+            max-height: 390px;
+            width: 45%;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+    }
+
+    .foot_form {
+        width: 45%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
     }
 }
 
@@ -448,50 +381,24 @@
 
     /* NAVBAR */
 
-    .top {
-        display: flex;
-        justify-content: start;
-    }
-
-    .form_profil_large_one {
-        height: 170px;
-    }
-
-    .form_profil_large_two {
-        height: 180px;
-    }
-
-    .form_medium_all {
-        height: 170px;
-    }
-
-    h1 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 5rem;
-        font-family: "Lemon Milk";
-    }
-
-    /* REVOIR */
-    .icon {
-        margin-top: 100px;
-    }
-
-    .text {
-        margin-top: 5px;
-        display: flex;
-        flex-direction: column;
-        margin-left: 0;
-        text-align: start;
-        margin-top: 10px;
-
-        p {
-            font-size: 1.4rem;
+    .announce_inline img {
+            max-height: 540px;
+            width: 45%;
+            object-fit: cover;
+            border-radius: 20px;
         }
-    }
+}
 
-    p {
-        font-size: 1.4rem;
+/* --------------------------------------------------- */
+/* --------------------------------------------------- */
+/* ------------- MEDIA MIN-WIDTH 1900PX --------------- */
+/* ----------------- SUP. OU ÉGALE ------------------- */
+/* --------------------------------------------------- */
+@media only screen and (min-width: 1900px) {
+    .announce_inline img {
+        max-height: 620px;
+        width: 45%;
+        object-fit: cover;
+        border-radius: 20px;
     }
 }
