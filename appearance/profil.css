@@ -351,6 +351,7 @@
 
     .form_profil {
         margin-right: 40px;
+        font-size: 1.4rem;
     }
 
     .form_circle {
@@ -395,6 +396,7 @@
         display: flex;
         justify-content: space-between;
         flex-direction: row;
+        margin-bottom: 30px;
     }
 
     .form_medium {

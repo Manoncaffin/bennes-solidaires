@@ -158,19 +158,6 @@
 
     /* ANNOUNCE */
 
-    .form_profil_large_one {
-        margin-top: 40px;
-        width: 100%;
-        padding: 35px 40px 30px 40px;
-        height: fit-content;
-        border-radius: 40px;
-        background-color: white;
-        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-        display: flex;
-        align-items: center;
-        text-decoration: underline;
-    }
-
     .form_profil {
         width: fit-content;
         padding: 20px;
@@ -189,16 +176,33 @@
 
     .form_profil_large_one {
         margin-top: 70px;
-            width: 100%;
-            padding: 35px 40px 30px 40px;
-            height: fit-content;
-            border-radius: 40px;
-            background-color: white;
-            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-            display: flex;
-            align-items: center;
-            text-decoration: underline;
-        
+        width: 100%;
+        padding: 35px 40px 30px 40px;
+        height: fit-content;
+        border-radius: 40px;
+        background-color: white;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        display: flex;
+        align-items: center;
+        text-decoration: underline;
+    }
+
+    .announce {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form_profil_large_two {
+        margin-top: 70px;
+        width: 100%;
+        padding: 35px 40px 30px 40px;
+        height: fit-content;
+        border-radius: 40px;
+        background-color: white;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        display: flex;
+        align-items: center;
+        text-decoration: underline;
     }
 
     .announce_inline {
@@ -207,13 +211,12 @@
         margin-bottom: 15px;
         overflow: hidden;
         display: flex;
-        justify-content: center;
-        
+
         img {
-            max-height: 430px;
-            width: 70%;
             object-fit: cover;
             border-radius: 20px;
+            height: 300px;
+            width: 500px;
         }
     }
 }
@@ -329,34 +332,60 @@
     }
 
     .form_profil p {
-        font-size: 1.7rem;
+        font-size: 1.4rem;
+    }
+
+    .form_profil_large_one {
+        margin-top: 35px;
+    }
+
+    .form_profil_large_one p {
+        font-size: 1.4rem;
     }
 
     /* INFOS TOP */
 
 
-    .form_profil_large_one p {
-        font-size: 1.3rem;
-    }
+    /* ANNOUNCE */
 
     .announce_inline {
         display: flex;
         justify-content: center;
-        
+
         img {
-            max-height: 390px;
-            width: 45%;
-            object-fit: cover;
-            border-radius: 20px;
+            height: 180px;
         }
     }
 
-    .foot_form {
-        width: 45%;
+    .announce {
         display: flex;
+        justify-content: space-between;
         flex-direction: row;
-        justify-content: center;
+        margin-bottom: 30px;
     }
+
+    .form_profil_large_two {
+        margin-top: 35px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 48%;
+    }
+
+    .foot_form {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 0;
+        width: 100%;
+    }
+
+    .send_message {
+        font-size: 1.3rem;
+        margin-bottom: 0;
+        margin-top: 15px;
+    }
+        /* ANNOUNCE */
 }
 
 
@@ -382,11 +411,11 @@
     /* NAVBAR */
 
     .announce_inline img {
-            max-height: 540px;
-            width: 45%;
-            object-fit: cover;
-            border-radius: 20px;
-        }
+        max-height: 540px;
+        width: 45%;
+        object-fit: cover;
+        border-radius: 20px;
+    }
 }
 
 /* --------------------------------------------------- */
