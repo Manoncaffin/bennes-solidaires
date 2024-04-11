@@ -159,12 +159,12 @@
         margin-top: 5px;
     }
 
-    .bubble {
-        width: 300px;
-        height: 300px;
-        background: white;
-        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-        border-radius: 20px;
+    .custom-popup {
+        
+    }
+
+    .custom-marker {
+        transform: scale(2);
     }
 
     .search {
@@ -362,8 +362,9 @@
 
     #classification-select,
     #materiau-geo-select,
-    #materiau-bio-select
-    #geographical_map {
+    #materiau-bio-select,
+    #geographical_map,
+    #adress-input {
         font-size: 1.1rem;
     }
 
@@ -453,7 +454,8 @@
 
     #classification-select,
     #materiau-geo-select,
-    #materiau-bio-select {
+    #materiau-bio-select,
+    #adress-input {
         font-size: 1.4rem;
     }
 
