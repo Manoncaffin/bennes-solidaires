@@ -158,9 +158,19 @@
         margin-top: 5px;
     }
 
-    /* .custom-popup {
-        
-    } */
+    /* REVOIR */
+    .custom-popup {
+        font-family: "Abordage";
+
+        h6 {
+            font-family: "Lemon Milk";
+        }
+
+        .container a {
+            display: flex;
+            justify-content: start;
+        }
+    }
 
     .search {
         display: flex;
@@ -186,7 +196,7 @@
         margin: 0 auto;
     }
 
-    .container a {
+    .foot_form a {
         padding-bottom: 5px;
         display: flex;
         justify-content: center;

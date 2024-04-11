@@ -182,6 +182,8 @@
     .announce {
         display: flex;
         flex-direction: column;
+        width: 100%;
+        gap: 30px;
     }
 
     .form_profil_large_two {
@@ -195,6 +197,7 @@
         display: flex;
         align-items: center;
         text-decoration: underline;
+        flex: 1; /* Chaque div occupera la même part d'espace */
     }
 
     .announce_inline {
@@ -324,6 +327,7 @@
         margin-top: 35px;
     }
 
+
     /* INFOS TOP */
 
 
@@ -350,7 +354,6 @@
         display: flex;
         justify-content: center;
         flex-direction: column;
-        width: 48%;
     }
 
     .foot_form {

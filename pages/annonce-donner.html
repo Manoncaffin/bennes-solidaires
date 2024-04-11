@@ -108,7 +108,8 @@
                     </select>
 
                     <!-- Champ d'entrée pour ajouter un matériau personnalisé -->
-                    <input type="text" id="new-material" placeholder="Entrez un nouveau matériau" style="display: none;">
+                    <input type="text" id="new-material" placeholder="Entrez un nouveau matériau"
+                        style="display: none;">
 
                     <div class="quantity">
                         <label for="number" class="quantity-select">Quantité</label>
@@ -135,9 +136,10 @@
                         <input id="file" type="file" name="file" placeholder="Choisir un fichier" required>
                     </div>
 
-                    <label for="description">Description</label>
-                    <input id="description" type="textarea" name="description"
-                        placeholder="Entrez votre description ici" required>
+                    <div class="message_enter">
+                        <label for="description">Description</label>
+                        <textarea id="message" placeholder="Entrez votre description ici" required></textarea>
+                    </div>
 
                     <label for="geographical">Localisation</label>
                     <input id="geographical" type="text" name="geographical" placeholder="Entrez un code postal"
@@ -225,42 +227,42 @@
 
         // AJOUTER UN MATÉRIAU
         // Fonction pour basculer entre les options de matériaux bio-sourcés et géo-sourcés
-    function toggleMaterialSelect() {
-        var classificationSelect = document.getElementById("classification-select");
-        var materiauBioSelect = document.getElementById("materiau-bio-select");
-        var materiauGeoSelect = document.getElementById("materiau-geo-select");
-        var newMaterialInput = document.getElementById("new-material");
+        function toggleMaterialSelect() {
+            var classificationSelect = document.getElementById("classification-select");
+            var materiauBioSelect = document.getElementById("materiau-bio-select");
+            var materiauGeoSelect = document.getElementById("materiau-geo-select");
+            var newMaterialInput = document.getElementById("new-material");
 
-        if (classificationSelect.value === "Matériau bio-sourcé") {
-            materiauBioSelect.style.display = "block";
-            materiauGeoSelect.style.display = "none";
-        } else if (classificationSelect.value === "Matériau géo-sourcé") {
-            materiauBioSelect.style.display = "none";
-            materiauGeoSelect.style.display = "block";
+            if (classificationSelect.value === "Matériau bio-sourcé") {
+                materiauBioSelect.style.display = "block";
+                materiauGeoSelect.style.display = "none";
+            } else if (classificationSelect.value === "Matériau géo-sourcé") {
+                materiauBioSelect.style.display = "none";
+                materiauGeoSelect.style.display = "block";
+            }
+
+            // Cacher le champ d'entrée de matériau personnalisé
+            newMaterialInput.style.display = "none";
         }
 
-        // Cacher le champ d'entrée de matériau personnalisé
-        newMaterialInput.style.display = "none";
-    }
+        // Ajouter des écouteurs d'événements pour les options "Ajouter un matériau"
+        materiauBioSelect.addEventListener("change", function () {
+            if (materiauBioSelect.value === "ajouter-un-materiau-bio") {
+                showCustomMaterialInput();
+            }
+        });
 
-    // Ajouter des écouteurs d'événements pour les options "Ajouter un matériau"
-    materiauBioSelect.addEventListener("change", function() {
-        if (materiauBioSelect.value === "ajouter-un-materiau-bio") {
-            showCustomMaterialInput();
+        materiauGeoSelect.addEventListener("change", function () {
+            if (materiauGeoSelect.value === "ajouter-un-materiau-geo") {
+                showCustomMaterialInput();
+            }
+        });
+
+        // Fonction pour afficher le champ d'entrée pour ajouter un nouveau matériau
+        function showCustomMaterialInput() {
+            var newMaterialInput = document.getElementById("new-material");
+            newMaterialInput.style.display = "block";
         }
-    });
-
-    materiauGeoSelect.addEventListener("change", function() {
-        if (materiauGeoSelect.value === "ajouter-un-materiau-geo") {
-            showCustomMaterialInput();
-        }
-    });
-
-    // Fonction pour afficher le champ d'entrée pour ajouter un nouveau matériau
-    function showCustomMaterialInput() {
-        var newMaterialInput = document.getElementById("new-material");
-        newMaterialInput.style.display = "block";
-    }
         // AJOUTER UN MATÉRIAU
 
         // SEARCH CITY
