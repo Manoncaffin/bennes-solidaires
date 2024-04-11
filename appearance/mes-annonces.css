@@ -18,7 +18,6 @@
 
     body {
         font-family: "Abordage";
-        font-size: 2rem;
         color: black;
         min-width: 100vw;
         min-height: 100vh;
@@ -112,14 +111,6 @@
 
     /* NAVBAR */
 
-    .foot_form {
-        justify-content: center;
-        flex-direction: column;
-        text-align: center;
-        font-size: 1.2rem;
-        margin-top: 40px;
-    }
-
     .send_message {
         background-color: rgb(65, 238, 186);
         color: black;
@@ -185,6 +176,7 @@
         display: flex;
         align-items: center;
         text-decoration: underline;
+        font-size: 1.7rem;
     }
 
     .announce {
@@ -270,12 +262,13 @@
 
     /* NAVBAR */
 
+
     .form_profil p {
-        font-size: 1.5rem;
+        font-size: 1.1rem;
     }
 
     .form_profil_large_one p {
-        font-size: 2rem;
+        font-size: 1.3rem;
     }
 }
 
@@ -327,20 +320,8 @@
         justify-content: space-between;
     }
 
-    p {
-        font-size: 1.1rem;
-    }
-
-    .form_profil p {
-        font-size: 1.4rem;
-    }
-
     .form_profil_large_one {
         margin-top: 35px;
-    }
-
-    .form_profil_large_one p {
-        font-size: 1.4rem;
     }
 
     /* INFOS TOP */

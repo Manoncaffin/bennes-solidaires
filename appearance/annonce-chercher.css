@@ -18,7 +18,6 @@
 
     body {
         font-family: "Abordage";
-        font-size: 1.4rem;
         color: black;
         min-width: 100vw;
         min-height: 100vh;
@@ -116,7 +115,7 @@
     label {
         margin-right: 0px;
         margin-left: 0px;
-        font-size: 1.3rem;
+        font-size: 1.7rem;
     }
 
     input[type=submit] {
@@ -128,7 +127,7 @@
         cursor: pointer;
         margin-bottom: 10px;
         margin-top: 5px;
-        font-size: 1.3rem;
+        font-size: 1.7rem;
         width: 100%;
     }
 
@@ -146,7 +145,7 @@
         cursor: pointer;
         margin-bottom: 5px;
         margin-top: 5px;
-        font-size: 1.3rem;
+        font-size: 1.7rem;
         width: 100%;
     }
 
@@ -159,13 +158,9 @@
         margin-top: 5px;
     }
 
-    .custom-popup {
+    /* .custom-popup {
         
-    }
-
-    .custom-marker {
-        transform: scale(2);
-    }
+    } */
 
     .search {
         display: flex;
@@ -178,11 +173,7 @@
         justify-content: center;
         flex-direction: column;
         text-align: center;
-        font-size: 1rem;
-    }
-
-    .links_form {
-        font-size: 1rem;
+        font-size: 1.7rem;
     }
 
     .container {
@@ -218,18 +209,13 @@
         resize: vertical;
         color: rgb(123, 122, 122);
         background-color: transparent;
-        font-size: 1.3rem;
+        font-size: 1.7rem;
     }
 
     /* FORM  */
 
     #map {
         height: 400px;
-    }
-
-    .scrolling-text {
-        display: block;
-        margin-right: 500px;
     }
 
     .scrolling-text-container {
@@ -239,11 +225,12 @@
     }
 
     .scrolling-text {
-        font-size: 1.9rem;
+        display: block;
+        margin-right: 500px;
+        font-size: 2.5rem;
         white-space: nowrap;
         animation: scrollText 10s linear infinite;
         animation-direction: alternate-reverse;
-
     }
 
     @keyframes scrollText {
@@ -266,28 +253,6 @@
 }
 
 
-/* --------------------------------------------------- */
-/* --------------------------------------------------- */
-/* ------------- MEDIA MIN-WIDTH 768PX --------------- */
-/* ------------------ SUP. OU ÉGALE ------------------ */
-/* --------------------------------------------------- */
-@media screen and (min-width: 768px) {
-    #footer {
-        background-color: #000000;
-        color: white;
-        width: 100%;
-        font-size: 1rem;
-    }
-
-    .credits {
-        margin: 0 50px;
-    }
-
-    .copyright {
-        font-family: "Lemon Milk";
-    }
-}
-
 
 /* --------------------------------------------------- */
 /* --------------------------------------------------- */
@@ -295,10 +260,6 @@
 /* ----------------- SUP. OU ÉGALE ------------------- */
 /* --------------------------------------------------- */
 @media only screen and (min-width: 1000px) {
-    body {
-        font-family: "Abordage";
-        font-size: 1.5rem;
-    }
 
     /* NAVBAR */
     .navbar {
@@ -324,7 +285,6 @@
 
     .links {
         width: 100%;
-        font-size: 1.2rem;
     }
 
     .container_menu {
@@ -340,6 +300,12 @@
 
     /* NAVBAR */
 
+    .scrolling-text {
+        display: block;
+        margin-right: 500px;
+        font-size: 1.7rem;
+    }
+
     /* FORM */
     .container {
         box-sizing: border-box;
@@ -351,33 +317,50 @@
         margin: 0;
     }
 
-    input[type=text] {
-        font-size: 1.1rem;
-        width: 40%;
+    label {
+        margin-right: 0px;
+        margin-left: 0px;
+        font-size: 1.3rem;
     }
 
-    button {
-        width: 40%;
-    }
-
-    #classification-select,
-    #materiau-geo-select,
     #materiau-bio-select,
-    #geographical_map,
-    #adress-input {
-        font-size: 1.1rem;
+    #materiau-geo-select,
+    #classification-select,
+    #quantity-select,
+    #value-select, 
+    #description, 
+    #geographical, 
+    #new-material,
+    #address-input,
+    #file {
+        font-size: 1.3rem;
+    }
+
+    .quantity {
+        font-size: 1.3rem;
     }
 
     input[type=submit] {
-        padding: 12px 20px;
-        font-size: 1.2rem;
+        margin-top: 10px;
+        width: 40%;
+        font-size: 1.3rem;
+    }
+
+    input[type=text] {
         width: 40%;
     }
 
     .foot_form {
         margin-top: 20px;
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
+
+    button {
+        width: 40%;
+        margin-top: 10px;
+        font-size: 1.3rem;
+    }
+
 
     /* FORM */
 }
@@ -455,7 +438,7 @@
     #classification-select,
     #materiau-geo-select,
     #materiau-bio-select,
-    #adress-input {
+    #address-input {
         font-size: 1.4rem;
     }
 
@@ -466,7 +449,7 @@
 
     .foot_form {
         margin-top: 20px;
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 
     label {

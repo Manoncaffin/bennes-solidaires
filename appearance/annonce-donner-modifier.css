@@ -18,7 +18,6 @@
 
     body {
         font-family: "Abordage";
-        font-size: 1.4rem;
         color: black;
         min-width: 100vw;
         min-height: 100vh;
@@ -115,7 +114,7 @@
     label {
         margin-right: 0px;
         margin-left: 0px;
-        font-size: 1.3rem;
+        font-size: 1.7rem;
     }
 
     input[type=submit] {
@@ -127,7 +126,7 @@
         cursor: pointer;
         margin-bottom: 10px;
         margin-top: 40px;
-        font-size: 1.5rem;
+        font-size: 1.7rem;
         width: 100%;
     }
 
@@ -140,7 +139,6 @@
         justify-content: center;
         flex-direction: column;
         text-align: center;
-        font-size: 1.2rem;
     }
 
     .container {
@@ -163,7 +161,10 @@
     #materiau-geo-select,
     #classification-select,
     #quantity-select,
-    #value-select, #description, #geographical {
+    #value-select, 
+    #description, 
+    #geographical, 
+    #new-material {
         width: 100%;
         border: none;
         outline: none;
@@ -177,25 +178,20 @@
         resize: vertical;
         color: rgb(123, 122, 122);
         background-color: transparent;
-        font-size: 1.4rem;
-    }
-
-    .file {
-        display: flex;
+        font-size: 1.7rem;
     }
 
     #file {
-        font-size: 1.3rem;
-        margin-left: 40px;
+        font-size: 1.7rem;
+        margin-left: 20px;
         margin-bottom: 16px;
-        padding: 8px;
     }
 
     .quantity {
         display: flex;
         width: 880px;
-        padding-bottom: 20px;
-        font-size: 1.4rem;
+        padding-bottom: 16px;
+        font-size: 1.7rem;
     }
 
     .quantity-select {
@@ -217,11 +213,6 @@
     }
     /* FORM  */
 
-    .scrolling-text {
-        display: block;
-        margin-right: 500px;
-    }
-
     .scrolling-text-container {
         min-width: 100%;
         overflow: hidden;
@@ -229,7 +220,9 @@
     }
 
     .scrolling-text {
-        font-size: 1.9rem;
+        display: block;
+        margin-right: 500px;
+        font-size: 2.5rem;
         white-space: nowrap;
         animation: scrollText 10s linear infinite;
         animation-direction: alternate-reverse;
@@ -260,28 +253,6 @@
 }
 
 
-/* --------------------------------------------------- */
-/* --------------------------------------------------- */
-/* ------------- MEDIA MIN-WIDTH 768PX --------------- */
-/* ------------------ SUP. OU ÉGALE ------------------ */
-/* --------------------------------------------------- */
-@media screen and (min-width: 768px) {
-    #footer {
-        background-color: #000000;
-        color: white;
-        width: 100%;
-        font-size: 1rem;
-    }
-
-    .credits {
-        margin: 0 50px;
-    }
-
-    .copyright {
-        font-family: "Lemon Milk";
-    }
-}
-
 
 /* --------------------------------------------------- */
 /* --------------------------------------------------- */
@@ -289,10 +260,6 @@
 /* ----------------- SUP. OU ÉGALE ------------------- */
 /* --------------------------------------------------- */
 @media only screen and (min-width: 1000px) {
-    body {
-        font-family: "Abordage";
-        font-size: 1.5rem;
-    }
 
      /* NAVBAR */
     .navbar {
@@ -333,6 +300,12 @@
     }
     /* NAVBAR */
 
+    .scrolling-text {
+        display: block;
+        margin-right: 500px;
+        font-size: 1.7rem;
+    }
+
     /* FORM */
     .container {
         box-sizing: border-box;
@@ -344,27 +317,32 @@
         margin: 0;
     }
 
+    label {
+        margin-right: 0px;
+        margin-left: 0px;
+        font-size: 1.3rem;
+    }
+
+    #materiau-bio-select,
+    #materiau-geo-select,
+    #classification-select,
+    #quantity-select,
+    #value-select, 
+    #description, 
+    #geographical, 
+    #new-material,
+    #file {
+        font-size: 1.3rem;
+    }
+
+    .quantity {
+        font-size: 1.3rem;
+    }
+
     input[type=submit] {
         margin-top: 20px;
         width: 40%;
-    }
-
-    #activity-select {
-        width: 100%;
-        border: none;
-        outline: none;
-        padding: 12px;
-        border: none;
-        outline: none;
-        border-bottom: 1px solid rgb(92, 91, 91);
-        border-radius: 0;
-        box-sizing: border-box;
-        margin-top: 6px;
-        margin-bottom: 16px;
-        margin-right: 0px;
-        margin-left: 0px;
-        resize: vertical;
-        font-size: 1.7rem;
+        font-size: 1.3rem;
     }
 
     /* FORM */

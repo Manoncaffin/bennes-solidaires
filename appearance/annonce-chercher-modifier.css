@@ -18,7 +18,6 @@
 
     body {
         font-family: "Abordage";
-        font-size: 1.4rem;
         color: black;
         min-width: 100vw;
         min-height: 100vh;
@@ -36,7 +35,7 @@
     }
 
      /* NAVBAR */
-     .navbar .burger-menu-button {
+    .navbar .burger-menu-button {
         color: black;
         cursor: pointer;
         display: none;
@@ -115,7 +114,7 @@
     label {
         margin-right: 0px;
         margin-left: 0px;
-        font-size: 1.3rem;
+        font-size: 1.7rem;
     }
 
     input[type=submit] {
@@ -126,8 +125,8 @@
         border-radius: 15px;
         cursor: pointer;
         margin-bottom: 10px;
-        margin-top: 5px;
-        font-size: 1.4rem;
+        margin-top: 40px;
+        font-size: 1.7rem;
         width: 100%;
     }
 
@@ -137,15 +136,9 @@
     }
 
     .foot_form {
-        margin-top: 20px;
         justify-content: center;
         flex-direction: column;
         text-align: center;
-        font-size: 1.2rem;
-    }
-
-    .links_form {
-        font-size: 1rem;
     }
 
     .container {
@@ -167,7 +160,11 @@
     #materiau-bio-select,
     #materiau-geo-select,
     #classification-select,
-    #geographical {
+    #quantity-select,
+    #value-select, 
+    #description, 
+    #geographical, 
+    #new-material {
         width: 100%;
         border: none;
         outline: none;
@@ -181,14 +178,40 @@
         resize: vertical;
         color: rgb(123, 122, 122);
         background-color: transparent;
-        font-size: 1.3rem;
+        font-size: 1.7rem;
+    }
+
+    #file {
+        font-size: 1.7rem;
+        margin-left: 20px;
+        margin-bottom: 16px;
+    }
+
+    .quantity {
+        display: flex;
+        width: 880px;
+        padding-bottom: 16px;
+        font-size: 1.7rem;
+    }
+
+    .quantity-select {
+        margin: 0px 40px 0px 0px;
+    }
+
+    .value-select {
+        margin-left: 50px;
+        margin-right: 40px;
+    }
+
+    .checkbox {
+        display: flex;
+    }
+
+    input[type=radio] {
+        margin-right: 20px;
+        width: 20px;
     }
     /* FORM  */
-
-    .scrolling-text {
-        display: block;
-        margin-right: 500px;
-    }
 
     .scrolling-text-container {
         min-width: 100%;
@@ -197,11 +220,12 @@
     }
 
     .scrolling-text {
-        font-size: 1.9rem;
+        display: block;
+        margin-right: 500px;
+        font-size: 2.5rem;
         white-space: nowrap;
         animation: scrollText 10s linear infinite;
         animation-direction: alternate-reverse;
-        
     }
 
     @keyframes scrollText {
@@ -221,30 +245,13 @@
     .bordure {
         border: 1px solid black;
     }
-}
 
-
-/* --------------------------------------------------- */
-/* --------------------------------------------------- */
-/* ------------- MEDIA MIN-WIDTH 768PX --------------- */
-/* ------------------ SUP. OU ÉGALE ------------------ */
-/* --------------------------------------------------- */
-@media screen and (min-width: 768px) {
-    #footer {
-        background-color: #000000;
-        color: white;
-        width: 100%;
-        font-size: 1rem;
-    }
-
-    .credits {
-        margin: 0 50px;
-    }
-
-    .copyright {
-        font-family: "Lemon Milk";
+    .text_rgpd {
+        width: 500px;
+        font-size: 10px;
     }
 }
+
 
 
 /* --------------------------------------------------- */
@@ -253,13 +260,9 @@
 /* ----------------- SUP. OU ÉGALE ------------------- */
 /* --------------------------------------------------- */
 @media only screen and (min-width: 1000px) {
-    body {
-        font-family: "Abordage";
-        font-size: 1.5rem;
-    }
 
      /* NAVBAR */
-     .navbar {
+    .navbar {
         width: 100%;
         display: flex;
         justify-content: center;
@@ -297,6 +300,12 @@
     }
     /* NAVBAR */
 
+    .scrolling-text {
+        display: block;
+        margin-right: 500px;
+        font-size: 1.7rem;
+    }
+
     /* FORM */
     .container {
         box-sizing: border-box;
@@ -308,9 +317,34 @@
         margin: 0;
     }
 
-    input[type=submit] {
-        width: 40%;
+    label {
+        margin-right: 0px;
+        margin-left: 0px;
+        font-size: 1.3rem;
     }
+
+    #materiau-bio-select,
+    #materiau-geo-select,
+    #classification-select,
+    #quantity-select,
+    #value-select, 
+    #description, 
+    #geographical, 
+    #new-material,
+    #file {
+        font-size: 1.3rem;
+    }
+
+    .quantity {
+        font-size: 1.3rem;
+    }
+
+    input[type=submit] {
+        margin-top: 20px;
+        width: 40%;
+        font-size: 1.3rem;
+    }
+
     /* FORM */
 }
 
