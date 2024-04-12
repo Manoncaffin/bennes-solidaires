@@ -28,13 +28,48 @@
                 <a href="./accueil.html" class="logo"><img src="../images/Bennes-solidaires.webp"
                         alt="Bennes solidaires"></a>
             </div>
+
             <div class="navbar">
                 <ul class="links">
                     <li><a href="./accueil.html">ACCUEIL</a></li>
-                    <li><a href="./accueil.html#deposer">DÉPOSER UNE ANNONCE</a></li>
-                    <li><a href="./connexion.html">CONNEXION</a></li>
-                    <li><a href="./accueil.html#adhesion">ADHÉSION</a></li>
-                    <li><a href="./accueil.html#contact">CONTACT</a></li>
+
+                    <div class="circle_menu"></div>
+
+                    <li class="dropdown">
+                        <a href="#deposer">DÉPOSER UNE ANNONCE</a>
+                        <ul class="dropdown-menu_one">
+                            <li><a href="./annonce-chercher.html">Chercher un matériau</a></li>
+                            <li><a href="./annonce-donner.html">Donner un matériau</a></li>
+                        </ul>
+                    </li>
+                    <div class="circle_menu"></div>
+
+                    <li class="dropdown">
+                        <a href="./connexion.html">CONNEXION</a>
+                        <ul class="dropdown-menu_two">
+                            <li><a href="./profil.html">Connexion</a></li>
+                            <li><a href="./inscription.html">Inscription</a></li>
+                        </ul>
+                    </li>
+
+                    <div class="circle_menu"></div>
+
+                    <li class="dropdown">
+                        <a href="./profil.html">MON PROFIL</a>
+                        <ul class="dropdown-menu_two">
+                            <li><a href="./profil.html">Voir mon profil</a></li>
+                            <li><a href="./mes-annonces.html">Mes annonces</a></li>
+                            <li><a href="./messagerie.html">Messagerie</a></li>
+                        </ul>
+                    </li>
+
+                    <div class="circle_menu"></div>
+
+                    <li><a href="#adhesion">ADHÉSION</a></li>
+
+                    <div class="circle_menu"></div>
+
+                    <li><a href="#contact">CONTACT</a></li>
                 </ul>
 
                 <div class="burger-menu-button" id="nav-toggle">
@@ -46,10 +81,10 @@
         <div class="burger-menu" id="nav-menu">
             <ul class="links">
                 <li><a href="./accueil.html">ACCUEIL</a></li>
-                <li><a href="./accueil.html#deposer">DÉPOSER UNE ANNONCE</a></li>
+                <li><a href="#deposer">DÉPOSER UNE ANNONCE</a></li>
                 <li><a href="./connexion.html">CONNEXION</a></li>
-                <li><a href="./accueil.html#adhesion">ADHÉSION</a></li>
-                <li><a href="./accueil.html#contact">CONTACT</a></li>
+                <li><a href="#adhesion">ADHÉSION</a></li>
+                <li><a href="#contact">CONTACT</a></li>
             </ul>
         </div>
     </header>
@@ -77,7 +112,7 @@
                 <div class="form_circle">
                     <h1><a href="#">S</a></h1>
                 </div>
-                <p><a href="#"><span>Ajoutez une photo de profil.</span></a></p>
+                <p><a href="#"><span>Ajouter une photo de profil.</span></a></p>
             </div>
 
             <div class="form_profil_large_two">
@@ -116,12 +151,11 @@
     </main>
 
     <script>
-        // SCRIPT NAVBAR / OPEN-BURGER AND HIDDEN SCROLLING-TEXT
+        // SCRIPT NAVBAR 
         const burgerMenuButton = document.querySelector('.burger-menu-button');
         const burgerMenuButtonIcon = document.querySelector('.burger-menu-button i');
         const burgerMenu = document.querySelector('.burger-menu');
         const navLinks = document.querySelectorAll('.links a');
-        const scrollingTextContainers = document.querySelectorAll('.scrolling-text-container');
 
         burgerMenuButton.onclick = function () {
             burgerMenu.classList.toggle('open');
@@ -140,7 +174,7 @@
                 burgerMenuButtonIcon.classList = 'fa-solid fa-bars';
             });
         });
-        // SCRIPT NAVBAR / OPEN-BURGER AND HIDDEN SCROLLING-TEXT
+        // SCRIPT NAVBAR 
 
     </script>
 

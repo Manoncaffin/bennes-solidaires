@@ -18,7 +18,6 @@
 
     body {
         font-family: "Abordage";
-        font-size: 1.4rem;
         color: black;
         min-width: 100vw;
         min-height: 100vh;
@@ -102,19 +101,25 @@
     }
 
     .burger-menu-button i {
-        padding: 15px;
-        transform: scale(3);
+        padding: 15px 0 15px 0;
+        transform: scale(4.5);
+    }
+
+    .fa-solid.fa-bars, .fa-solid.fa-xmark {
+        padding-right: 10px;
     }
 
     .dropdown-menu_one {
+        z-index: 100;
+        border: 2px solid black;
         display: none;
         position: absolute;
-        border-bottom-right-radius: 20px;
-        border-bottom-left-radius: 20px;
+        justify-content: center;
         padding: 10px;
-        width: 170px;
+        width: 280px;
+        margin-left: 20px;
         background-color: rgb(59, 106, 236);
-        list-style: none;
+        text-align: center;
     }
 
     .dropdown:hover .dropdown-menu_one {
@@ -122,23 +127,29 @@
     }
 
     .dropdown-menu_two {
+        z-index: 100;
+        border: 2px solid black;
         display: none;
         position: absolute;
-        border-bottom-right-radius: 20px;
-        border-bottom-left-radius: 20px;
+        justify-content: center;
         padding: 10px;
-        width: 170px;
+        width: 280px;
+        margin-left: 20px;
         background-color: rgb(59, 106, 236);
-        list-style: none;
+        text-align: center;
     }
 
     .dropdown:hover .dropdown-menu_two {
         display: block;
     }
 
-    .links {
-        list-style: none;
+    .circle_menu {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: black;
     }
+
     /* NAVBAR */
 
     h1 {
@@ -191,10 +202,6 @@
 /* ----------------- SUP. OU ÉGALE ------------------- */
 /* --------------------------------------------------- */
 @media only screen and (min-width: 1000px) {
-    body {
-        font-family: "Abordage";
-        font-size: 1.5rem;
-    }
 
         /* NAVBAR */
         .navbar {
@@ -211,6 +218,7 @@
     
         .navbar .links {
             display: flex;
+            align-items: center;
             justify-content: space-between;
         }
     
@@ -221,6 +229,7 @@
         .links {
             width: 100%;
             font-size: 1.2rem;
+            list-style: none;
         }
     
         .container_menu {

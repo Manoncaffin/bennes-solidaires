@@ -25,15 +25,51 @@
     <header id="header">
         <div class="container_menu">
             <div>
-                <a href="./accueil.html" class="logo"><img src="../images/Bennes-solidaires.webp" alt="Bennes solidaires"></a>
+                <a href="./accueil.html" class="logo"><img src="../images/Bennes-solidaires.webp"
+                        alt="Bennes solidaires"></a>
             </div>
+
             <div class="navbar">
                 <ul class="links">
                     <li><a href="./accueil.html">ACCUEIL</a></li>
-                    <li><a href="./accueil.html#deposer">DÉPOSER UNE ANNONCE</a></li>
-                    <li><a href="./connexion.html">CONNEXION</a></li>
-                    <li><a href="./accueil.html#adhesion">ADHÉSION</a></li>
-                    <li><a href="./accueil.html#contact">CONTACT</a></li>
+
+                    <div class="circle_menu"></div>
+
+                    <li class="dropdown">
+                        <a href="#deposer">DÉPOSER UNE ANNONCE</a>
+                        <ul class="dropdown-menu_one">
+                            <li><a href="./annonce-chercher.html">Chercher un matériau</a></li>
+                            <li><a href="./annonce-donner.html">Donner un matériau</a></li>
+                        </ul>
+                    </li>
+                    <div class="circle_menu"></div>
+
+                    <li class="dropdown">
+                        <a href="./connexion.html">CONNEXION</a>
+                        <ul class="dropdown-menu_two">
+                            <li><a href="./profil.html">Connexion</a></li>
+                            <li><a href="./inscription.html">Inscription</a></li>
+                        </ul>
+                    </li>
+
+                    <div class="circle_menu"></div>
+
+                    <li class="dropdown">
+                        <a href="./profil.html">MON PROFIL</a>
+                        <ul class="dropdown-menu_two">
+                            <li><a href="./profil.html">Voir mon profil</a></li>
+                            <li><a href="./mes-annonces.html">Mes annonces</a></li>
+                            <li><a href="./messagerie.html">Messagerie</a></li>
+                        </ul>
+                    </li>
+
+                    <div class="circle_menu"></div>
+
+                    <li><a href="#adhesion">ADHÉSION</a></li>
+
+                    <div class="circle_menu"></div>
+
+                    <li><a href="#contact">CONTACT</a></li>
                 </ul>
 
                 <div class="burger-menu-button" id="nav-toggle">
@@ -45,10 +81,10 @@
         <div class="burger-menu" id="nav-menu">
             <ul class="links">
                 <li><a href="./accueil.html">ACCUEIL</a></li>
-                    <li><a href="./accueil.html#deposer">DÉPOSER UNE ANNONCE</a></li>
-                    <li><a href="./connexion.html">CONNEXION</a></li>
-                    <li><a href="./accueil.html#adhesion">ADHÉSION</a></li>
-                    <li><a href="./accueil.html#contact">CONTACT</a></li>
+                <li><a href="#deposer">DÉPOSER UNE ANNONCE</a></li>
+                <li><a href="./connexion.html">CONNEXION</a></li>
+                <li><a href="#adhesion">ADHÉSION</a></li>
+                <li><a href="#contact">CONTACT</a></li>
             </ul>
         </div>
     </header>
@@ -81,25 +117,34 @@
     </main>
 
     <script>
-        // SCRIPT NAVBAR
-        const burgerMenuButton = document.querySelector('.burger-menu-button')
-        const burgerMenuButtonIcon = document.querySelector('.burger-menu-button i')
-        const burgerMenu = document.querySelector('.burger-menu')
-        const navLinks = document.querySelectorAll('.links a')
+        // SCRIPT NAVBAR 
+        // Récupérer les éléments du menu burger et du menu burger lui-même
+        const burgerMenuButton = document.querySelector('.burger-menu-button');
+        const burgerMenu = document.querySelector('.burger-menu');
 
-        burgerMenuButton.onclick = function () {
-            burgerMenu.classList.toggle('open')
-            const isOpen = burgerMenu.classList.contains('open')
-            burgerMenuButtonIcon.classList = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'
-        }
-
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                burgerMenu.classList.remove('open');
-                burgerMenuButtonIcon.classList = 'fa-solid fa-bars';
+        // Ajouter un gestionnaire d'événements pour l'ouverture et la fermeture du menu burger
+        burgerMenuButton.addEventListener('click', function () {
+            burgerMenu.classList.toggle('open');
+            // Récupérer tous les conteneurs de texte de défilement
+            const scrollingTextContainers = document.querySelectorAll('.scrolling-text-container');
+            // Masquer ou afficher les conteneurs de texte de défilement en fonction de l'état du menu burger
+            scrollingTextContainers.forEach(container => {
+                if (burgerMenu.classList.contains('open')) {
+                    container.style.display = 'none'; // Masquer le conteneur de texte de défilement lorsque le menu burger est ouvert
+                } else {
+                    container.style.display = 'flex'; // Afficher le conteneur de texte de défilement avec display flex lorsque le menu burger est fermé
+                }
             });
+
+            // Ajouter ou retirer la balise i pour la croix du bouton close
+            const isOpen = burgerMenu.classList.contains('open');
+            if (isOpen) {
+                burgerMenuButton.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+            } else {
+                burgerMenuButton.innerHTML = '<i class="fa-solid fa-bars"></i>'; // Réinitialiser le contenu du menu-burger
+            }
         });
-        // SCRIPT NAVBAR
+        // SCRIPT NARBAR
     </script>
 
 

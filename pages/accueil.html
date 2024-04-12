@@ -28,25 +28,47 @@
                 <a href="./accueil.html" class="logo"><img src="../images/Bennes-solidaires.webp"
                         alt="Bennes solidaires"></a>
             </div>
+
             <div class="navbar">
                 <ul class="links">
                     <li><a href="#projet">ACCUEIL</a></li>
+
+                    <div class="circle_menu"></div>
+
                     <li class="dropdown">
                         <a href="#deposer">DÉPOSER UNE ANNONCE</a>
                         <ul class="dropdown-menu_one">
-                            <li><a href="./annonce-chercher.html">Chercher</a></li>
-                            <li><a href="./annonce-donner.html">Donner</a></li>
+                            <li><a href="./annonce-chercher.html">Chercher un matériau</a></li>
+                            <li><a href="./annonce-donner.html">Donner un matériau</a></li>
                         </ul>
-                    <li><a href="./connexion.html">CONNEXION/INSCRIPTION</a></li>
+                    </li>
+                    <div class="circle_menu"></div>
+
+                    <li class="dropdown">
+                        <a href="./connexion.html">CONNEXION</a>
+                        <ul class="dropdown-menu_two">
+                            <li><a href="./profil.html">Connexion</a></li>
+                            <li><a href="./inscription.html">Inscription</a></li>
+                        </ul>
+                    </li>
+
+                    <div class="circle_menu"></div>
+
                     <li class="dropdown">
                         <a href="./profil.html">MON PROFIL</a>
                         <ul class="dropdown-menu_two">
                             <li><a href="./profil.html">Voir mon profil</a></li>
-                            <li><a href="#">Mes annonces</a></li>
+                            <li><a href="./mes-annonces.html">Mes annonces</a></li>
                             <li><a href="./messagerie.html">Messagerie</a></li>
                         </ul>
                     </li>
+
+                    <div class="circle_menu"></div>
+
                     <li><a href="#adhesion">ADHÉSION</a></li>
+
+                    <div class="circle_menu"></div>
+
                     <li><a href="#contact">CONTACT</a></li>
                 </ul>
 
@@ -75,14 +97,17 @@
                 <p class="p_description pb-5">Bennes solidaires se positionne comme une plate-forme dédiée à l'économie
                     circulaire des ressources bio et géo-sourcées, où l’excèdent de matière de l'un·e devient la matière
                     première de l'autre.
-                    Cette plateforme est ouverte à toutes et tous : designers, créateur·rices, artisan·es, bâtisseur·euses et
+                    Cette plateforme est ouverte à toutes et tous : designers, créateur·rices, artisan·es,
+                    bâtisseur·euses et
                     particuliers.
                 </p>
 
                 <div class="scrolling-text-container">
-                    <p class="scrolling-text">Quel est le projet de Bennes Solidaires ?</p>
-                    <div class="bordure mb-4"></div>
+                    <p class="scrolling-text">Quel est le projet de Bennes solidaires ?</p>
+                    <p class="scrolling-text">Quel est le projet de Bennes solidaires ?</p>
+                    <p class="scrolling-text">Quel est le projet de Bennes solidaires ?</p>
                 </div>
+                <div class="bordure mb-4"></div>
 
                 <p class="p_description pb-5">L'idée initiale de ce projet découle d'un constat évident : ces matériaux
                     incitent au
@@ -97,8 +122,10 @@
             <section id="fonctionnement">
                 <div class="scrolling-text-container">
                     <p class="scrolling-text">Quel est le fonctionnement de Bennes solidaires ?</p>
-                    <div class="bordure mb-5"></div>
+                    <p class="scrolling-text">Quel est le fonctionnement de Bennes solidaires ?</p>
+                    <p class="scrolling-text">Quel est le fonctionnement de Bennes solidaires ?</p>
                 </div>
+                <div class="bordure mb-5"></div>
 
                 <div class="stage pb-4">
                     <div class="circle">
@@ -185,9 +212,11 @@
                 </div>
 
                 <p class="pb-5">Le principe est simple : lorsque vous créez votre annonce, un code postal
-                    vous sera demandé afin que les autres membres sachent dans quelle zone géographique venir chercher le matériau en
+                    vous sera demandé afin que les autres membres sachent dans quelle zone géographique venir chercher
+                    le matériau en
                     question.
-                    En appliquant sa recherche, un pointeur fixé sur la cartographie indiquera donc les environs où venir le
+                    En appliquant sa recherche, un pointeur fixé sur la cartographie indiquera donc les environs où
+                    venir le
                     récupérer. Suite à la prise de contact, l'adresse exacte pourra être communiquée en message privé.
                 </p>
                 <div class="bordure mb-5"></div>
@@ -230,9 +259,6 @@
             </section>
 
             <section id="adhesion">
-                <!-- <a href="#header" class="arrow-up mt-4">
-                    <img src="../images/arrow-up.svg" width="50px" height="auto">
-                </a> -->
                 <div class="bordure mt-5"></div>
                 <h1 class="big-title-two pt-5">J'ADHÈRE</h1>
                 <p class="pb-5 text_line">Soutenez l’action de Bennes solidaires en devenant adhérent·e sur la
@@ -290,6 +316,52 @@
     </main>
 
     <script>
+        // SCRIPT OPEN MENU-BURGER / HIDDEN SCROLLING-TEXT
+        // Récupérer les éléments du menu burger et du menu burger lui-même
+        const burgerMenuButton = document.querySelector('.burger-menu-button');
+        const burgerMenu = document.querySelector('.burger-menu');
+
+        // Ajouter un gestionnaire d'événements pour l'ouverture et la fermeture du menu burger
+        burgerMenuButton.addEventListener('click', function () {
+            burgerMenu.classList.toggle('open');
+            // Récupérer tous les conteneurs de texte de défilement
+            const scrollingTextContainers = document.querySelectorAll('.scrolling-text-container');
+            // Masquer ou afficher les conteneurs de texte de défilement en fonction de l'état du menu burger
+            scrollingTextContainers.forEach(container => {
+                if (burgerMenu.classList.contains('open')) {
+                    container.style.display = 'none'; // Masquer le conteneur de texte de défilement lorsque le menu burger est ouvert
+                } else {
+                    container.style.display = 'flex'; // Afficher le conteneur de texte de défilement avec display flex lorsque le menu burger est fermé
+                }
+            });
+
+            // Ajouter ou retirer la balise i pour la croix du bouton close
+            const isOpen = burgerMenu.classList.contains('open');
+            if (isOpen) {
+                burgerMenuButton.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+            } else {
+                burgerMenuButton.innerHTML = '<i class="fa-solid fa-bars"></i>'; // Réinitialiser le contenu du menu-burger
+            }
+        });
+
+        // Récupérer les éléments de la barre de navigation
+        const navLinks = document.querySelectorAll('.links a');
+
+        // Ajouter un gestionnaire d'événements pour la fermeture du menu burger lorsque l'utilisateur clique sur un lien de navigation
+        navLinks.forEach(link => {
+            link.addEventListener('click', function () {
+                burgerMenu.classList.remove('open');
+                // Récupérer tous les conteneurs de texte de défilement
+                const scrollingTextContainers = document.querySelectorAll('.scrolling-text-container');
+                // Afficher les conteneurs de texte de défilement avec display flex lorsque l'utilisateur clique sur un lien de navigation
+                scrollingTextContainers.forEach(container => {
+                    container.style.display = 'flex';
+                });
+                // Réinitialiser le contenu du menu-burger
+                burgerMenuButton.innerHTML = '<i class="fa-solid fa-bars"></i>';
+            });
+        });
+        // SCRIPT OPEN MENU-BURGER / HIDDEN SCROLLING-TEXT
 
         // SCRIPT TABLEAU MATÉRIAUX
         document.addEventListener('DOMContentLoaded', function () {
@@ -308,46 +380,6 @@
             });
         });
         // SCRIPT TABLEAU MATÉRIAUX
-
-        // SCRIPT NAVBAR
-        const burgerMenuButton = document.querySelector('.burger-menu-button')
-        const burgerMenuButtonIcon = document.querySelector('.burger-menu-button i')
-        const burgerMenu = document.querySelector('.burger-menu')
-        const navLinks = document.querySelectorAll('.links a')
-
-        burgerMenuButton.onclick = function () {
-            burgerMenu.classList.toggle('open')
-            const isOpen = burgerMenu.classList.contains('open')
-            burgerMenuButtonIcon.classList = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'
-        }
-
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                burgerMenu.classList.remove('open');
-                burgerMenuButtonIcon.classList = 'fa-solid fa-bars';
-            });
-
-            // SCRIPT NAVBAR
-
-            // SCRIPT HIDDEN SCROLLING WHEN BURGER OPEN
-            const burgerMenuButton = document.querySelector('.burger-menu-button');
-            const scrollingTextContainers = document.querySelectorAll('.scrolling-text-container');
-
-            burgerMenuButton.addEventListener('click', function () {
-                // Toggle the 'open' class on the burger menu
-                burgerMenu.classList.toggle('open');
-
-                // Check if the burger menu is open
-                const isOpen = burgerMenu.classList.contains('open');
-
-                // Add or remove the class to hide the scrolling text container based on the menu state
-                scrollingTextContainers.forEach(container => {
-                    container.classList.toggle('hide-on-menu-open', isOpen);
-                });
-            });
-        });
-        // SCRIPT HIDDEN SCROLLING WHEN BURGER OPEN
-
 
     </script>
 

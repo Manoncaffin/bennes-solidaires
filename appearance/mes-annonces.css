@@ -105,8 +105,54 @@
     }
 
     .burger-menu-button i {
-        padding: 15px;
-        transform: scale(3);
+        padding: 15px 0 15px 0;
+        transform: scale(4.5);
+    }
+
+    .fa-solid.fa-bars,
+    .fa-solid.fa-xmark {
+        padding-right: 10px;
+    }
+
+    .dropdown-menu_one {
+        z-index: 100;
+        border: 2px solid black;
+        display: none;
+        position: absolute;
+        justify-content: center;
+        padding: 10px;
+        width: 280px;
+        margin-left: 20px;
+        background-color: rgb(59, 106, 236);
+        text-align: center;
+    }
+
+    .dropdown:hover .dropdown-menu_one {
+        display: block;
+    }
+
+    .dropdown-menu_two {
+        z-index: 100;
+        border: 2px solid black;
+        display: none;
+        position: absolute;
+        justify-content: center;
+        padding: 10px;
+        width: 280px;
+        margin-left: 20px;
+        background-color: rgb(59, 106, 236);
+        text-align: center;
+    }
+
+    .dropdown:hover .dropdown-menu_two {
+        display: block;
+    }
+
+    .circle_menu {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: black;
     }
 
     /* NAVBAR */
@@ -166,7 +212,7 @@
     }
 
     .form_profil_large_one {
-        margin-top: 70px;
+        margin-top: 30px;
         width: 100%;
         padding: 35px 40px 30px 40px;
         height: fit-content;
@@ -183,35 +229,49 @@
         display: flex;
         flex-direction: column;
         width: 100%;
-        gap: 30px;
     }
 
     .form_profil_large_two {
-        margin-top: 70px;
+        margin-top: 30px;
         width: 100%;
         padding: 35px 40px 30px 40px;
-        height: fit-content;
+        height: 450px;
         border-radius: 40px;
         background-color: white;
         box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
         display: flex;
-        align-items: center;
-        text-decoration: underline;
-        flex: 1; /* Chaque div occupera la même part d'espace */
+        flex-direction: column;
+        flex: 1;
+        /* Chaque div occupera la même part d'espace */
+    }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+        font-family: "Lemon Milk";
+        font-size: 1.4rem;
+    }
+
+    .foot_form {
+        display: flex;
+        flex-direction: column;
+        margin-top: 25px;
+        width: 100%;
+
+        a {
+            width: 100%;
+        }
     }
 
     .announce_inline {
         width: 100%;
-        height: 100%;
-        margin-bottom: 15px;
-        overflow: hidden;
-        display: flex;
 
         img {
             object-fit: cover;
             border-radius: 20px;
-            height: 300px;
-            width: 500px;
+            height: 400px;
+            width: 100%;
         }
     }
 }
@@ -240,6 +300,7 @@
 
     .navbar .links {
         display: flex;
+        align-items: center;
         justify-content: space-between;
     }
 
@@ -272,6 +333,11 @@
 
     .form_profil_large_one p {
         font-size: 1.3rem;
+    }
+
+    .text {
+        font-size: 1.1rem;
+        text-align: start;
     }
 }
 
@@ -327,7 +393,6 @@
         margin-top: 35px;
     }
 
-
     /* INFOS TOP */
 
 
@@ -347,6 +412,7 @@
         justify-content: space-between;
         flex-direction: row;
         margin-bottom: 30px;
+        gap: 30px;
     }
 
     .form_profil_large_two {
@@ -369,7 +435,8 @@
         margin-bottom: 0;
         margin-top: 15px;
     }
-        /* ANNOUNCE */
+
+    /* ANNOUNCE */
 }
 
 

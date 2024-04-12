@@ -105,8 +105,53 @@
     }
 
     .burger-menu-button i {
-        padding: 15px;
-        transform: scale(3);
+        padding: 15px 0 15px 0;
+        transform: scale(4.5);
+    }
+
+    .fa-solid.fa-bars, .fa-solid.fa-xmark {
+        padding-right: 10px;
+    }
+
+    .dropdown-menu_one {
+        z-index: 100;
+        border: 2px solid black;
+        display: none;
+        position: absolute;
+        justify-content: center;
+        padding: 10px;
+        width: 280px;
+        margin-left: 20px;
+        background-color: rgb(59, 106, 236);
+        text-align: center;
+    }
+
+    .dropdown:hover .dropdown-menu_one {
+        display: block;
+    }
+
+    .dropdown-menu_two {
+        z-index: 100;
+        border: 2px solid black;
+        display: none;
+        position: absolute;
+        justify-content: center;
+        padding: 10px;
+        width: 280px;
+        margin-left: 20px;
+        background-color: rgb(59, 106, 236);
+        text-align: center;
+    }
+
+    .dropdown:hover .dropdown-menu_two {
+        display: block;
+    }
+
+    .circle_menu {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: black;
     }
 
     /* NAVBAR */
@@ -222,6 +267,7 @@
         font-size: 1.7rem;
     }
 
+
     /* FORM  */
 
     #map {
@@ -253,7 +299,7 @@
         }
     }
 
-    .hide-on-menu-open .scrolling-text {
+    .hide-on-menu-open .scrolling-text .hide-map {
         display: none;
     }
 
@@ -286,6 +332,7 @@
 
     .navbar .links {
         display: flex;
+        align-items: center;
         justify-content: space-between;
     }
 

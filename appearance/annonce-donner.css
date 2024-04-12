@@ -105,8 +105,53 @@
     }
 
     .burger-menu-button i {
-        padding: 15px;
-        transform: scale(3);
+        padding: 15px 0 15px 0;
+        transform: scale(4.5);
+    }
+
+    .fa-solid.fa-bars, .fa-solid.fa-xmark {
+        padding-right: 10px;
+    }
+
+    .dropdown-menu_one {
+        z-index: 100;
+        border: 2px solid black;
+        display: none;
+        position: absolute;
+        justify-content: center;
+        padding: 10px;
+        width: 280px;
+        margin-left: 20px;
+        background-color: rgb(59, 106, 236);
+        text-align: center;
+    }
+
+    .dropdown:hover .dropdown-menu_one {
+        display: block;
+    }
+
+    .dropdown-menu_two {
+        z-index: 100;
+        border: 2px solid black;
+        display: none;
+        position: absolute;
+        justify-content: center;
+        padding: 10px;
+        width: 280px;
+        margin-left: 20px;
+        background-color: rgb(59, 106, 236);
+        text-align: center;
+    }
+
+    .dropdown:hover .dropdown-menu_two {
+        display: block;
+    }
+
+    .circle_menu {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: black;
     }
     /* NAVBAR */
 
@@ -125,7 +170,7 @@
         border-radius: 15px;
         cursor: pointer;
         margin-bottom: 10px;
-        margin-top: 40px;
+        margin-top: 30px;
         font-size: 1.7rem;
         width: 100%;
     }
@@ -133,6 +178,19 @@
     input[type=submit]:hover {
         background-color: black;
         color: white;
+    }
+
+    .add-material {
+        width: 30%;
+    }
+
+    .add-material input[type="submit"] {
+        display: none;
+    }
+
+    .add {
+        display: flex;
+        justify-content: space-between;
     }
 
     .foot_form {
@@ -189,9 +247,10 @@
 
     .quantity {
         display: flex;
-        width: 880px;
+        width: 100%;
         padding-bottom: 16px;
         font-size: 1.7rem;
+        margin-top: 16px;
     }
 
     .quantity-select {
@@ -303,6 +362,7 @@
 
     .navbar .links {
         display: flex;
+        align-items: center;
         justify-content: space-between;
     }
 
@@ -356,10 +416,14 @@
     #quantity-select,
     #value-select, 
     #description, 
-    #geographical, 
+    #geographical,
     #new-material,
     #file {
         font-size: 1.3rem;
+    }
+
+    .add-material input[type="submit"] {
+        width: 95%;
     }
 
     .quantity {
@@ -371,7 +435,7 @@
     }
 
     input[type=submit] {
-        margin-top: 20px;
+        /* margin-top: 20px; */
         width: 40%;
         font-size: 1.3rem;
     }

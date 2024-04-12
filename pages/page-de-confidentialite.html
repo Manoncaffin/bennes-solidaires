@@ -28,26 +28,48 @@
                 <a href="./accueil.html" class="logo"><img src="../images/Bennes-solidaires.webp"
                         alt="Bennes solidaires"></a>
             </div>
+
             <div class="navbar">
                 <ul class="links">
                     <li><a href="./accueil.html">ACCUEIL</a></li>
+
+                    <div class="circle_menu"></div>
+
                     <li class="dropdown">
-                        <a href="./accueil.html#deposer">DÉPOSER UNE ANNONCE</a>
+                        <a href="#deposer">DÉPOSER UNE ANNONCE</a>
                         <ul class="dropdown-menu_one">
-                            <li><a href="./annonce-chercher.html">Chercher</a></li>
-                            <li><a href="./annonce-donner.html">Donner</a></li>
+                            <li><a href="./annonce-chercher.html">Chercher un matériau</a></li>
+                            <li><a href="./annonce-donner.html">Donner un matériau</a></li>
                         </ul>
-                    <li><a href="./connexion.html">CONNEXION/INSCRIPTION</a></li>
+                    </li>
+                    <div class="circle_menu"></div>
+
+                    <li class="dropdown">
+                        <a href="./connexion.html">CONNEXION</a>
+                        <ul class="dropdown-menu_two">
+                            <li><a href="./profil.html">Connexion</a></li>
+                            <li><a href="./inscription.html">Inscription</a></li>
+                        </ul>
+                    </li>
+
+                    <div class="circle_menu"></div>
+
                     <li class="dropdown">
                         <a href="./profil.html">MON PROFIL</a>
                         <ul class="dropdown-menu_two">
                             <li><a href="./profil.html">Voir mon profil</a></li>
-                            <li><a href="#">Mes annonces</a></li>
+                            <li><a href="./mes-annonces.html">Mes annonces</a></li>
                             <li><a href="./messagerie.html">Messagerie</a></li>
                         </ul>
                     </li>
-                    <li><a href="./accueil.html#adhesion">ADHÉSION</a></li>
-                    <li><a href="./accueil.html#contact">CONTACT</a></li>
+
+                    <div class="circle_menu"></div>
+
+                    <li><a href="#adhesion">ADHÉSION</a></li>
+
+                    <div class="circle_menu"></div>
+
+                    <li><a href="#contact">CONTACT</a></li>
                 </ul>
 
                 <div class="burger-menu-button" id="nav-toggle">
@@ -58,7 +80,7 @@
 
         <div class="burger-menu" id="nav-menu">
             <ul class="links">
-                <li><a href="#projet">ACCUEIL</a></li>
+                <li><a href="./accueil.html">ACCUEIL</a></li>
                 <li><a href="#deposer">DÉPOSER UNE ANNONCE</a></li>
                 <li><a href="./connexion.html">CONNEXION</a></li>
                 <li><a href="#adhesion">ADHÉSION</a></li>
@@ -151,27 +173,9 @@
                 burgerMenu.classList.remove('open');
                 burgerMenuButtonIcon.classList = 'fa-solid fa-bars';
             });
-
+        });
             // SCRIPT NAVBAR
 
-            // SCRIPT HIDDEN SCROLLING WHEN BURGER OUVERT
-            const burgerMenuButton = document.querySelector('.burger-menu-button');
-            const scrollingTextContainers = document.querySelectorAll('.scrolling-text-container');
-
-            burgerMenuButton.addEventListener('click', function () {
-                // Toggle the 'open' class on the burger menu
-                burgerMenu.classList.toggle('open');
-
-                // Check if the burger menu is open
-                const isOpen = burgerMenu.classList.contains('open');
-
-                // Add or remove the class to hide the scrolling text container based on the menu state
-                scrollingTextContainers.forEach(container => {
-                    container.classList.toggle('hide-on-menu-open', isOpen);
-                });
-            });
-        });
-        // SCRIPT HIDDEN SCROLLING WHEN BURGER OUVERT
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

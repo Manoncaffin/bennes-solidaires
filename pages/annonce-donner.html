@@ -29,13 +29,48 @@
                 <a href="./accueil.html" class="logo"><img src="../images/Bennes-solidaires.webp"
                         alt="Bennes solidaires"></a>
             </div>
+
             <div class="navbar">
                 <ul class="links">
                     <li><a href="./accueil.html">ACCUEIL</a></li>
-                    <li><a href="./accueil.html#deposer">DÉPOSER UNE ANNONCE</a></li>
-                    <li><a href="./connexion.html">CONNEXION</a></li>
-                    <li><a href="./accueil.html#adhesion">ADHÉSION</a></li>
-                    <li><a href="./accueil.html#contact">CONTACT</a></li>
+
+                    <div class="circle_menu"></div>
+
+                    <li class="dropdown">
+                        <a href="#deposer">DÉPOSER UNE ANNONCE</a>
+                        <ul class="dropdown-menu_one">
+                            <li><a href="./annonce-chercher.html">Chercher un matériau</a></li>
+                            <li><a href="./annonce-donner.html">Donner un matériau</a></li>
+                        </ul>
+                    </li>
+                    <div class="circle_menu"></div>
+
+                    <li class="dropdown">
+                        <a href="./connexion.html">CONNEXION</a>
+                        <ul class="dropdown-menu_two">
+                            <li><a href="./profil.html">Connexion</a></li>
+                            <li><a href="./inscription.html">Inscription</a></li>
+                        </ul>
+                    </li>
+
+                    <div class="circle_menu"></div>
+
+                    <li class="dropdown">
+                        <a href="./profil.html">MON PROFIL</a>
+                        <ul class="dropdown-menu_two">
+                            <li><a href="./profil.html">Voir mon profil</a></li>
+                            <li><a href="./mes-annonces.html">Mes annonces</a></li>
+                            <li><a href="./messagerie.html">Messagerie</a></li>
+                        </ul>
+                    </li>
+
+                    <div class="circle_menu"></div>
+
+                    <li><a href="#adhesion">ADHÉSION</a></li>
+
+                    <div class="circle_menu"></div>
+
+                    <li><a href="#contact">CONTACT</a></li>
                 </ul>
 
                 <div class="burger-menu-button" id="nav-toggle">
@@ -47,10 +82,10 @@
         <div class="burger-menu" id="nav-menu">
             <ul class="links">
                 <li><a href="./accueil.html">ACCUEIL</a></li>
-                <li><a href="./accueil.html#deposer">DÉPOSER UNE ANNONCE</a></li>
+                <li><a href="#deposer">DÉPOSER UNE ANNONCE</a></li>
                 <li><a href="./connexion.html">CONNEXION</a></li>
-                <li><a href="./accueil.html#adhesion">ADHÉSION</a></li>
-                <li><a href="./accueil.html#contact">CONTACT</a></li>
+                <li><a href="#adhesion">ADHÉSION</a></li>
+                <li><a href="#contact">CONTACT</a></li>
             </ul>
         </div>
     </header>
@@ -86,30 +121,36 @@
                         <option value="materiau geo-source">Sable</option>
                         <option value="materiau geo-source">Verre</option>
                         <option value="materiau geo-source">Céramique</option>
-                        <option value="ajouter-un-materiau-geo">Ajouter un matériau</option>
+                        <option value="ajouter-un-materiau-geo">Le matériau ne figure pas dans la liste</option>
                     </select>
 
                     <label for="materiau-bio-select" class="materiau-select-bio"
                         style="display: none;">Matériaux</label>
                     <select name="materiau-bio-select" id="materiau-bio-select" style="display: none;" required>
                         <option value="">--</option>
+                        <option value="materiau bio-source">Bambou</option>
                         <option value="materiau bio-source">Bois</option>
-                        <option value="materiau bio-source">Papier</option>
-                        <option value="materiau bio-source">Papier-journal</option>
-                        <option value="materiau bio-source">Paille</option>
                         <option value="materiau bio-source">Canne-de-provence</option>
-                        <option value="materiau bio-source">Cambou</option>
-                        <option value="materiau bio-source">Sciure de bois</option>
-                        <option value="materiau bio-source">Liège</option>
+                        <option value="materiau bio-source">Chanvre</option>
                         <option value="materiau bio-source">Coquille d'huître</option>
                         <option value="materiau bio-source">Coquille d'escargot</option>
+                        <option value="materiau bio-source">Laine de mouton</option>
+                        <option value="materiau bio-source">Liège</option>
                         <option value="materiau bio-source">Marc de café</option>
-                        <option value="ajouter-un-materiau-bio">Ajouter un matériau</option>
+                        <option value="materiau bio-source">Papier</option>
+                        <option value="materiau bio-source">Papier-journal</option>
+                        <option value="materiau bio-source">Paille de blé</option>
+                        <option value="materiau bio-source">Paille de lavande</option>
+                        <option value="materiau bio-source">Roseau</option>
+                        <option value="materiau bio-source">Sciure de bois</option>
+                        <option value="ajouter-un-materiau-bio">Le matériau ne figure pas dans la liste</option>
                     </select>
 
                     <!-- Champ d'entrée pour ajouter un matériau personnalisé -->
-                    <input type="text" id="new-material" placeholder="Entrez un nouveau matériau"
-                        style="display: none;">
+                    <div class="add" style="display: none;">
+                        <label for="new-material" class="new-material">Ajouter</label>
+                        <input type="text" id="new-material" placeholder="Entrer un autre matériau">
+                    </div>
 
                     <div class="quantity">
                         <label for="number" class="quantity-select">Quantité</label>
@@ -145,11 +186,6 @@
                     <input id="geographical" type="text" name="geographical" placeholder="Entrez un code postal"
                         required>
 
-                    <div class="checkbox pt-3 pb-4">
-                        <input type="radio" id="registration" name="user-type" value="registration">
-                        <label for="registration">Je souhaite m’enregistrer pour une prochaine fois</label>
-                    </div>
-
                     <div class="foot_form">
                         <input type="submit" value="Valider mon annonce">
                     </div>
@@ -160,31 +196,52 @@
     </main>
 
     <script>
-        // SCRIPT NAVBAR / OPEN-BURGER AND HIDDEN SCROLLING-TEXT
+         // SCRIPT OPEN MENU-BURGER / HIDDEN SCROLLING-TEXT
+        // Récupérer les éléments du menu burger et du menu burger lui-même
         const burgerMenuButton = document.querySelector('.burger-menu-button');
-        const burgerMenuButtonIcon = document.querySelector('.burger-menu-button i');
         const burgerMenu = document.querySelector('.burger-menu');
-        const navLinks = document.querySelectorAll('.links a');
-        const scrollingTextContainers = document.querySelectorAll('.scrolling-text-container');
 
-        burgerMenuButton.onclick = function () {
+        // Ajouter un gestionnaire d'événements pour l'ouverture et la fermeture du menu burger
+        burgerMenuButton.addEventListener('click', function () {
             burgerMenu.classList.toggle('open');
-            const isOpen = burgerMenu.classList.contains('open');
-            burgerMenuButtonIcon.classList = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
-
-            // Add or remove the class to hide the scrolling text containers based on the menu state
+            // Récupérer tous les conteneurs de texte de défilement
+            const scrollingTextContainers = document.querySelectorAll('.scrolling-text-container');
+            // Masquer ou afficher les conteneurs de texte de défilement en fonction de l'état du menu burger
             scrollingTextContainers.forEach(container => {
-                container.classList.toggle('hide-on-menu-open', isOpen);
+                if (burgerMenu.classList.contains('open')) {
+                    container.style.display = 'none'; // Masquer le conteneur de texte de défilement lorsque le menu burger est ouvert
+                } else {
+                    container.style.display = 'flex'; // Afficher le conteneur de texte de défilement avec display flex lorsque le menu burger est fermé
+                }
             });
-        }
 
+            // Ajouter ou retirer la balise i pour la croix du bouton close
+            const isOpen = burgerMenu.classList.contains('open');
+            if (isOpen) {
+                burgerMenuButton.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+            } else {
+                burgerMenuButton.innerHTML = '<i class="fa-solid fa-bars"></i>'; // Réinitialiser le contenu du menu-burger
+            }
+        });
+
+        // Récupérer les éléments de la barre de navigation
+        const navLinks = document.querySelectorAll('.links a');
+
+        // Ajouter un gestionnaire d'événements pour la fermeture du menu burger lorsque l'utilisateur clique sur un lien de navigation
         navLinks.forEach(link => {
-            link.addEventListener('click', () => {
+            link.addEventListener('click', function () {
                 burgerMenu.classList.remove('open');
-                burgerMenuButtonIcon.classList = 'fa-solid fa-bars';
+                // Récupérer tous les conteneurs de texte de défilement
+                const scrollingTextContainers = document.querySelectorAll('.scrolling-text-container');
+                // Afficher les conteneurs de texte de défilement avec display flex lorsque l'utilisateur clique sur un lien de navigation
+                scrollingTextContainers.forEach(container => {
+                    container.style.display = 'flex';
+                });
+                // Réinitialiser le contenu du menu-burger
+                burgerMenuButton.innerHTML = '<i class="fa-solid fa-bars"></i>';
             });
         });
-        // SCRIPT NAVBAR / OPEN-BURGER AND HIDDEN SCROLLING-TEXT
+        // SCRIPT OPEN MENU-BURGER / HIDDEN SCROLLING-TEXT
 
         // SCRIPT SELECT MATÉRIAU
         const classificationSelect = document.getElementById('classification-select');
@@ -226,12 +283,13 @@
         // SCRIPT QUANTITY
 
         // AJOUTER UN MATÉRIAU
+
         // Fonction pour basculer entre les options de matériaux bio-sourcés et géo-sourcés
         function toggleMaterialSelect() {
-            var classificationSelect = document.getElementById("classification-select");
-            var materiauBioSelect = document.getElementById("materiau-bio-select");
-            var materiauGeoSelect = document.getElementById("materiau-geo-select");
-            var newMaterialInput = document.getElementById("new-material");
+            const classificationSelect = document.getElementById("classification-select");
+            const materiauBioSelect = document.getElementById("materiau-bio-select");
+            const materiauGeoSelect = document.getElementById("materiau-geo-select");
+            const newMaterialInput = document.getElementById("new-material");
 
             if (classificationSelect.value === "Matériau bio-sourcé") {
                 materiauBioSelect.style.display = "block";
@@ -245,25 +303,69 @@
             newMaterialInput.style.display = "none";
         }
 
+        // Fonction pour afficher le champ d'entrée pour ajouter un nouveau matériau
+        function showCustomMaterialInput() {
+            const newMaterialInput = document.getElementById("new-material");
+            newMaterialInput.style.display = "block";
+        }
+
+        // Fonction pour basculer l'affichage de l'élément "Ajouter un matériau" en fonction de la sélection
+        function toggleMaterialElements(show) {
+            const addDiv = document.querySelector('.add');
+            addDiv.style.display = show ? 'block' : 'none';
+        }
+
         // Ajouter des écouteurs d'événements pour les options "Ajouter un matériau"
         materiauBioSelect.addEventListener("change", function () {
             if (materiauBioSelect.value === "ajouter-un-materiau-bio") {
                 showCustomMaterialInput();
+                toggleMaterialElements(true);
+            } else {
+                toggleMaterialElements(false);
             }
         });
 
         materiauGeoSelect.addEventListener("change", function () {
             if (materiauGeoSelect.value === "ajouter-un-materiau-geo") {
                 showCustomMaterialInput();
+                toggleMaterialElements(true);
+            } else {
+                toggleMaterialElements(false);
             }
         });
 
-        // Fonction pour afficher le champ d'entrée pour ajouter un nouveau matériau
-        function showCustomMaterialInput() {
-            var newMaterialInput = document.getElementById("new-material");
-            newMaterialInput.style.display = "block";
-        }
+        // Appeler la fonction toggleMaterialSelect au chargement de la page
+        toggleMaterialSelect();
+
         // AJOUTER UN MATÉRIAU
+
+        // GÉRER LE BOUTTON POUR ADD MATERIAL
+        // Fonction pour afficher ou masquer la div add-material en fonction de la sélection de l'utilisateur
+        function toggleAddMaterialDiv(show) {
+            const addMaterialDiv = document.querySelector('.add-material');
+            addMaterialDiv.style.display = show ? 'block' : 'none';
+            const addButton = document.querySelector('.add-material input[type="submit"]');
+            addButton.style.display = show ? 'block' : 'none';
+        }
+
+        // Fonction pour gérer l'affichage de la div add-material lorsque l'utilisateur sélectionne "Ajouter un matériau" dans les listes déroulantes
+        function handleMaterialSelectChange(selectElement) {
+            if (selectElement.value === "ajouter-un-materiau-bio" || selectElement.value === "ajouter-un-materiau-geo") {
+                toggleAddMaterialDiv(true);
+            } else {
+                toggleAddMaterialDiv(false);
+            }
+        }
+
+        // Ajouter des écouteurs d'événements pour les changements de sélection dans les listes déroulantes
+        materiauBioSelect.addEventListener("change", function () {
+            handleMaterialSelectChange(this);
+        });
+
+        materiauGeoSelect.addEventListener("change", function () {
+            handleMaterialSelectChange(this);
+        });
+        // GÉRER LE BOUTTON POUR ADD MATERIAL
 
         // SEARCH CITY
         let searchTimeout;
