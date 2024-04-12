@@ -47,7 +47,7 @@
                     <li class="dropdown">
                         <a href="./connexion.html">CONNEXION</a>
                         <ul class="dropdown-menu_two">
-                            <li><a href="./profil.html">Connexion</a></li>
+                            <li><a href="./connexion.html">Connexion</a></li>
                             <li><a href="./inscription.html">Inscription</a></li>
                         </ul>
                     </li>
@@ -147,12 +147,42 @@
                     <p class="title">JE CLASSE</p>
                 </div>
 
-                <p class="pb-5">Les matériaux pouvant être enregistrés sur la plateforme sont issus de sources
+                <p>Les matériaux pouvant être enregistrés sur la plateforme sont issus de sources
                     bio-sourcée
                     ou du géo-sourcée. Ici, vous trouverez deux listes non-exhaustives pour chacune de ses typologies.
                     Si
                     votre matériau n’est pas encore classé : pas de problème, vous pourrez le proposer en créant votre
                     annonce et notre modérateur s’en occupera !</p>
+
+                    <button id="openModal" class="mb-5">Pour en savoir plus, vous pouvez cliquer ici.</button>
+
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <p class="mb-5">Les matériaux bio-sourcés sont des matériaux qui sont dérivés de matières premières
+                                renouvelables
+                                d'origine biologique, généralement issues de plantes, d'arbres, ou d'autres organismes
+                                vivants. Les
+                                exemples de matériaux bio-sourcés comprennent le bois, la paille, le liège, la fibre de
+                                lin, le
+                                bambou, etc. L'utilisation de matériaux bio-sourcés est souvent associée à des avantages
+                                environnementaux, car ils sont généralement considérés comme plus durables et moins
+                                nocifs pour
+                                l'environnement que les matériaux synthétiques dérivés du pétrole.</p>
+
+                                <p>Les matériaux géo-sourcés, eux, sont des matériaux qui sont extraits directement de la
+                                    Terre,
+                                    généralement à partir de ressources minérales ou de roches. Les exemples de matériaux
+                                    géo-sourcés
+                                    comprennent le sable, le gravier, la pierre, l'argile, les métaux, les minéraux, etc.
+                                    Contrairement
+                                    aux matériaux bio-sourcés, les matériaux géo-sourcés ne sont pas dérivés de matières
+                                    premières
+                                    renouvelables, mais sont plutôt issus de ressources naturelles non vivantes présentes
+                                    dans le sol ou
+                                    le sous-sol de la Terre.</p>
+                    </div>
+                </div>
 
                 <div class="corners pb-5">
                     <div class="corner">
@@ -380,6 +410,30 @@
             });
         });
         // SCRIPT TABLEAU MATÉRIAUX
+
+        // SCRIPT MODALE
+        // Récupérer les éléments DOM nécessaires
+        const modal = document.getElementById("myModal");
+        const btn = document.getElementById("openModal");
+        const span = document.getElementsByClassName("close")[0];
+
+        // Ouvrir la modale lorsque le bouton est cliqué
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // Fermer la modale lorsque l'utilisateur clique sur le bouton de fermeture
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // Fermer la modale lorsque l'utilisateur clique en dehors de celle-ci
+        window.onclick = function (event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+        // SCRIPT MODALE
 
     </script>
 
