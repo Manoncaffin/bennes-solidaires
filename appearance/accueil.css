@@ -13,7 +13,8 @@
 
     html,
     body {
-        background-color: rgb(232, 232, 232);
+        /* background-color: rgb(232, 232, 232); */
+        background-color: rgb(241, 240, 202);
     }
 
     body {
@@ -58,7 +59,8 @@
 
     header {
         position: relative;
-        background-color: rgb(65, 238, 186);
+        /* background-color: rgb(65, 238, 186); */
+        background-color: rgb(27, 237, 177);
     }
 
     .navbar {
@@ -79,6 +81,7 @@
         overflow: hidden;
         transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         background-color: rgb(65, 238, 186);
+        /* background-color: rgb(163, 247, 156); */
     }
 
     .burger-menu.open {
@@ -121,7 +124,8 @@
         padding: 10px;
         width: 280px;
         margin-left: 20px;
-        background-color: rgb(59, 106, 236);
+        /* background-color: rgb(26, 126, 246); */
+        background-color: rgb(246, 191, 26);
         text-align: center;
     }
 
@@ -137,7 +141,8 @@
         padding: 10px;
         width: 280px;
         margin-left: 20px;
-        background-color: rgb(59, 106, 236);
+        /* background-color: rgb(26, 126, 246); */
+        background-color: rgb(246, 191, 26);
         text-align: center;
     }
 
@@ -162,11 +167,16 @@
         text-align: left;
     }
 
+    .text_click {
+        font-family: "Lemon Milk";
+    }
+
     /* MODALE */
     #openModal {
         border: none;
         background-color: transparent;
-        color:rgb(59, 106, 236);
+        /* color:rgb(26, 126, 246); */
+        font-size: 1.2rem;
         transition: transform 0.3s ease;
     }
 
@@ -190,7 +200,8 @@
         background-color: #fefefe;
         margin: 15% auto;
         padding: 20px;
-        border: 1px solid rgb(65, 238, 186);
+        /* border: 1px solid rgb(65, 238, 186); */
+        border: 1px solid rgb(246, 191, 26);
         width: 80%;
       }
       
@@ -247,7 +258,8 @@
         font-size: 2.1rem;
         line-height: 1.7;
         background-color: white;
-        box-shadow: 0px 0px 10px 5px rgb(255, 255, 255);
+        /* box-shadow: 0px 0px 10px 5px rgb(255, 255, 255); */
+        box-shadow: 0px 0px 50px 5px rgb(246, 191, 26);
     }
 
     .p_description {
@@ -418,7 +430,8 @@
         box-sizing: border-box;
         width: 50%;
         height: 350px;
-        background-color: rgb(65, 238, 186);
+        /* background-color: rgb(65, 238, 186); */
+        background-color: rgb(27, 237, 177);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -429,7 +442,8 @@
         box-sizing: border-box;
         width: 50%;
         height: 350px;
-        background-color: rgb(65, 238, 186);
+        /* background-color: rgb(65, 238, 186); */
+        background-color: rgb(27, 237, 177);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -440,7 +454,8 @@
         box-sizing: border-box;
         width: 50%;
         height: 350px;
-        background-color: rgb(232, 232, 232);
+        /* background-color: rgb(232, 232, 232); */
+        background-color: rgb(241, 240, 202);
         position: relative;
         display: flex;
         justify-content: center;
@@ -451,7 +466,8 @@
         box-sizing: border-box;
         width: 50%;
         height: 350px;
-        background-color: rgb(232, 232, 232);
+        /* background-color: rgb(232, 232, 232); */
+        background-color: rgb(241, 240, 202);
         position: relative;
         display: flex;
         justify-content: center;
@@ -677,7 +693,9 @@ h2 {
         display: flex;
         justify-content: center;
         padding: 10px 110px 10px 110px;
-        background-color: rgb(59, 106, 236);
+        /* background-color: rgb(26, 126, 246); */
+        /* background-color: rgb(59, 246, 26); */
+        background-color: rgb(247, 243, 126);
     }
 
     .navbar .burger-menu-button {
@@ -889,6 +907,20 @@ h2 {
     .navbar .links {
         display: flex;
         /* gap: 6rem; */
+    }
+
+    .dropdown-menu_one {
+        padding: 10px;
+        width: 340px;
+    }
+
+    .dropdown:hover .dropdown-menu_one {
+        display: block;
+    }
+
+    .dropdown-menu_two {
+        padding: 10px;
+        width: 340px;
     }
 
     .p_description {

@@ -27,6 +27,7 @@
             <div>
                 <a href="./accueil.html" class="logo"><img src="../images/Bennes-solidaires.webp"
                         alt="Bennes solidaires"></a>
+                        <img id="imageChange" src="../images/brouette.webp" width="15%" height="auto">
             </div>
 
             <div class="navbar">
@@ -154,7 +155,7 @@
                     votre matériau n’est pas encore classé : pas de problème, vous pourrez le proposer en créant votre
                     annonce et notre modérateur s’en occupera !</p>
 
-                    <button id="openModal" class="mb-5">Pour en savoir plus, vous pouvez cliquer ici.</button>
+                    <button id="openModal" class="text_click mb-5">Pour en savoir plus, vous pouvez cliquer ici.</button>
 
                 <div id="myModal" class="modal">
                     <div class="modal-content">
@@ -435,6 +436,43 @@
         }
         // SCRIPT MODALE
 
+        // IMAGE HEADER 
+        // Sélection de l'élément image
+const image = document.getElementById('imageChange');
+
+// Tableau contenant les chemins des différentes images
+const imagesArray = [
+    "../images/brouette.webp",
+    "../images/image2.webp",
+    "../images/image3.webp",
+    "../images/image4.webp"
+];
+
+// Index actuel de l'image affichée
+let currentIndex = 0;
+
+// Fonction pour changer l'image au survol
+function changeImageOnHover() {
+    // Incrémenter l'index pour afficher la prochaine image
+    currentIndex = (currentIndex + 1) % imagesArray.length;
+    // Changer la source de l'image
+    image.src = imagesArray[currentIndex];
+}
+
+// Attacher un gestionnaire d'événement pour l'événement mouseenter
+image.addEventListener('mouseenter', changeImageOnHover);
+
+// Fonction pour réinitialiser l'image à l'originale lorsque la souris quitte l'image
+function resetImage() {
+    // Réinitialiser l'index pour afficher l'image originale
+    currentIndex = 0;
+    // Réinitialiser la source de l'image
+    image.src = imagesArray[currentIndex];
+}
+
+// Attacher un gestionnaire d'événement pour l'événement mouseleave
+image.addEventListener('mouseleave', resetImage);
+// IMAGE HEADER
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

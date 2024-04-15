@@ -114,6 +114,7 @@
                         <option value="Matériau géo-sourcé">Matériau géo-sourcé</option>
                     </select>
 
+                    <!-- INSERER MODALE -->
 
                     <label for="materiau-geo-select" class="materiau-select-geo"
                         style="display: none;">Matériaux</label>
@@ -169,59 +170,61 @@
     </main>
 
     <script>
-    // Récupérer les éléments du menu burger et du menu burger lui-même
-const burgerMenuButton = document.querySelector('.burger-menu-button');
-const burgerMenu = document.querySelector('.burger-menu');
+        // SCRIPT NAVBAR ET MENU-BURGER
+        // Récupérer les éléments du menu burger et du menu burger lui-même
+        const burgerMenuButton = document.querySelector('.burger-menu-button');
+        const burgerMenu = document.querySelector('.burger-menu');
 
-// Récupérer la carte
-const mapContainer = document.getElementById('map');
+        // Récupérer la carte
+        const mapContainer = document.getElementById('map');
 
-// Ajouter un gestionnaire d'événements pour l'ouverture et la fermeture du menu burger
-burgerMenuButton.addEventListener('click', function () {
-    burgerMenu.classList.toggle('open');
-    
-    // Masquer ou afficher la carte en fonction de l'état du menu burger
-    if (burgerMenu.classList.contains('open')) {
-        mapContainer.style.display = 'none'; // Masquer la carte lorsque le menu burger est ouvert
-    } else {
-        mapContainer.style.display = 'block'; // Afficher la carte lorsque le menu burger est fermé
-    }
+        // Ajouter un gestionnaire d'événements pour l'ouverture et la fermeture du menu burger
+        burgerMenuButton.addEventListener('click', function () {
+            burgerMenu.classList.toggle('open');
 
-    // Récupérer tous les conteneurs de texte de défilement
-    const scrollingTextContainers = document.querySelectorAll('.scrolling-text-container');
-    // Masquer ou afficher les conteneurs de texte de défilement en fonction de l'état du menu burger
-    scrollingTextContainers.forEach(container => {
-        container.style.display = burgerMenu.classList.contains('open') ? 'none' : 'flex';
-    });
+            // Masquer ou afficher la carte en fonction de l'état du menu burger
+            if (burgerMenu.classList.contains('open')) {
+                mapContainer.style.display = 'none'; // Masquer la carte lorsque le menu burger est ouvert
+            } else {
+                mapContainer.style.display = 'block'; // Afficher la carte lorsque le menu burger est fermé
+            }
 
-    // Ajouter ou retirer la balise i pour la croix du bouton close
-    const isOpen = burgerMenu.classList.contains('open');
-    if (isOpen) {
-        burgerMenuButton.innerHTML = '<i class="fa-solid fa-xmark"></i>';
-    } else {
-        burgerMenuButton.innerHTML = '<i class="fa-solid fa-bars"></i>'; // Réinitialiser le contenu du menu-burger
-    }
-});
+            // Récupérer tous les conteneurs de texte de défilement
+            const scrollingTextContainers = document.querySelectorAll('.scrolling-text-container');
+            // Masquer ou afficher les conteneurs de texte de défilement en fonction de l'état du menu burger
+            scrollingTextContainers.forEach(container => {
+                container.style.display = burgerMenu.classList.contains('open') ? 'none' : 'flex';
+            });
 
-// Récupérer les éléments de la barre de navigation
-const navLinks = document.querySelectorAll('.links a');
-
-// Ajouter un gestionnaire d'événements pour la fermeture du menu burger lorsque l'utilisateur clique sur un lien de navigation
-navLinks.forEach(link => {
-    link.addEventListener('click', function () {
-        burgerMenu.classList.remove('open');
-        // Récupérer tous les conteneurs de texte de défilement
-        const scrollingTextContainers = document.querySelectorAll('.scrolling-text-container');
-        // Afficher les conteneurs de texte de défilement avec display flex lorsque l'utilisateur clique sur un lien de navigation
-        scrollingTextContainers.forEach(container => {
-            container.style.display = 'flex';
+            // Ajouter ou retirer la balise i pour la croix du bouton close
+            const isOpen = burgerMenu.classList.contains('open');
+            if (isOpen) {
+                burgerMenuButton.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+            } else {
+                burgerMenuButton.innerHTML = '<i class="fa-solid fa-bars"></i>'; // Réinitialiser le contenu du menu-burger
+            }
         });
-        // Réinitialiser le contenu du menu-burger
-        burgerMenuButton.innerHTML = '<i class="fa-solid fa-bars"></i>';
-        // Afficher à nouveau la carte lorsque le menu burger est fermé
-        mapContainer.style.display = 'block';
-    });
-});
+
+        // Récupérer les éléments de la barre de navigation
+        const navLinks = document.querySelectorAll('.links a');
+
+        // Ajouter un gestionnaire d'événements pour la fermeture du menu burger lorsque l'utilisateur clique sur un lien de navigation
+        navLinks.forEach(link => {
+            link.addEventListener('click', function () {
+                burgerMenu.classList.remove('open');
+                // Récupérer tous les conteneurs de texte de défilement
+                const scrollingTextContainers = document.querySelectorAll('.scrolling-text-container');
+                // Afficher les conteneurs de texte de défilement avec display flex lorsque l'utilisateur clique sur un lien de navigation
+                scrollingTextContainers.forEach(container => {
+                    container.style.display = 'flex';
+                });
+                // Réinitialiser le contenu du menu-burger
+                burgerMenuButton.innerHTML = '<i class="fa-solid fa-bars"></i>';
+                // Afficher à nouveau la carte lorsque le menu burger est fermé
+                mapContainer.style.display = 'block';
+            });
+        });
+        // SCRIPT NAVBAR ET MENU-BURGER
 
         // SCRIPT SELECT MATÉRIAU
         const classificationSelect = document.getElementById('classification-select');
@@ -312,6 +315,41 @@ navLinks.forEach(link => {
                 });
         }
         // SCRIPT MAP
+
+        // SEARCH CITY
+        let searchTimeout;
+
+        document.getElementById("address-input").addEventListener("input", function () {
+            const postalCode = this.value.trim();
+            clearTimeout(searchTimeout); // Pour éviter les requêtes multiples pendant la saisie
+
+            // Attendez un court délai après la saisie avant de déclencher la recherche
+            searchTimeout = setTimeout(() => {
+                if (postalCode.length === 5 && /^\d+$/.test(postalCode)) { // Vérifie si le code postal est valide
+                    const url = 'https://nominatim.openstreetmap.org/search?format=json&postalcode=' + encodeURIComponent(postalCode);
+
+                    fetch(url)
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data && data.length > 0) {
+                                const city = data[0].display_name;
+                                // Remplir le champ avec la ville trouvée
+                                document.getElementById("address-input").value = city;
+                            } else {
+                                alert("Aucune ville trouvée pour ce code postal");
+                            }
+                        })
+                        .catch(error => {
+                            console.error('Erreur lors de la recherche de ville par code postal :', error);
+                            alert("Une erreur s'est produite lors de la recherche de ville par code postal");
+                        });
+                } else {
+                    // Code postal invalide, afficher un prompt d'erreur
+                    alert("Veuillez entrer un code postal valide (5 chiffres).");
+                }
+            }, 600); // Délai de 500 millisecondes avant de déclencher la recherche
+        });
+        // SEARCH CITY
     </script>
 
 

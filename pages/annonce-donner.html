@@ -111,6 +111,8 @@
                         <option value="Matériau géo-sourcé">Matériau géo-sourcé</option>
                     </select>
 
+                    <!-- INSERER UNE MODALE -->
+
                     <label for="materiau-geo-select" class="materiau-select-geo"
                         style="display: none;">Matériaux</label>
                     <select name="materiau-geo-select" id="materiau-geo-select" style="display: none;" required>
@@ -196,7 +198,7 @@
     </main>
 
     <script>
-         // SCRIPT OPEN MENU-BURGER / HIDDEN SCROLLING-TEXT
+        // SCRIPT OPEN MENU-BURGER / HIDDEN SCROLLING-TEXT
         // Récupérer les éléments du menu burger et du menu burger lui-même
         const burgerMenuButton = document.querySelector('.burger-menu-button');
         const burgerMenu = document.querySelector('.burger-menu');
@@ -339,7 +341,7 @@
 
         // AJOUTER UN MATÉRIAU
 
-        // GÉRER LE BOUTTON POUR ADD MATERIAL
+        // GÉRER LE BOUTTON ADD MATERIAL
         // Fonction pour afficher ou masquer la div add-material en fonction de la sélection de l'utilisateur
         function toggleAddMaterialDiv(show) {
             const addMaterialDiv = document.querySelector('.add-material');
@@ -365,7 +367,7 @@
         materiauGeoSelect.addEventListener("change", function () {
             handleMaterialSelectChange(this);
         });
-        // GÉRER LE BOUTTON POUR ADD MATERIAL
+        // GÉRER LE BOUTTON ADD MATERIAL
 
         // SEARCH CITY
         let searchTimeout;
@@ -398,7 +400,7 @@
                     // Code postal invalide, afficher un prompt d'erreur
                     alert("Veuillez entrer un code postal valide (5 chiffres).");
                 }
-            }, 500); // Délai de 500 millisecondes avant de déclencher la recherche
+            }, 600); // Délai de 500 millisecondes avant de déclencher la recherche
         });
         // SEARCH CITY
     </script>

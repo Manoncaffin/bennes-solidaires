@@ -34,7 +34,7 @@
         }
     }
 
-     /* NAVBAR */
+    /* NAVBAR */
     .navbar .burger-menu-button {
         color: black;
         cursor: pointer;
@@ -109,7 +109,8 @@
         transform: scale(4.5);
     }
 
-    .fa-solid.fa-bars, .fa-solid.fa-xmark {
+    .fa-solid.fa-bars,
+    .fa-solid.fa-xmark {
         padding-right: 10px;
     }
 
@@ -153,6 +154,7 @@
         border-radius: 50%;
         background-color: black;
     }
+
     /* NAVBAR */
 
     /* FORM  */
@@ -219,9 +221,9 @@
     #materiau-geo-select,
     #classification-select,
     #quantity-select,
-    #value-select, 
-    #description, 
-    #geographical, 
+    #value-select,
+    #description,
+    #geographical,
     #new-material {
         width: 100%;
         border: none;
@@ -295,8 +297,9 @@
     textarea:focus {
         border: 2px solid;
         border-color: rgb(65, 238, 186);
-        outline: none; 
+        outline: none;
     }
+
     /* FORM  */
 
     .scrolling-text-container {
@@ -347,7 +350,7 @@
 /* --------------------------------------------------- */
 @media only screen and (min-width: 1000px) {
 
-     /* NAVBAR */
+    /* NAVBAR */
     .navbar {
         width: 100%;
         display: flex;
@@ -385,6 +388,7 @@
         width: 400px;
         padding: 15px 110px 15px 110px;
     }
+
     /* NAVBAR */
 
     .scrolling-text {
@@ -414,8 +418,8 @@
     #materiau-geo-select,
     #classification-select,
     #quantity-select,
-    #value-select, 
-    #description, 
+    #value-select,
+    #description,
     #geographical,
     #new-material,
     #file {
@@ -441,6 +445,7 @@
     }
 
     /* FORM */
+
 }
 
 
@@ -450,6 +455,7 @@
 /* ----------------- SUP. OU ÉGALE ------------------- */
 /* --------------------------------------------------- */
 @media only screen and (min-width: 1200px) {
+
     /* NAVBAR  */
     .navbar {
         padding: 10px 140px 10px 140px;
@@ -480,6 +486,7 @@
         max-width: 2000px;
         margin: 0;
     }
+
     /* NAVBAR  */
 }
 
@@ -491,15 +498,17 @@
 /* ----------------- SUP. OU ÉGALE ------------------- */
 /* --------------------------------------------------- */
 @media only screen and (min-width: 1500px) {
-/* NAVBAR */
-.navbar {
-    display: flex;
-    justify-content: center;
-}
 
-.navbar .links {
-    display: flex;
-    justify-content: space-between;
-}
-/* NAVBAR */
+    /* NAVBAR */
+    .navbar {
+        display: flex;
+        justify-content: center;
+    }
+
+    .navbar .links {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /* NAVBAR */
 }
