@@ -13,7 +13,7 @@
 
     html,
     body {
-        background-color: rgb(232, 232, 232);
+        background-color: rgb(239, 238, 218);
     }
 
     body {
@@ -58,7 +58,7 @@
 
     header {
         position: relative;
-        background-color: rgb(65, 238, 186);
+        background-color: rgb(27, 237, 177);
     }
 
     .navbar {
@@ -78,7 +78,7 @@
         width: 100%;
         overflow: hidden;
         transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        background-color: rgb(65, 238, 186);
+        background-color: rgb(27, 237, 177);
     }
 
     .burger-menu.open {
@@ -163,7 +163,7 @@
     }
 
     .send_message {
-        background-color: rgb(65, 238, 186);
+        background-color: rgb(27, 237, 177);
         color: black;
         padding: 12px 20px;
         border: none;
@@ -292,7 +292,7 @@
     }
 
     .carousel__track-container {
-        background: rgb(65, 238, 186);
+        background: rgb(27, 237, 177);
         height: 100%;
         width: 100%;
         position: relative;
@@ -325,20 +325,20 @@
     }
 
     .carousel__button:hover {
-        background-color: rgb(65, 238, 186);
+        background-color: rgb(27, 237, 177);
         border-radius: 20px;
     }
 
     .carousel__button--left {
         left: -40px;
         border-radius: 10px;
-        background-color: rgb(65, 238, 186);
+        background-color: rgb(27, 237, 177);
     }
 
     .carousel__button--right {
         right: -40px;
         border-radius: 10px;
-        background-color: rgb(65, 238, 186);
+        background-color: rgb(27, 237, 177);
     }
 
     .carousel__button img {
