@@ -165,11 +165,11 @@
     }
 
     input[type=submit] {
-        background-color: rgb(243, 237, 79);
+        background-color: rgb(27, 237, 177);
         color: black;
         padding: 12px 20px;
-        border: 1px solid black;
-        /* border-radius: 15px; */
+        border: none;
+        border-radius: 15px;
         cursor: pointer;
         margin-bottom: 10px;
         margin-top: 5px;
@@ -183,11 +183,11 @@
     }
 
     button {
-        background-color: rgb(243, 237, 79);
+        background-color: rgb(27, 237, 177);
         color: black;
         padding: 12px 20px;
-        border: 1px solid black;
-        /* border-radius: 15px; */
+        border: none;
+        border-radius: 15px;
         cursor: pointer;
         margin-bottom: 5px;
         margin-top: 5px;

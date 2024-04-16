@@ -18,7 +18,7 @@
     }
 
     body {
-        font-family: "Abordage";
+        font-family: "Abordage", "Space Grotesk";
         color: black;
         min-width: 100vw;
         min-height: 100vh;
@@ -54,7 +54,8 @@
     }
 
     .logo img {
-        width: 250px;
+        width: 400px;
+        padding-right: 70px;
     }
 
     header {
@@ -159,25 +160,20 @@
     }
 
     /* revoir */
-    .imageChange {
-        width: 200px;
-        height: 150px;
-        -webkit-filter: grayscale(0) blur(0px);
+    #imageChange {
+        padding: 40px 100px 0 0;
+        width: 250px;
+        height: auto; 
+        /* -webkit-filter: grayscale(0) blur(0px);
         filter: grayscale(0) blur(0px);
         -webkit-transition: all 0.5s ease;
-        transition: all 0.5s ease;
+        transition: all 0.5s ease; */
     }
 
-    .imageChange:hover {
-        width: 150px;
-        /* on affiche l'image au carré */
-        height: 150px;
-        border-radius: 50%;
-        /* on arrondit l'image */
+    /* #imageChange:hover {
         -webkit-transform: rotate(360deg);
-        /* rotation de l'image */
         transform: rotate(360deg);
-    }
+    } */
 
     /* revoir */
 
@@ -191,11 +187,11 @@
         text-align: left;
     }
 
+    /* MODALE */
     .text_click {
         font-family: "Lemon Milk";
     }
 
-    /* MODALE */
     #openModal {
         border: none;
         background-color: transparent;
@@ -719,6 +715,7 @@ h2 {
         /* background-color: rgb(26, 126, 246); */
         /* background-color: rgb(59, 246, 26); */
         background-color: rgb(243, 237, 79);
+        box-shadow: 10px 10px 10px 1px rgb(243, 237, 79);
     }
 
     .navbar .burger-menu-button {
@@ -727,7 +724,12 @@ h2 {
 
     .navbar .links {
         display: flex;
+        align-items: center;
         justify-content: space-between;
+    }
+
+    .navbar a {
+        font-size: 1.1rem;
     }
 
     .burger-menu {
@@ -736,7 +738,6 @@ h2 {
 
     .links {
         width: 100%;
-        font-size: 1.2rem;
     }
 
     .container_menu {
@@ -746,8 +747,14 @@ h2 {
     }
 
     .logo img {
-        width: 800px;
-        padding: 40px 110px 40px 110px;
+        width: 670px;
+        padding: 40px 50px 40px 110px;
+    }
+
+    #imageChange {
+        width: 470px;
+        height: auto; 
+        padding: 40px 110px 40px 0;
     }
 
     /* NAVBAR */
@@ -893,8 +900,13 @@ h2 {
     }
 
     .logo img {
-        width: 1000px;
-        padding: 40px 140px 40px 140px;
+        width: 870px;
+        padding: 40px 50px 40px 140px;
+    }
+
+    .imageChange {
+        width: 500px;
+        padding: 40px 50px 40px 140px;
     }
 
     .container {

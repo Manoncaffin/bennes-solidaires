@@ -27,7 +27,7 @@
             <div>
                 <a href="./accueil.html" class="logo"><img src="../images/Bennes-solidaires.webp"
                         alt="Bennes solidaires"></a>
-                <img id="imageChange" src="../images/brouette.webp" width="25%" height="auto">
+                <img id="imageChange" src="../images/brouette.webp">
             </div>
 
             <div class="navbar">
@@ -273,7 +273,9 @@
 
                     <div class="rectangle">
                         <div class="rectangle-gray-one">
-                            <img src="../images/big-arrow-left.png" alt="arrow" class="icon">
+                            <!-- <img src="../images/big-arrow-left.png" alt="arrow" class="icon"> -->
+                            <img src="../images/lolilol.png" alt="arrow" class="icon">
+                            <!-- <img src="../images/tourbillon.png" alt="arrow" class="icon"> -->
                         </div>
                         <div class="rectangle-green-one">
                             <h2><a href="./annonce-chercher.html" class="swipe-text">CHERCHER UN MATÉRIAU</a></h2>
@@ -347,136 +349,9 @@
         </div>
     </main>
 
-    <script>
-        // SCRIPT OPEN MENU-BURGER / HIDDEN SCROLLING-TEXT
-        // Récupérer les éléments du menu burger et du menu burger lui-même
-        const burgerMenuButton = document.querySelector('.burger-menu-button');
-        const burgerMenu = document.querySelector('.burger-menu');
 
-        // Ajouter un gestionnaire d'événements pour l'ouverture et la fermeture du menu burger
-        burgerMenuButton.addEventListener('click', function () {
-            burgerMenu.classList.toggle('open');
-            // Récupérer tous les conteneurs de texte de défilement
-            const scrollingTextContainers = document.querySelectorAll('.scrolling-text-container');
-            // Masquer ou afficher les conteneurs de texte de défilement en fonction de l'état du menu burger
-            scrollingTextContainers.forEach(container => {
-                if (burgerMenu.classList.contains('open')) {
-                    container.style.display = 'none'; // Masquer le conteneur de texte de défilement lorsque le menu burger est ouvert
-                } else {
-                    container.style.display = 'flex'; // Afficher le conteneur de texte de défilement avec display flex lorsque le menu burger est fermé
-                }
-            });
-
-            // Ajouter ou retirer la balise i pour la croix du bouton close
-            const isOpen = burgerMenu.classList.contains('open');
-            if (isOpen) {
-                burgerMenuButton.innerHTML = '<i class="fa-solid fa-xmark"></i>';
-            } else {
-                burgerMenuButton.innerHTML = '<i class="fa-solid fa-bars"></i>'; // Réinitialiser le contenu du menu-burger
-            }
-        });
-
-        // Récupérer les éléments de la barre de navigation
-        const navLinks = document.querySelectorAll('.links a');
-
-        // Ajouter un gestionnaire d'événements pour la fermeture du menu burger lorsque l'utilisateur clique sur un lien de navigation
-        navLinks.forEach(link => {
-            link.addEventListener('click', function () {
-                burgerMenu.classList.remove('open');
-                // Récupérer tous les conteneurs de texte de défilement
-                const scrollingTextContainers = document.querySelectorAll('.scrolling-text-container');
-                // Afficher les conteneurs de texte de défilement avec display flex lorsque l'utilisateur clique sur un lien de navigation
-                scrollingTextContainers.forEach(container => {
-                    container.style.display = 'flex';
-                });
-                // Réinitialiser le contenu du menu-burger
-                burgerMenuButton.innerHTML = '<i class="fa-solid fa-bars"></i>';
-            });
-        });
-        // SCRIPT OPEN MENU-BURGER / HIDDEN SCROLLING-TEXT
-
-        // SCRIPT TABLEAU MATÉRIAUX
-        document.addEventListener('DOMContentLoaded', function () {
-            const toggleItems = document.querySelectorAll('.toggle-table');
-
-            toggleItems.forEach(function (item) {
-                item.addEventListener('click', function () {
-                    const sublistItems = this.parentElement.querySelectorAll('li:not(.toggle-table)');
-                    sublistItems.forEach(function (subitem) {
-                        subitem.classList.toggle('hidden');
-                    });
-
-                    // Ajouter ou supprimer la classe show-pointer pour basculer entre les icônes
-                    this.classList.toggle('show-pointer');
-                });
-            });
-        });
-        // SCRIPT TABLEAU MATÉRIAUX
-
-        // SCRIPT MODALE
-        // Récupérer les éléments DOM nécessaires
-        const modal = document.getElementById("myModal");
-        const btn = document.getElementById("openModal");
-        const span = document.getElementsByClassName("close")[0];
-
-        // Ouvrir la modale lorsque le bouton est cliqué
-        btn.onclick = function () {
-            modal.style.display = "block";
-        }
-
-        // Fermer la modale lorsque l'utilisateur clique sur le bouton de fermeture
-        span.onclick = function () {
-            modal.style.display = "none";
-        }
-
-        // Fermer la modale lorsque l'utilisateur clique en dehors de celle-ci
-        window.onclick = function (event) {
-            if (event.target === modal) {
-                modal.style.display = "none";
-            }
-        }
-        // SCRIPT MODALE
-
-        // IMAGE HEADER 
-        // Sélection de l'élément image
-        const image = document.getElementById('imageChange');
-
-        // Tableau contenant les chemins des différentes images
-        const imagesArray = [
-            "../images/brouette.webp",
-            "../images/brouette-pleine-droite.webp",
-            "../images/remorque.webp",
-            "../images/remorque-pleine-gauche.webp",
-        ];
-
-        // Index actuel de l'image affichée
-        let currentIndex = 0;
-
-        // Fonction pour changer l'image au survol
-        function changeImageOnHover() {
-            // Incrémenter l'index pour afficher la prochaine image
-            currentIndex = (currentIndex + 1) % imagesArray.length;
-            // Changer la source de l'image
-            image.src = imagesArray[currentIndex];
-        }
-
-        // Attacher un gestionnaire d'événement pour l'événement mouseenter
-        image.addEventListener('mouseenter', changeImageOnHover);
-
-        // Fonction pour réinitialiser l'image à l'originale lorsque la souris quitte l'image
-        function resetImage() {
-            // Réinitialiser l'index pour afficher l'image originale
-            currentIndex = 0;
-            // Réinitialiser la source de l'image
-            image.src = imagesArray[currentIndex];
-        }
-
-        // Attacher un gestionnaire d'événement pour l'événement mouseleave
-        image.addEventListener('mouseleave', resetImage);
-        console.log(imagesArray)
-        // IMAGE HEADER
-    </script>
-
+    <script src="../appearance/overallScrolling.js"></script>
+    <script src="../appearance/accueil.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
