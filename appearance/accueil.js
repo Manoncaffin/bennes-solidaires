@@ -48,9 +48,10 @@ const image = document.getElementById('imageChange');
 const imagesArray = [
     "../images/brouette.webp",
     "../images/brouette-pleine-droite.webp",
-    "../images/remorque.webp",
-    "../images/remorque-pleine-gauche.webp",
+    "../images/remorque.svg",
+    "../images/remorque-pleine.png",
 ];
+console.log(imagesArray)
 
 // Index actuel de l'image affichée
 let currentIndex = 0;
@@ -76,5 +77,4 @@ function resetImage() {
 
 // Attacher un gestionnaire d'événement pour l'événement mouseleave
 image.addEventListener('mouseleave', resetImage);
-console.log(imagesArray)
 // IMAGE HEADER

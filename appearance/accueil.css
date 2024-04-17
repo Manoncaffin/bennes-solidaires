@@ -54,7 +54,7 @@
     }
 
     .logo img {
-        width: 400px;
+        width: 55%;
         padding-right: 70px;
     }
 
@@ -162,7 +162,7 @@
     /* revoir */
     #imageChange {
         padding: 40px 100px 0 0;
-        width: 250px;
+        width: 35%;
         height: auto; 
         /* -webkit-filter: grayscale(0) blur(0px);
         filter: grayscale(0) blur(0px);
@@ -277,8 +277,8 @@
         font-size: 2.1rem;
         line-height: 1.7;
         background-color: white;
-        /* box-shadow: 0px 0px 10px 5px rgb(255, 255, 255); */
-        box-shadow: 0px 0px 20px 5px rgb(243, 237, 79);
+        /* box-shadow: 3px 3px 10px 1px white; */
+        box-shadow: 0px 0px 10px 10px rgb(243, 237, 79);
     }
 
     .p_description {
@@ -715,7 +715,7 @@ h2 {
         /* background-color: rgb(26, 126, 246); */
         /* background-color: rgb(59, 246, 26); */
         background-color: rgb(243, 237, 79);
-        box-shadow: 10px 10px 10px 1px rgb(243, 237, 79);
+        box-shadow: 2px 2px 10px 1px rgb(243, 237, 79);
     }
 
     .navbar .burger-menu-button {
@@ -747,13 +747,12 @@ h2 {
     }
 
     .logo img {
-        width: 670px;
+        width: 60%;
         padding: 40px 50px 40px 110px;
     }
 
     #imageChange {
-        width: 470px;
-        height: auto; 
+        width: 32%;
         padding: 40px 110px 40px 0;
     }
 
@@ -895,18 +894,18 @@ h2 {
         align-items: center;
     }
 
-    .links {
+    .navbar .links a {
         font-size: 1.3rem;
     }
 
     .logo img {
-        width: 870px;
+        width: 60%;
         padding: 40px 50px 40px 140px;
     }
 
     .imageChange {
-        width: 500px;
-        padding: 40px 50px 40px 140px;
+        width: 50%;
+        padding: 40px 140px 0 0;
     }
 
     .container {
@@ -930,6 +929,20 @@ h2 {
     .navbar a {
         font-size: 1.8rem;
     }
+
+    .navbar .links a {
+        font-size: 1.8rem;
+    }
+
+    .logo img {
+        width: 60%;
+        padding: 40px 50px 40px 140px;
+    }
+
+    .imageChange {
+        width: 60%;
+    }
+
 
     h2 {
         font-size: 4.6rem;
@@ -977,4 +990,22 @@ h2 {
     .rectangle-gray-two {
         height: 400px;
     }
+}
+
+
+
+/* --------------------------------------------------- */
+/* --------------------------------------------------- */
+/* ------------- MEDIA MIN-WIDTH 1500PX --------------- */
+/* ----------------- SUP. OU ÉGALE ------------------- */
+/* --------------------------------------------------- */
+@media only screen and (min-width: 1500px) {
+.logo img {
+    width: 60%;
+    padding: 40px 50px 40px 140px;
+}
+
+.imageChange {
+    width: 65%;
+}
 }
