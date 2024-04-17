@@ -13,7 +13,7 @@
 
     html,
     body {
-        background-color: rgb(239, 238, 218);
+        background-color: rgb(247, 245, 216);
     }
 
     body {
@@ -167,9 +167,9 @@
     input[type=submit] {
         background-color: rgb(27, 237, 177);
         color: black;
-        padding: 12px 20px;
+        padding: 8px 20px;
         border: none;
-        border-radius: 15px;
+        border-radius: 55px;
         cursor: pointer;
         margin-bottom: 10px;
         margin-top: 30px;
@@ -285,7 +285,7 @@
     }
 
     textarea {
-        background-color: rgb(239, 238, 218);
+        background-color:rgb(247, 245, 216);
         border: 1px solid rgb(123, 123, 123);
         border-radius: 10px;
         width: 100%;
@@ -305,7 +305,7 @@
      input:-webkit-autofill:hover,
      input:-webkit-autofill:focus,
      input:-webkit-autofill:active {
-         -webkit-box-shadow: 0 0 0 30px rgb(239, 238, 218) inset !important;
+         -webkit-box-shadow: 0 0 0 30px rgb(247, 245, 216) inset !important;
      }
 
     /* FORM  */
@@ -365,6 +365,7 @@
         justify-content: center;
         padding: 10px 110px 10px 110px;
         background-color: rgb(243, 237, 79);
+        box-shadow: 2px 2px 10px 1px rgb(243, 237, 79);
     }
 
     .navbar .burger-menu-button {

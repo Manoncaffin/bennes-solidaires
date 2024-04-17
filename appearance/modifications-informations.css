@@ -13,7 +13,7 @@
 
     html,
     body {
-        background-color: rgb(239, 238, 218);
+        background-color: rgb(247, 245, 216);
     }
 
     body {
@@ -186,9 +186,9 @@
     input[type=submit] {
         background-color: rgb(27, 237, 177);
         color: black;
-        padding: 12px 20px;
+        padding: 8px 20px;
         border: none;
-        border-radius: 15px;
+        border-radius: 55px;
         cursor: pointer;
         margin-bottom: 10px;
         margin-top: 40px;

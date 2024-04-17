@@ -168,6 +168,7 @@ materiauGeoSelect.addEventListener("change", function () {
 });
 // GÉRER LE BOUTTON ADD MATERIAL
 
+
 // SEARCH CITY
 let searchTimeout;
 

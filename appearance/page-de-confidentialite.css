@@ -13,7 +13,7 @@
 
     html,
     body {
-        background-color: rgb(239, 238, 218);
+        background-color: rgb(247, 245, 216);
     }
 
     body {
@@ -210,6 +210,7 @@
             justify-content: center;
             padding: 10px 110px 10px 110px;
             background-color: rgb(243, 237, 79);
+            box-shadow: 2px 2px 10px 1px rgb(243, 237, 79);
         }
     
         .navbar .burger-menu-button {

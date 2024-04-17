@@ -1,6 +1,7 @@
 //  SCRIPT OPEN MENU-BURGER / HIDDEN SCROLLING-TEXT
 // Récupérer les éléments du menu burger et du menu burger lui-même
-const burgerMenuButton = document.querySelector('.burger-menu-button');
+document.addEventListener("DOMContentLoaded", function() {
+    const burgerMenuButton = document.querySelector('.burger-menu-button');
 const burgerMenu = document.querySelector('.burger-menu');
 
 // Ajouter un gestionnaire d'événements pour l'ouverture et la fermeture du menu burger
@@ -139,10 +140,11 @@ function toggleAddMaterialDiv(show) {
 
 // Fonction pour gérer l'affichage de la div add-material lorsque l'utilisateur sélectionne "Ajouter un matériau" dans les listes déroulantes 
 function handleMaterialSelectChange(selectElement) {
+    const newMaterialInput = document.getElementById("new-material");
     if (selectElement.value === "ajouter-un-materiau-bio" || selectElement.value === "ajouter-un-materiau-geo") {
-        toggleAddMaterialDiv(true);
+        newMaterialInput.style.display = "block";
     } else {
-        toggleAddMaterialDiv(false);
+        newMaterialInput.style.display = "none";
     }
 }
 
@@ -157,14 +159,15 @@ materiauGeoSelect.addEventListener("change", function () {
 // GÉRER LE BOUTTON ADD MATERIAL
 
 
-
-
-{/* // SCRIPT MAP */ }
+// SCRIPT MAP 
 const map = L.map('map').setView([48.8566, 2.3522], 13);
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '© OpenStreetMap contributors'
 }).addTo(map);
+
+// Déclarer une variable pour stocker la référence au marqueur précédent
+let previousMarker = null;
 
 function searchAddress() {
     const address = document.getElementById("address-input").value;
@@ -188,6 +191,14 @@ function searchAddress() {
                 const marker = L.marker([lat, lon], {
                     icon: myIcon
                 }).addTo(map);
+
+                // Si un marqueur précédent existe, le supprimer de la carte
+                if (previousMarker !== null) {
+                    map.removeLayer(previousMarker);
+                }
+
+                // Assigner le nouveau marqueur à la variable previousMarker
+                previousMarker = marker;
 
                 // Construire le contenu HTML du popup avec les informations de la publication
                 const popupContent = `
@@ -220,9 +231,9 @@ function searchAddress() {
             alert("Une erreur s'est produite lors de la recherche d'adresse");
         });
 }
-{/* // SCRIPT MAP */ }
+// SCRIPT MAP
 
-{/* // SEARCH CITY */ }
+// SEARCH CITY 
 let searchTimeout;
 
 document.getElementById("address-input").addEventListener("input", function () {
@@ -241,6 +252,9 @@ document.getElementById("address-input").addEventListener("input", function () {
                         const city = data[0].display_name;
                         // Remplir le champ avec la ville trouvée
                         document.getElementById("address-input").value = city;
+
+                        // Effectuer automatiquement la recherche dans la carte une fois que le code postal est saisi
+                        searchAddress();
                     } else {
                         alert("Aucune ville trouvée pour ce code postal");
                     }
@@ -253,6 +267,7 @@ document.getElementById("address-input").addEventListener("input", function () {
             // Code postal invalide, afficher un prompt d'erreur
             alert("Veuillez entrer un code postal valide (5 chiffres).");
         }
-    }, 600); // Délai de 500 millisecondes avant de déclencher la recherche
+    }, 600); // Délai de 600 millisecondes avant de déclencher la recherche
 });
-{/* // SEARCH CITY */ }
+});
+// SEARCH CITY
