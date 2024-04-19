@@ -109,7 +109,8 @@
         transform: scale(4.5);
     }
 
-    .fa-solid.fa-bars, .fa-solid.fa-xmark {
+    .fa-solid.fa-bars,
+    .fa-solid.fa-xmark {
         padding-right: 10px;
     }
 
@@ -293,6 +294,13 @@
         box-shadow: 2px 2px 10px 1px rgb(243, 237, 79);
     }
 
+    .circle_menu {
+        width: 17px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: black;
+    }
+
     .navbar .burger-menu-button {
         display: none;
     }
@@ -466,8 +474,7 @@
     }
 
     .form_profil_large_one p,
-    .form_profil_large_two p
-    {
+    .form_profil_large_two p {
         font-size: 1.3rem;
     }
 
@@ -495,6 +502,11 @@
         justify-content: center;
     }
 
+    .circle_menu {
+        width: 25px;
+        height: 16px;
+    }
+
     .navbar .links {
         display: flex;
         justify-content: space-between;
@@ -507,6 +519,7 @@
         justify-content: space-between;
     }
 
+    /* FORM */
     .form_profil_large_one {
         height: 170px;
     }
@@ -518,6 +531,8 @@
     .form_medium_all {
         height: 170px;
     }
+
+    /* FORM */
 
     h1 {
         display: flex;

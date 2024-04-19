@@ -1,4 +1,5 @@
-// SCRIPT NAVBAR
+// SCRIPT OPEN MENU-BURGER
+document.addEventListener("DOMContentLoaded", function () {
 const burgerMenuButton = document.querySelector('.burger-menu-button')
 const burgerMenuButtonIcon = document.querySelector('.burger-menu-button i')
 const burgerMenu = document.querySelector('.burger-menu')
@@ -16,4 +17,5 @@ navLinks.forEach(link => {
         burgerMenuButtonIcon.classList = 'fa-solid fa-bars';
     });
 });
-// SCRIPT NAVBAR
+});
+// SCRIPT OPEN MENU-BURGER

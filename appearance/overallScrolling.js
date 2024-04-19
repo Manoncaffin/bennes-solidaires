@@ -1,4 +1,5 @@
 // SCRIPT OPEN MENU-BURGER / HIDDEN SCROLLING-TEXT
+document.addEventListener("DOMContentLoaded", function () {
 // Récupérer les éléments du menu burger et du menu burger lui-même
 const burgerMenuButton = document.querySelector('.burger-menu-button');
 const burgerMenu = document.querySelector('.burger-menu');
@@ -42,5 +43,6 @@ navLinks.forEach(link => {
         // Réinitialiser le contenu du menu-burger
         burgerMenuButton.innerHTML = '<i class="fa-solid fa-bars"></i>';
     });
+});
 });
 // SCRIPT OPEN MENU-BURGER / HIDDEN SCROLLING-TEXT

@@ -1,76 +1,29 @@
-// SCRIPT OPEN MENU-BURGER / HIDDEN SCROLLING-TEXT
-// Récupérer les éléments du menu burger et du menu burger lui-même
-const burgerMenuButton = document.querySelector('.burger-menu-button');
-const burgerMenu = document.querySelector('.burger-menu');
-
-// Ajouter un gestionnaire d'événements pour l'ouverture et la fermeture du menu burger
-burgerMenuButton.addEventListener('click', function () {
-    burgerMenu.classList.toggle('open');
-    // Récupérer tous les conteneurs de texte de défilement
-    const scrollingTextContainers = document.querySelectorAll('.scrolling-text-container');
-    // Masquer ou afficher les conteneurs de texte de défilement en fonction de l'état du menu burger
-    scrollingTextContainers.forEach(container => {
-        if (burgerMenu.classList.contains('open')) {
-            container.style.display = 'none'; // Masquer le conteneur de texte de défilement lorsque le menu burger est ouvert
-        } else {
-            container.style.display = 'flex'; // Afficher le conteneur de texte de défilement avec display flex lorsque le menu burger est fermé
-        }
-    });
-
-    // Ajouter ou retirer la balise i pour la croix du bouton close
-    const isOpen = burgerMenu.classList.contains('open');
-    if (isOpen) {
-        burgerMenuButton.innerHTML = '<i class="fa-solid fa-xmark"></i>';
-    } else {
-        burgerMenuButton.innerHTML = '<i class="fa-solid fa-bars"></i>'; // Réinitialiser le contenu du menu-burger
-    }
-});
-
-// Récupérer les éléments de la barre de navigation
-const navLinks = document.querySelectorAll('.links a');
-
-// Ajouter un gestionnaire d'événements pour la fermeture du menu burger lorsque l'utilisateur clique sur un lien de navigation
-navLinks.forEach(link => {
-    link.addEventListener('click', function () {
-        burgerMenu.classList.remove('open');
-        // Récupérer tous les conteneurs de texte de défilement
-        const scrollingTextContainers = document.querySelectorAll('.scrolling-text-container');
-        // Afficher les conteneurs de texte de défilement avec display flex lorsque l'utilisateur clique sur un lien de navigation
-        scrollingTextContainers.forEach(container => {
-            container.style.display = 'flex';
-        });
-        // Réinitialiser le contenu du menu-burger
-        burgerMenuButton.innerHTML = '<i class="fa-solid fa-bars"></i>';
-    });
-});
-// SCRIPT OPEN MENU-BURGER / HIDDEN SCROLLING-TEXT
-
-// SCRIPT SELECT MATÉRIAU
+// SCRIPT SELECT MATERIAL
 const classificationSelect = document.getElementById('classification-select');
-const materiauGeoSelect = document.getElementById('materiau-geo-select');
-const materiauBioSelect = document.getElementById('materiau-bio-select');
-const materiauGeoLabel = document.querySelector('.materiau-select-geo');
-const materiauBioLabel = document.querySelector('.materiau-select-bio');
+const materialGeoSelect = document.getElementById('material-geo-select');
+const materialBioSelect = document.getElementById('material-bio-select');
+const materialGeoLabel = document.querySelector('.material-select-geo');
+const materialBioLabel = document.querySelector('.material-select-bio');
 
 classificationSelect.addEventListener('change', function () {
     if (this.value === 'Matériau géo-sourcé') {
-        materiauGeoSelect.style.display = 'block';
-        materiauBioSelect.style.display = 'none';
-        materiauGeoLabel.style.display = 'block';
-        materiauBioLabel.style.display = 'none';
+        materialGeoSelect.style.display = 'block';
+        materialBioSelect.style.display = 'none';
+        materialGeoLabel.style.display = 'block';
+        materialBioLabel.style.display = 'none';
     } else if (this.value === 'Matériau bio-sourcé') {
-        materiauGeoSelect.style.display = 'none';
-        materiauBioSelect.style.display = 'block';
-        materiauGeoLabel.style.display = 'none';
-        materiauBioLabel.style.display = 'block';
+        materialGeoSelect.style.display = 'none';
+        materialBioSelect.style.display = 'block';
+        materialGeoLabel.style.display = 'none';
+        materialBioLabel.style.display = 'block';
     } else {
-        materiauGeoSelect.style.display = 'none';
-        materiauBioSelect.style.display = 'none';
-        materiauGeoLabel.style.display = 'none';
-        materiauBioLabel.style.display = 'none';
+        materialGeoSelect.style.display = 'none';
+        materialBioSelect.style.display = 'none';
+        materialGeoLabel.style.display = 'none';
+        materialBioLabel.style.display = 'none';
     }
 });
-// SCRIPT SELECT MATÉRIAU
+// SCRIPT SELECT MATERIAL
 
 // SCRIPT QUANTITY
 const select = document.getElementById("quantity-select");
@@ -88,16 +41,16 @@ for (let i = 1; i <= maxNumber; i++) {
 // Fonction pour basculer entre les options de matériaux bio-sourcés et géo-sourcés
 function toggleMaterialSelect() {
     const classificationSelect = document.getElementById("classification-select");
-    const materiauBioSelect = document.getElementById("materiau-bio-select");
-    const materiauGeoSelect = document.getElementById("materiau-geo-select");
+    const materialBioSelect = document.getElementById("material-bio-select");
+    const materialGeoSelect = document.getElementById("material-geo-select");
     const newMaterialInput = document.getElementById("new-material");
 
     if (classificationSelect.value === "Matériau bio-sourcé") {
-        materiauBioSelect.style.display = "block";
-        materiauGeoSelect.style.display = "none";
+        materialBioSelect.style.display = "block";
+        materialGeoSelect.style.display = "none";
     } else if (classificationSelect.value === "Matériau géo-sourcé") {
-        materiauBioSelect.style.display = "none";
-        materiauGeoSelect.style.display = "block";
+        materialBioSelect.style.display = "none";
+        materialGeoSelect.style.display = "block";
     }
 
     // Cacher le champ d'entrée de matériau personnalisé
@@ -117,8 +70,8 @@ function toggleMaterialElements(show) {
 }
 
 // Ajouter des écouteurs d'événements pour les options "Ajouter un matériau"
-materiauBioSelect.addEventListener("change", function () {
-    if (materiauBioSelect.value === "ajouter-un-materiau-bio") {
+materialBioSelect.addEventListener("change", function () {
+    if (materialBioSelect.value === "add-an-material-bio") {
         showCustomMaterialInput();
         toggleMaterialElements(true);
     } else {
@@ -126,8 +79,8 @@ materiauBioSelect.addEventListener("change", function () {
     }
 });
 
-materiauGeoSelect.addEventListener("change", function () {
-    if (materiauGeoSelect.value === "ajouter-un-materiau-geo") {
+materialGeoSelect.addEventListener("change", function () {
+    if (materialGeoSelect.value === "add-an-material-geo") {
         showCustomMaterialInput();
         toggleMaterialElements(true);
     } else {
@@ -151,7 +104,7 @@ function toggleAddMaterialDiv(show) {
 
 // Fonction pour gérer l'affichage de la div add-material lorsque l'utilisateur sélectionne "Ajouter un matériau" dans les listes déroulantes
 function handleMaterialSelectChange(selectElement) {
-    if (selectElement.value === "ajouter-un-materiau-bio" || selectElement.value === "ajouter-un-materiau-geo") {
+    if (selectElement.value === "add-an-material-bio" || selectElement.value === "add-an-material-geo") {
         toggleAddMaterialDiv(true);
     } else {
         toggleAddMaterialDiv(false);
@@ -159,11 +112,11 @@ function handleMaterialSelectChange(selectElement) {
 }
 
 // Ajouter des écouteurs d'événements pour les changements de sélection dans les listes déroulantes
-materiauBioSelect.addEventListener("change", function () {
+materialBioSelect.addEventListener("change", function () {
     handleMaterialSelectChange(this);
 });
 
-materiauGeoSelect.addEventListener("change", function () {
+materialGeoSelect.addEventListener("change", function () {
     handleMaterialSelectChange(this);
 });
 // GÉRER LE BOUTTON ADD MATERIAL

@@ -391,6 +391,13 @@
         box-shadow: 2px 2px 10px 1px rgb(243, 237, 79);
     }
 
+    .circle_menu {
+        width: 17px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: black;
+    }
+
     .navbar .burger-menu-button {
         display: none;
     }
@@ -559,6 +566,11 @@
     .navbar {
         display: flex;
         justify-content: center;
+    }
+
+    .circle_menu {
+        width: 25px;
+        height: 16px;
     }
 
     .navbar .links {

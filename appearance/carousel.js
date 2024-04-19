@@ -1,30 +1,5 @@
-// SCRIPT NAVBAR / OPEN-BURGER AND HIDDEN SCROLLING-TEXT
-const burgerMenuButton = document.querySelector('.burger-menu-button');
-const burgerMenuButtonIcon = document.querySelector('.burger-menu-button i');
-const burgerMenu = document.querySelector('.burger-menu');
-const navLinks = document.querySelectorAll('.links a');
-const scrollingTextContainers = document.querySelectorAll('.scrolling-text-container');
-
-burgerMenuButton.onclick = function () {
-    burgerMenu.classList.toggle('open');
-    const isOpen = burgerMenu.classList.contains('open');
-    burgerMenuButtonIcon.classList = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
-
-    // Add or remove the class to hide the scrolling text containers based on the menu state
-    scrollingTextContainers.forEach(container => {
-        container.classList.toggle('hide-on-menu-open', isOpen);
-    });
-}
-
-navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        burgerMenu.classList.remove('open');
-        burgerMenuButtonIcon.classList = 'fa-solid fa-bars';
-    });
-});
-// SCRIPT NAVBAR / OPEN-BURGER AND HIDDEN SCROLLING-TEXT
-
 // SCRIPT CAROUSEL
+document.addEventListener("DOMContentLoaded", function () {
 const track = document.querySelector(".carousel__track"); //ul
 const slides = Array.from(track.children); //li items
 const nextButton = document.querySelector(".carousel__button--right ");
@@ -104,5 +79,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const carousel = document.querySelector('.carousel');
         carousel.classList.toggle('hide-carousel'); // Ajoute ou supprime la classe 'hide-carousel' du carousel lorsque le menu burger est cliqué
     });
+});
 });
 // CAROUSEL HIDDEN WHEN BURGER MENU OPEN

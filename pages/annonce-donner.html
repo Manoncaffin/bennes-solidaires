@@ -113,42 +113,41 @@
 
                     <!-- INSERER UNE MODALE -->
 
-                    <label for="materiau-geo-select" class="materiau-select-geo"
+                    <label for="material-geo-select" class="material-select-geo"
                         style="display: none;">Matériaux</label>
-                    <select name="materiau-geo-select" id="materiau-geo-select" style="display: none;" required>
+                    <select name="material-geo-select" id="material-geo-select" style="display: none;" required>
                         <option value="">--</option>
-                        <option value="materiau geo-source">Terre</option>
-                        <option value="materiau geo-source">Pierre</option>
-                        <option value="materiau geo-source">Gravier</option>
-                        <option value="materiau geo-source">Sable</option>
-                        <option value="materiau geo-source">Verre</option>
-                        <option value="materiau geo-source">Céramique</option>
-                        <option value="ajouter-un-materiau-geo">Le matériau ne figure pas dans la liste</option>
+                        <option value="material geo-source">Céramique</option>
+                        <option value="material geo-source">Gravier</option>
+                        <option value="material geo-source">Pierre</option>
+                        <option value="material geo-source">Sable</option>
+                        <option value="material geo-source">Terre</option>
+                        <option value="material geo-source">Verre</option>
+                        <option value="add-an-material-geo">Le matériau ne figure pas dans la liste</option>
                     </select>
 
-                    <label for="materiau-bio-select" class="materiau-select-bio"
+                    <label for="material-bio-select" class="material-select-bio"
                         style="display: none;">Matériaux</label>
-                    <select name="materiau-bio-select" id="materiau-bio-select" style="display: none;" required>
+                    <select name="material-bio-select" id="material-bio-select" style="display: none;" required>
                         <option value="">--</option>
-                        <option value="materiau bio-source">Bambou</option>
-                        <option value="materiau bio-source">Bois</option>
-                        <option value="materiau bio-source">Canne-de-provence</option>
-                        <option value="materiau bio-source">Chanvre</option>
-                        <option value="materiau bio-source">Coquille d'huître</option>
-                        <option value="materiau bio-source">Coquille d'escargot</option>
-                        <option value="materiau bio-source">Laine de mouton</option>
-                        <option value="materiau bio-source">Liège</option>
-                        <option value="materiau bio-source">Marc de café</option>
-                        <option value="materiau bio-source">Papier</option>
-                        <option value="materiau bio-source">Papier-journal</option>
-                        <option value="materiau bio-source">Paille de blé</option>
-                        <option value="materiau bio-source">Paille de lavande</option>
-                        <option value="materiau bio-source">Roseau</option>
-                        <option value="materiau bio-source">Sciure de bois</option>
-                        <option value="ajouter-un-materiau-bio">Le matériau ne figure pas dans la liste</option>
+                        <option value="material bio-source">Bambou</option>
+                        <option value="material bio-source">Bois</option>
+                        <option value="material bio-source">Canne-de-provence</option>
+                        <option value="material bio-source">Chanvre</option>
+                        <option value="material bio-source">Coquille d'huître</option>
+                        <option value="material bio-source">Coquille d'escargot</option>
+                        <option value="material bio-source">Laine de mouton</option>
+                        <option value="material bio-source">Liège</option>
+                        <option value="material bio-source">Marc de café</option>
+                        <option value="material bio-source">Papier</option>
+                        <option value="material bio-source">Papier-journal</option>
+                        <option value="material bio-source">Paille de blé</option>
+                        <option value="material bio-source">Paille de lavande</option>
+                        <option value="material bio-source">Roseau</option>
+                        <option value="material bio-source">Sciure de bois</option>
+                        <option value="add-an-material-bio">Le matériau ne figure pas dans la liste</option>
                     </select>
 
-                    <!-- Champ d'entrée pour ajouter un matériau personnalisé -->
                     <div class="add" style="display: none;">
                         <label for="new-material" class="new-material">Ajouter</label>
                         <input type="text" id="new-material" placeholder="Entrer un autre matériau">
@@ -198,13 +197,15 @@
 
     </main>
 
-</body>
-<script src="../appearance/annonce-donner.js"></script>
+<script src="../appearance/overallScrolling.js"></script>
+<script src="../appearance/select-material.js"></script>
+<script src="../appearance/quantity-material.js"></script>
+<script src="../appearance/add-material.js"></script>
+<script src="../appearance/search-city.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=VOTRE_CLE_API&libraries=places"></script>
 </body>
-
 </html>
