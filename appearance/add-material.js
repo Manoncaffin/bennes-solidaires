@@ -56,6 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+
     // INPUT ADD MATERIAL
     // Fonction pour afficher ou masquer la div add en fonction de la sélection de l'utilisateur
     function toggleAddMaterialDiv(show) {

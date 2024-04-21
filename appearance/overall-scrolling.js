@@ -7,8 +7,10 @@ const burgerMenu = document.querySelector('.burger-menu');
 // Ajouter un gestionnaire d'événements pour l'ouverture et la fermeture du menu burger
 burgerMenuButton.addEventListener('click', function () {
     burgerMenu.classList.toggle('open');
+    
     // Récupérer tous les conteneurs de texte de défilement
     const scrollingTextContainers = document.querySelectorAll('.scrolling-text-container');
+
     // Masquer ou afficher les conteneurs de texte de défilement en fonction de l'état du menu burger
     scrollingTextContainers.forEach(container => {
         if (burgerMenu.classList.contains('open')) {
@@ -46,3 +48,4 @@ navLinks.forEach(link => {
 });
 });
 // SCRIPT OPEN MENU-BURGER / HIDDEN SCROLLING-TEXT
+

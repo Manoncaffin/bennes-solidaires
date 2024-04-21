@@ -9,7 +9,8 @@ document.getElementById("geographical").addEventListener("input", function () {
     // Attendez un court délai après la saisie avant de déclencher la recherche
     searchTimeout = setTimeout(() => {
         if (postalCode.length === 5 && /^\d+$/.test(postalCode)) { // Vérifie si le code postal est valide
-            const url = 'https://nominatim.openstreetmap.org/search?format=json&postalcode=' + encodeURIComponent(postalCode);
+            // Construire l'URL avec des paramètres de recherche spécifiques à la France et aux territoires d'outre-mer
+            const url = 'https://nominatim.openstreetmap.org/search?format=json&postalcode=' + encodeURIComponent(postalCode) + '&countrycodes=FR,RE,GF,GP,MQ,YT';
 
             fetch(url)
                 .then(response => response.json())
@@ -30,7 +31,7 @@ document.getElementById("geographical").addEventListener("input", function () {
             // Code postal invalide, afficher un prompt d'erreur
             alert("Veuillez entrer un code postal valide (5 chiffres).");
         }
-    }, 600); // Délai de 500 millisecondes avant de déclencher la recherche
+    }, 600); // Délai de 600 millisecondes avant de déclencher la recherche
 });
 });
 // SEARCH CITY

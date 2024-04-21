@@ -110,12 +110,47 @@
                         <option value="Matériau géo-sourcé">Matériau géo-sourcé</option>
                     </select>
 
-                    <!-- INSERER UNE MODALE -->
+                    <button id="openModal" class="mb-4">Pour en savoir plus, vous pouvez cliquer ici.</button>
+                    
+                    <div id="myModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <div class="first-content">
+                                <p class="mb-5">Les matériaux bio-sourcés sont des matériaux qui sont dérivés de matières
+                                    premières
+                                    renouvelables
+                                    d'origine biologique, généralement issues de plantes, d'arbres, ou d'autres organismes
+                                    vivants. Les
+                                    exemples de matériaux bio-sourcés comprennent le bois, la paille, le liège, la fibre de
+                                    lin, le
+                                    bambou, etc. L'utilisation de matériaux bio-sourcés est souvent associée à des avantages
+                                    environnementaux, car ils sont généralement considérés comme plus durables et moins
+                                    nocifs pour
+                                    l'environnement que les matériaux synthétiques dérivés du pétrole.</p>
+                                    <!-- <img src="../images/20201108_115654.jpeg" class="circle-material"> -->
+                            </div>
+                            
+                            <div class="second-content">
+                                <p>Les matériaux géo-sourcés, eux, sont des matériaux qui sont extraits directement de la
+                                    Terre,
+                                    généralement à partir de ressources minérales ou de roches. Les exemples de matériaux
+                                    géo-sourcés
+                                    comprennent le sable, le gravier, la pierre, l'argile, les métaux, les minéraux, etc.
+                                    Contrairement
+                                    aux matériaux bio-sourcés, les matériaux géo-sourcés ne sont pas dérivés de matières
+                                    premières
+                                    renouvelables, mais sont plutôt issus de ressources naturelles non vivantes présentes
+                                    dans le sol ou
+                                    le sous-sol de la Terre.</p>
+                            </div>
+                        </div>
+                    </div>
 
                     <label for="material-geo-select" class="material-select-geo"
                         style="display: none;">Matériaux</label>
                     <select name="material-geo-select" id="material-geo-select" style="display: none;" required>
                         <option value="">--</option>
+                        <option value="material geo-source">Brique</option>
                         <option value="material geo-source">Céramique</option>
                         <option value="material geo-source">Gravier</option>
                         <option value="material geo-source">Pierre</option>
@@ -197,15 +232,14 @@
 
     </main>
 
-<script src="../appearance/overallScrolling.js"></script>
+<script src="../appearance/overall-scrolling.js"></script>
 <script src="../appearance/select-material.js"></script>
 <script src="../appearance/quantity-material.js"></script>
 <script src="../appearance/add-material.js"></script>
 <script src="../appearance/search-city.js"></script>
-
+<script src="../appearance/modale.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=VOTRE_CLE_API&libraries=places"></script>
 </body>
 </html>

@@ -347,7 +347,7 @@
         }
     }
 
-    .hide-on-menu-open .scrolling-text .hide-map {
+    .hide-on-menu-open .scrolling-text .hidden {
         display: none;
     }
 
