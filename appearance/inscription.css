@@ -216,6 +216,10 @@
         font-size: 1.7rem;
     }
 
+    .foot_form a {
+        font-size: 1.4rem;
+    }
+
     .container {
         box-sizing: border-box;
         border-radius: 5px;
@@ -397,12 +401,17 @@
 
 
     input[type=submit] {
+        margin-top: 15px;
         font-size: 1.3rem;
         width: 40%;
     }
 
     .foot_form {
         font-size: 1.3rem;
+    }
+
+    .foot_form a {
+        font-size: 1.1rem;
     }
 
     /* FORM */

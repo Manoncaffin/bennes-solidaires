@@ -273,6 +273,12 @@
         font-size: 1.7rem;
     }
 
+    .foot_form a {
+        display: flex;
+        justify-content: center;
+        font-size: 1.4rem;
+    }
+
     .container {
         box-sizing: border-box;
         border-radius: 5px;
@@ -281,11 +287,6 @@
         min-width: 980px;
         max-width: 900px;
         margin: 0 auto;
-    }
-
-    .foot_form a {
-        display: flex;
-        justify-content: center;
     }
 
     #material-bio-select,
@@ -457,6 +458,7 @@
     }
 
     input[type=submit] {
+        margin-top: 10px;
         width: 40%;
         font-size: 1.3rem;
     }
@@ -467,15 +469,16 @@
 
     .foot_form {
         margin-top: 20px;
-        font-size: 1.2rem;
+        font-size: 1.3rem;
+    }
+
+    .foot_form a {
+        font-size: 1.1rem;
     }
 
     button {
         width: 40%;
-        margin-top: 10px;
-        font-size: 1.3rem;
     }
-
 
     /* FORM */
 }

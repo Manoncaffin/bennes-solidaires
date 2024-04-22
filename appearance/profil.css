@@ -264,14 +264,22 @@
     }
 
     .form_profil_large_one p,
-    .form_profil_large_two p,
-    .form_medium a,
-    .text {
+    .form_profil_large_two p {
         font-size: 1.7rem;
     }
 
-    .form_profil p {
-        font-size: 1.6rem;
+    h6 {
+        font-size: 1.7rem;
+        margin-bottom: 0;
+    }
+
+    p {
+        font-size: 1.5rem;
+        /* line-height: 2.3rem; */
+    }
+
+    .remove_registration a {
+        color: red;
     }
 }
 
@@ -473,18 +481,23 @@
         font-size: 1.3rem;
     }
 
+
     .form_profil_large_one p,
     .form_profil_large_two p {
         font-size: 1.3rem;
     }
 
-    .form_profil p {
-        font-size: 1.1rem;
+    h6 {
+        font-size: 1.5rem;
+        margin-bottom: 0;
     }
 
-    .form_medium a {
-        font-size: 1.3rem;
+    p {
+        font-size: 1.1rem;
+        line-height: 1.5rem;
     }
+
+
 }
 
 
@@ -530,6 +543,10 @@
 
     .form_medium_all {
         height: 170px;
+    }
+
+    p {
+        line-height: 1.8rem;
     }
 
     /* FORM */

@@ -502,7 +502,7 @@
     }
 
     input[type=submit] {
-        /* margin-top: 20px; */
+        margin-top: 15px;
         width: 40%;
         font-size: 1.3rem;
     }
