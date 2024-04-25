@@ -182,28 +182,18 @@
         color: white;
     }
 
-    .add {
-        width: 30%;
-    }
-
-    .add input[type="submit"] {
-        display: none;
-    }
-
-    .add {
-        display: flex;
-        justify-content: space-between;
-    }
-
     /* MODALE */
     #openModal {
         border: none;
-        background-color: transparent;      
+        background-color: rgb(27, 237, 177);     
         font-size: 0.7rem;
         font-family: "Lemon Milk";
         display: flex;
         align-items: start;
         margin-top: 0;
+        border-radius: 20px;
+        width: fit-content;
+        padding: 6px;
     }
 
     .modal {
@@ -292,7 +282,8 @@
     #material-bio-select,
     #material-geo-select,
     #classification-select,
-    #address-input {
+    #geographical,
+    #new-material {
         width: 100%;
         border: none;
         outline: none;
@@ -444,13 +435,9 @@
     #value-select,
     #description,
     #new-material,
-    #address-input,
+    #geographical,
     #file {
         font-size: 1.3rem;
-    }
-
-    .add input[type="submit"] {
-        width: 95%;
     }
 
     .quantity {
@@ -463,9 +450,9 @@
         font-size: 1.3rem;
     }
 
-    input[type=text] {
+    /* input[type=text] {
         width: 40%;
-    }
+    } */
 
     .foot_form {
         margin-top: 20px;
@@ -561,7 +548,8 @@
     #classification-select,
     #material-geo-select,
     #material-bio-select,
-    #address-input {
+    #geographical,
+    #new-material {
         font-size: 1.3rem;
     }
 
