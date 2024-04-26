@@ -162,25 +162,25 @@
     input[type=email],
     input[type=password] {
         width: 100%;
-        padding: 8px;
+        padding: 20px;
         border: none;
         outline: none;
         border-bottom: 1px solid rgb(92, 91, 91);
         border-radius: 0;
         box-sizing: border-box;
         margin-top: 6px;
-        margin-bottom: 16px;
+        margin-bottom: 36px;
         margin-right: 0px;
         margin-left: 0px;
         resize: vertical;
         background-color: transparent;
-        font-size: 1.7rem;
+        font-size: 2.7rem;
     }
 
     label {
         margin-right: 0px;
         margin-left: 0px;
-        font-size: 1.7rem;
+        font-size: 3rem;
     }
 
     input[type=submit] {
@@ -192,7 +192,7 @@
         cursor: pointer;
         margin-bottom: 10px;
         margin-top: 40px;
-        font-size: 1.7rem;
+        font-size: 2.7rem;
         width: 100%;
     }
 
@@ -213,11 +213,10 @@
         justify-content: center;
         flex-direction: column;
         text-align: center;
-        font-size: 1.7rem;
     }
 
     .foot_form a {
-        font-size: 1.4rem;
+        font-size: 2rem;
     }
 
     .container {
@@ -240,15 +239,15 @@
         width: 100%;
         border: none;
         outline: none;
-        padding: 8px;
+        padding: 20px;
         border-bottom: 1px solid rgb(92, 91, 91);
         border-radius: 0;
         box-sizing: border-box;
-        margin-bottom: 16px;
+        margin-bottom: 36px;
         margin-right: 0px;
         margin-left: 0px;
         resize: vertical;
-        font-size: 1.7rem;
+        font-size: 2.7rem;
         color: rgb(123, 122, 122);
         background-color: transparent;
     }
@@ -259,7 +258,7 @@
 
     input[type=radio] {
         margin-right: 20px;
-        width: 20px;
+        width: 40px;
     }
 
     input[type="radio"]::before {
@@ -287,7 +286,7 @@
     .scrolling-text {
         display: block;
         margin-right: 500px;
-        font-size: 2.5rem;
+        font-size: 3.5rem;
         white-space: nowrap;
         animation: scrollText 10s linear infinite;
         animation-direction: alternate-reverse;
@@ -313,8 +312,8 @@
     }
 
     .text_rgpd {
-        width: 500px;
-        font-size: 0.8rem;
+        width: 700px;
+        font-size: 1.8rem;
     }
 }
 

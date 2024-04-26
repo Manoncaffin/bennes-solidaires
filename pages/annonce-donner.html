@@ -103,7 +103,7 @@
                 </div>
                 <div class="bordure mb-4"></div>
 
-                <form action="#" method="POST">
+                <form action="" method="POST">
                     <label for="classification-select" class="classification-select">Classification</label>
                     <select name="classification" id="classification-select" required onchange="toggleMaterialSelect()">
                         <option value="">--</option>
@@ -111,7 +111,7 @@
                         <option value="Matériau géo-sourcé">Matériau géo-sourcé</option>
                     </select>
 
-                    <button id="openModal" class="mb-4">Pour en savoir plus, vous pouvez cliquer ici.</button>
+                    <button id="openModal" type="button">Pour en savoir plus, vous pouvez cliquer ici.</button>
                     
                     <div id="myModal" class="modal">
                         <div class="modal-content">
@@ -128,7 +128,6 @@
                                     environnementaux, car ils sont généralement considérés comme plus durables et moins
                                     nocifs pour
                                     l'environnement que les matériaux synthétiques dérivés du pétrole.</p>
-                                    <!-- <img src="../images/20201108_115654.jpeg" class="circle-material"> -->
                             </div>
                             
                             <div class="second-content">
@@ -149,7 +148,7 @@
 
                     <label for="material-geo-select" class="material-select-geo"
                         style="display: none;">Matériaux</label>
-                    <select name="material-geo-select" id="material-geo-select" style="display: none;" required>
+                    <select name="material-geo-select" id="material-geo-select" required style="display: none;">
                         <option value="">--</option>
                         <option value="material geo-source">Brique</option>
                         <option value="material geo-source">Céramique</option>
@@ -163,7 +162,7 @@
 
                     <label for="material-bio-select" class="material-select-bio"
                         style="display: none;">Matériaux</label>
-                    <select name="material-bio-select" id="material-bio-select" style="display: none;" required>
+                    <select name="material-bio-select" id="material-bio-select" required style="display: none;">
                         <option value="">--</option>
                         <option value="material bio-source">Bambou</option>
                         <option value="material bio-source">Bois</option>
@@ -185,7 +184,7 @@
 
                     <div class="add" style="display: none;">
                         <label for="new-material" class="new-material">Ajouter</label>
-                        <input type="text" id="new-material" placeholder="Entrer un autre matériau">
+                        <input type="text" id="new-material" placeholder="Entrer un autre matériau" required>
                     </div>
 
                     <div class="quantity">
@@ -221,7 +220,7 @@
 
                     <label for="geographical">Localisation</label>
                     <input id="geographical" type="text" name="geographical" placeholder="Entrer le code postal"
-                        required>
+                    required>
 
                     <div class="foot_form">
                         <input type="submit" value="Valider mon annonce">

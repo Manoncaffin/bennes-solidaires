@@ -13,7 +13,6 @@
 
     html,
     body {
-        /* background-color: rgb(232, 232, 232); */
         background-color: rgb(247, 245, 216);
     }
 
@@ -60,7 +59,6 @@
 
     header {
         position: relative;
-        /* background-color: rgb(65, 238, 186); */
         background-color: rgb(27, 237, 177);
     }
 
@@ -81,7 +79,6 @@
         width: 100%;
         overflow: hidden;
         transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        /* background-color: rgb(65, 238, 186); */
         background-color: rgb(27, 237, 177);
     }
 
@@ -126,7 +123,6 @@
         padding: 10px;
         width: 280px;
         margin-left: 20px;
-        /* background-color: rgb(26, 126, 246); */
         background-color: rgb(243, 237, 79);
         text-align: center;
     }
@@ -143,7 +139,6 @@
         padding: 10px;
         width: 280px;
         margin-left: 20px;
-        /* background-color: rgb(26, 126, 246); */
         background-color: rgb(243, 237, 79);
         text-align: center;
     }
@@ -156,19 +151,8 @@
     #imageChange {
         padding: 40px 100px 0 0;
         width: 35%;
-        height: auto; 
-        /* -webkit-filter: grayscale(0) blur(0px);
-        filter: grayscale(0) blur(0px);
-        -webkit-transition: all 0.5s ease;
-        transition: all 0.5s ease; */
+        height: auto;
     }
-
-    /* #imageChange:hover {
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
-    } */
-
-    /* revoir */
 
     /* NAVBAR */
 
@@ -180,6 +164,15 @@
         text-align: left;
     }
 
+    .container {
+        box-sizing: border-box;
+        border-radius: 5px;
+        width: 100%;
+        min-width: 980px;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
     /* MODALE */
     .text_click {
         font-family: "Lemon Milk";
@@ -187,8 +180,15 @@
 
     #openModal {
         border: none;
-        background-color: transparent;
+        background-color: rgb(27, 237, 177);
         font-size: 1.2rem;
+        font-family: "Lemon Milk";
+        display: flex;
+        align-items: start;
+        margin-top: 0;
+        border-radius: 20px;
+        width: fit-content;
+        padding: 6px;
         transition: transform 0.3s ease;
     }
 
@@ -231,21 +231,6 @@
         cursor: pointer;
     }
 
-    /* .circle-material {
-        width: 100px;
-        height: 100px;
-        background-color: #000000;
-        border-radius: 50%;
-        transition: filter 0.5s ease; 
-        filter: none; 
-    }
-   
-    .circle-material:hover {
-        filter: brightness(110%) saturate(150%) hue-rotate(180deg); 
-        
-    } */
-    /* MODALE */
-
     .hide-on-menu-open {
         display: none;
     }
@@ -286,7 +271,7 @@
     }
 
     .corner:hover {
-    box-shadow: 0px 0px 20px 5px white;
+        box-shadow: 0px 0px 20px 5px white;
     }
 
     .p_description {
@@ -376,7 +361,7 @@
 /* ------------------ SUP. OU ÉGALE ------------------ */
 /* --------------------------------------------------- */
 @media screen and (min-width: 768px) {
-    .container_homepage {
+    .container {
         width: 100%;
         height: 100%;
         margin: 0 auto;
@@ -457,7 +442,6 @@
         box-sizing: border-box;
         width: 50%;
         height: 350px;
-        /* background-color: rgb(65, 238, 186); */
         background-color: rgb(27, 237, 177);
         display: flex;
         justify-content: center;
@@ -469,7 +453,6 @@
         box-sizing: border-box;
         width: 50%;
         height: 350px;
-        /* background-color: rgb(65, 238, 186); */
         background-color: rgb(27, 237, 177);
         display: flex;
         justify-content: center;
@@ -481,7 +464,6 @@
         box-sizing: border-box;
         width: 50%;
         height: 350px;
-        /* background-color: rgb(232, 232, 232); */
         background-color: rgb(247, 245, 216);
         position: relative;
         display: flex;
@@ -493,7 +475,6 @@
         box-sizing: border-box;
         width: 50%;
         height: 350px;
-        /* background-color: rgb(232, 232, 232); */
         background-color: rgb(247, 245, 216);
         position: relative;
         display: flex;
@@ -591,6 +572,15 @@ h2 {
         flex-wrap: wrap;
         display: flex;
         justify-content: center;
+    }
+
+    .container {
+        box-sizing: border-box;
+        border-radius: 5px;
+        width: 100%;
+        min-width: 1000px;
+        max-width: 1500px;
+        margin: 0;
     }
 
     .circle_menu {
@@ -930,6 +920,7 @@ h2 {
         min-width: 980px;
         max-width: 2000px;
         margin: 0;
+        padding: 0;
     }
 
     /* NAVBAR  */
@@ -1018,12 +1009,12 @@ h2 {
 /* ----------------- SUP. OU ÉGALE ------------------- */
 /* --------------------------------------------------- */
 @media only screen and (min-width: 1500px) {
-.logo img {
-    width: 60%;
-    padding: 40px 50px 40px 140px;
-}
+    .logo img {
+        width: 60%;
+        padding: 40px 50px 40px 140px;
+    }
 
-.imageChange {
-    width: 65%;
-}
+    .imageChange {
+        width: 65%;
+    }
 }

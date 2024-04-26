@@ -26,11 +26,13 @@
 
         p {
             margin: 0;
+            font-size: 2.7rem;
         }
 
         a {
             text-decoration: none;
             color: black;
+            font-size: 2.7rem;
         }
     }
 
@@ -157,233 +159,58 @@
 
     /* NAVBAR */
 
-    /* FORM  */
-    label {
-        margin-right: 0px;
-        margin-left: 0px;
-        font-size: 3rem;
-    }
-
-    input[type=submit] {
-        background-color: rgb(27, 237, 177);
-        color: black;
-        padding: 8px 20px;
-        border: none;
-        border-radius: 55px;
-        cursor: pointer;
-        margin-bottom: 10px;
-        margin-top: 30px;
-        font-size: 3rem;
-        width: 100%;
-    }
-
-    input[type=submit]:hover {
-        background-color: black;
-        color: white;
-    }
-
-    /* MODALE */
-    #openModal {
-        border: none;
-        background-color: rgb(27, 237, 177);     
-        font-size: 1.7rem;
-        font-family: "Lemon Milk";
+    .container {
+        box-sizing: border-box;
+        min-width: 350px;
+        max-width: 1000px;
         display: flex;
-        align-items: start;
-        margin-top: 0;
-        border-radius: 20px;
-        width: fit-content;
-        padding: 20px;
-        margin-bottom: 36px;
+        flex-direction: column;
+        align-items: center;
+        padding: 50px 50px 20px 50px;
+        margin: 0;
     }
 
-    .modal {
-        display: none;
-        position: fixed;
-        z-index: 1;
-        left: 0;
-        top: 0;
+    /* ALL MESSAGE */
+
+    .description_announce {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: start;
+        gap: 40px;
         width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-        overflow: auto;
+        margin-bottom: 50px;
     }
 
-    .modal-content {
-        background-color: #fefefe;
-        margin: 15% auto;
-        padding: 15px 35px 35px 35px;
-        border: 2px solid black;
-        box-shadow: 0px 0px 10px 1px white;
-        width: 80%;
+    .text_announce p {
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
+
+    .img_announce img {
+        width: 210px;
+        height: 210px;
+        border-radius: 50%;
+    }
+
+    span {
+        font-family: "Lemon milk";
         font-size: 2.5rem;
     }
 
-    .close {
-        color: #aaa;
-        float: right;
-        font-size: 85px;
-        font-weight: bold;
-    }
-
-    .close:hover,
-    .close:focus {
-        color: black;
-        text-decoration: none;
-        cursor: pointer;
-    }
-    /* MODALE */
-
-    .foot_form {
-        justify-content: center;
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .container {
-        box-sizing: border-box;
-        border-radius: 5px;
-        padding: 50px;
-        width: 100%;
-        min-width: 980px;
-        max-width: 900px;
-        margin: 0 auto;
-    }
-
-    .container a {
-        padding-bottom: 5px;
-        display: flex;
-        justify-content: center;
-    }
-
-    #material-bio-select,
-    #material-geo-select,
-    #classification-select,
-    #quantity-select,
-    #value-select,
-    #description,
-    #geographical,
-    #new-material {
-        width: 100%;
-        border: none;
-        outline: none;
-        padding: 20px;
-        border-bottom: 1px solid rgb(92, 91, 91);
-        border-radius: 0;
-        box-sizing: border-box;
-        margin-bottom: 36px;
-        margin-right: 0px;
-        margin-left: 0px;
-        resize: vertical;
-        color: rgb(123, 122, 122);
-        background-color: transparent;
-        font-size: 2.7rem;
-    }
-
-    #file {
-        font-size: 2.7rem;
-        margin-left: 20px;
-        margin-bottom: 36px;
-    }
-
-    .quantity {
-        display: flex;
-        width: 100%;
-        padding-bottom: 16px;
-        font-size: 3rem;
-        margin-top: 16px;
-    }
-
-    .quantity-select {
-        margin: 0px 40px 0px 0px;
-    }
-
-    .value-select {
-        margin-left: 50px;
-        margin-right: 40px;
-    }
-
-    .checkbox {
-        display: flex;
-    }
-
-    input[type=radio] {
-        margin-right: 20px;
-        width: 20px;
-    }
-
-    .message_enter {
+    .icons_announce {
         display: flex;
         flex-direction: column;
-        margin-bottom: 25px;
+        align-items: center;
     }
 
-    #message {
-        padding: 15px;
-        border-radius: 10px;
+    .icons_announce i{
+        font-size: 75px;
+        margin-bottom: 40px;
     }
 
-    textarea {
-        background-color:rgb(247, 245, 216);
-        border: 1px solid rgb(123, 123, 123);
-        border-radius: 10px;
-        width: 100%;
-        height: 330px;
-        font-size: 2.7rem;
-        margin-top: 16px;
-        margin-bottom: 36px;
-    }
-
-    textarea:focus {
-        border: 2px solid;
-        border-color: rgb(27, 237, 177);
-        outline: none;
-    }
-
-     /* Change the white to any color */
-     input:-webkit-autofill,
-     input:-webkit-autofill:hover,
-     input:-webkit-autofill:focus,
-     input:-webkit-autofill:active {
-         -webkit-box-shadow: 0 0 0 30px rgb(247, 245, 216) inset !important;
-     }
-
-    /* FORM  */
-
-    .scrolling-text-container {
-        min-width: 100%;
-        overflow: hidden;
-        display: flex;
-    }
-
-    .scrolling-text {
-        display: block;
-        margin-right: 500px;
-        font-size: 3.5rem;
-        white-space: nowrap;
-        animation: scrollText 10s linear infinite;
-        animation-direction: alternate-reverse;
-    }
-
-    @keyframes scrollText {
-        from {
-            transform: translateX(100%);
-        }
-
-        to {
-            transform: translateX(-100%);
-        }
-    }
-
-    .hide-on-menu-open .scrolling-text {
-        display: none;
-    }
-
-    .bordure {
-        border: 1px solid black;
-    }
+    /* ALL MESSAGE */
 }
-
 
 
 /* --------------------------------------------------- */
@@ -392,6 +219,10 @@
 /* ----------------- SUP. OU ÉGALE ------------------- */
 /* --------------------------------------------------- */
 @media only screen and (min-width: 1000px) {
+
+    p {
+        font-size: 1.1rem;
+    }
 
     /* NAVBAR */
     .navbar {
@@ -442,67 +273,6 @@
 
     /* NAVBAR */
 
-    .scrolling-text {
-        display: block;
-        margin-right: 500px;
-        font-size: 1.7rem;
-    }
-
-    /* FORM */
-    .container {
-        box-sizing: border-box;
-        border-radius: 5px;
-        padding: 20px 110px 20px 110px;
-        width: 100%;
-        min-width: 1000px;
-        max-width: 1500px;
-        margin: 0;
-    }
-
-    label {
-        margin-right: 0px;
-        margin-left: 0px;
-        font-size: 1.3rem;
-    }
-
-    #material-bio-select,
-    #material-geo-select,
-    #classification-select,
-    #quantity-select,
-    #value-select,
-    #description,
-    #geographical,
-    #new-material,
-    #file {
-        font-size: 1.3rem;
-    }
-
-    .quantity {
-        font-size: 1.3rem;
-    }
-
-    textarea {
-        font-size: 1.3rem;
-    }
-
-    input[type=submit] {
-        margin-top: 15px;
-        width: 40%;
-        font-size: 1.3rem;
-    }
-
-    /* FORM */
-
-    /* MODALE */
-    .modal-content {
-        font-size: 2rem;
-    }
-
-    .close {
-        font-size: 35px;
-    }
-    /* MODALE */
-
 }
 
 
@@ -534,16 +304,6 @@
         padding: 20px 140px 20px 140px;
     }
 
-    .container {
-        box-sizing: border-box;
-        border-radius: 5px;
-        padding: 20px 140px 20px 140px;
-        width: 100%;
-        min-width: 980px;
-        max-width: 2000px;
-        margin: 0;
-    }
-
     /* NAVBAR  */
 }
 
@@ -573,4 +333,14 @@
     }
 
     /* NAVBAR */
+
 }
+
+
+
+/* --------------------------------------------------- */
+/* --------------------------------------------------- */
+/* ------------- MEDIA MIN-WIDTH 1800PX -------------- */
+/* ----------------- SUP. OU ÉGALE ------------------- */
+/* --------------------------------------------------- */
+@media only screen and (min-width: 1800px) {}

@@ -161,7 +161,7 @@
     label {
         margin-right: 0px;
         margin-left: 0px;
-        font-size: 1.7rem;
+        font-size: 3rem;
     }
 
     input[type=submit] {
@@ -173,7 +173,7 @@
         cursor: pointer;
         margin-bottom: 10px;
         margin-top: 5px;
-        font-size: 1.7rem;
+        font-size: 3rem;
         width: 100%;
     }
 
@@ -186,14 +186,15 @@
     #openModal {
         border: none;
         background-color: rgb(27, 237, 177);     
-        font-size: 0.7rem;
+        font-size: 1.7rem;
         font-family: "Lemon Milk";
         display: flex;
         align-items: start;
         margin-top: 0;
         border-radius: 20px;
         width: fit-content;
-        padding: 6px;
+        padding: 20px;
+        margin-bottom: 36px;
     }
 
     .modal {
@@ -206,6 +207,7 @@
         height: 100%;
         background-color: rgba(0, 0, 0, 0.5);
         overflow: auto;
+        z-index: 2;
     }
 
     .modal-content {
@@ -233,7 +235,8 @@
     /* MODALE */
 
     #map {
-        margin-top: 5px;
+        margin-top: 20px;
+        margin-bottom: 80px;
     }
 
     .custom-popup {
@@ -260,13 +263,12 @@
         justify-content: center;
         flex-direction: column;
         text-align: center;
-        font-size: 1.7rem;
     }
 
     .foot_form a {
         display: flex;
         justify-content: center;
-        font-size: 1.4rem;
+        font-size: 2rem;
     }
 
     .container {
@@ -287,20 +289,19 @@
         width: 100%;
         border: none;
         outline: none;
-        padding: 8px;
+        padding: 20px;
         color: rgb(123, 122, 122);
         border-bottom: 1px solid rgb(92, 91, 91);
         border-radius: 0;
         box-sizing: border-box;
-        margin-bottom: 16px;
+        margin-bottom: 36px;
         margin-right: 0px;
         margin-left: 0px;
         resize: vertical;
         background-color: transparent;
-        font-size: 1.7rem;
+        font-size: 2.7rem;
     }
 
-    /* Change the white to any color */
     input:-webkit-autofill,
     input:-webkit-autofill:hover,
     input:-webkit-autofill:focus,
@@ -312,6 +313,7 @@
 
     #map {
         height: 400px;
+        z-index: 1;
     }
 
     .scrolling-text-container {
@@ -323,7 +325,7 @@
     .scrolling-text {
         display: block;
         margin-right: 500px;
-        font-size: 2.5rem;
+        font-size: 3.5rem;
         white-space: nowrap;
         animation: scrollText 10s linear infinite;
         animation-direction: alternate-reverse;

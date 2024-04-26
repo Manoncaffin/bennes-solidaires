@@ -157,7 +157,8 @@
 
     /* NAVBAR */
 
-    .send_message {
+    .update_announce,
+    .delete_announce {
         background-color: rgb(27, 237, 177);
         color: black;
         padding: 8px 20px;
@@ -165,11 +166,12 @@
         border-radius: 55px;
         cursor: pointer;
         margin-bottom: 25px;
-        font-size: 2rem;
+        font-size: 2.7rem;
         width: 100%;
     }
 
-    .send_message:hover {
+    .update_announce:hover,
+    .delete_announce:hover {
         background-color: black;
         color: white;
     }
@@ -186,9 +188,9 @@
 
     /* INFOS TOP */
     .top_all {
-        width: 100%;
         display: flex;
-        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 30px;
     }
 
     /* INFOS TOP */
@@ -198,7 +200,7 @@
     .form_profil {
         width: fit-content;
         padding: 20px;
-        height: 50px;
+        height: fit-content;
         border-radius: 40px;
         background-color: white;
         box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
@@ -208,7 +210,7 @@
     }
 
     .form_profil p {
-        font-size: 1.6rem;
+        font-size: 2.5rem;
     }
 
     .form_profil_large_one {
@@ -222,7 +224,7 @@
         display: flex;
         align-items: center;
         text-decoration: underline;
-        font-size: 1.7rem;
+        font-size: 2.7rem;
     }
 
     .announce {
@@ -250,7 +252,8 @@
         flex-direction: column;
         margin-bottom: 10px;
         font-family: "Lemon Milk";
-        font-size: 1.4rem;
+        font-size: 2.2rem;
+        text-align: start;
     }
 
     .foot_form {
@@ -451,8 +454,9 @@
         width: 100%;
     }
 
-    .send_message {
-        font-size: 1.3rem;
+    .update_announce,
+    .delete_announce{
+        font-size: 2rem;
         margin-bottom: 0;
         margin-top: 15px;
     }

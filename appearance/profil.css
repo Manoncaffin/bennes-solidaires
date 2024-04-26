@@ -176,7 +176,7 @@
     .form_profil {
         width: fit-content;
         padding: 20px;
-        height: 50px;
+        height: fit-content;
         border-radius: 20px;
         background-color: white;
         box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
@@ -206,15 +206,16 @@
 
     .fa-regular.fa-pen-to-square,
     .fa-regular.fa-folder,
-    .fa-regular.fa-message {
-        font-size: 80px;
+    .fa-regular.fa-message,
+    .fa-solid.fa-folder-plus {
+        font-size: 90px;
     }
 
     .form_profil_large_one {
         margin-top: 40px;
         width: 100%;
         padding: 35px 40px 30px 40px;
-        height: 180px;
+        height: fit-content;
         border-radius: 40px;
         background-color: white;
         box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
@@ -226,7 +227,7 @@
         margin-top: 40px;
         width: 100%;
         padding: 35px 40px 30px 40px;
-        height: 350px;
+        height: fit-content;
         border-radius: 40px;
         background-color: white;
         box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
@@ -243,8 +244,8 @@
         display: flex;
         margin-top: 40px;
         width: 100%;
-        padding: 35px 35px 35px 35px;
-        height: 170px;
+        padding: 35px 40px 30px 40px;
+        height: fit-content;
         border-radius: 40px;
         background-color: white;
         box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
@@ -265,21 +266,22 @@
 
     .form_profil_large_one p,
     .form_profil_large_two p {
-        font-size: 1.7rem;
+        font-size: 2.7rem;
     }
 
     h6 {
-        font-size: 1.7rem;
+        font-size: 3rem;
         margin-bottom: 0;
     }
 
     p {
-        font-size: 1.5rem;
-        /* line-height: 2.3rem; */
+        font-size: 2.5rem;
     }
 
     .remove_registration a {
-        color: red;
+        color: rgb(27, 237, 177);
+        background-color: rgb(0, 0, 0);
+        padding: 2px;
     }
 }
 
@@ -405,7 +407,8 @@
 
     .fa-regular.fa-pen-to-square,
     .fa-regular.fa-folder,
-    .fa-regular.fa-message {
+    .fa-regular.fa-message,
+    .fa-solid.fa-folder-plus {
         font-size: 40px;
     }
 
