@@ -90,6 +90,13 @@
     </header>
 
     <main>
+        <div class="nav-two">
+            <!-- RETOUR VERS LA PAGE PRÉCÉDENTE -->
+            <a href="#"onclick="history.back(); return false;"><i class="fa-solid fa-chevron-left"></i></a>
+            <h1>VOS CONVERSATIONS</h1>
+        </div>
+
+        <!-- VERSION MOBILE  -->
         <div class="container">
             <div class="description_announce">
 
@@ -101,62 +108,21 @@
                     <p><span>PAILLE</span></p>
                     <p>Annonce en ligne</p>
                     <p>Barnabé - 4 mai 2024</p>
-                    <a href="#">Voir l'annonce</a>
+                    <a href="#" class="look_announce">Voir l'annonce</a>
                 </div>
 
                 <div class="icons_announce">
-                    <a href="#" class="trash-link">
-                        <i class="fa-solid fa-trash trash-icon"></i>
-                    </a>
-                    <a href="#" class="message-link">
-                        <i class="fa-regular fa-message"></i></a>
+                    <!-- FONCTION DELETE -->
+                    <a href=""><i class="fa-solid fa-trash"></i></a>
+                    <a href="./messagerie.html"><i class="fa-regular fa-message"></i></a>
                 </div>
-
             </div>
-
-            <div class="description_announce">
-
-                <div class="img_announce">
-                    <img src="../images/20201108_115654.jpeg">
-                </div>
-
-                <div class="text_announce">
-                    <p><span>PAILLE</span></p>
-                    <p>Annonce en ligne</p>
-                    <p>Barnabé - 4 mai 2024</p>
-                    <a href="#">Voir l'annonce</a>
-                </div>
-
-                <div class="icons_announce">
-                    <i class="fa-solid fa-trash"></i>
-                    <i class="fa-regular fa-message"></i>
-                </div>
-
-            </div>
-
-            <div class="description_announce">
-
-                <div class="img_announce">
-                    <img src="../images/20201108_115654.jpeg">
-                </div>
-
-                <div class="text_announce">
-                    <p><span>PAILLE</span></p>
-                    <p>Annonce en ligne</p>
-                    <p>Barnabé - 4 mai 2024</p>
-                    <a href="#">Voir l'annonce</a>
-                </div>
-
-                <div class="icons_announce">
-                    <i class="fa-solid fa-trash"></i>
-                    <i class="fa-regular fa-message"></i>
-                </div>
-
-            </div>
+        <!-- VERSION MOBILE  -->
 
     </main>
 
     <script src="../appearance/overall-no-scrolling.js"></script>
+    <script src="back.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
