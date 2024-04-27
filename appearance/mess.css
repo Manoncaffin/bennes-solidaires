@@ -171,6 +171,7 @@
 
     h1 {
         font-size: 2.5rem;
+        margin: 0;
     }
 
     .fa-solid.fa-chevron-left {
@@ -181,6 +182,7 @@
         width: 100px;
         height: 100px;
         border-radius: 50%;
+        margin-bottom: 20px;
     }
 
     .info_user {
@@ -201,8 +203,6 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        text-align: start;
-        gap: 40px;
         width: 100%;
         margin-bottom: 50px;
     }
@@ -240,9 +240,17 @@
 
     /* ALL MESSAGE */
 
-    .container {
+    .container_one {
         box-sizing: border-box;
         max-width: 100vw;
+        display: flex;
+        flex-direction: column;
+        padding: 50px 50px 20px 50px;
+        margin: 0;
+    }
+
+    .container_two {
+        box-sizing: border-box;
         display: flex;
         flex-direction: column;
         padding: 50px 50px 20px 50px;
@@ -257,10 +265,6 @@
         flex-direction: column;
         align-items: end;
         justify-content: end;
-    }
-
-    .avatar {
-        margin-bottom: 20px;
     }
 
     .bubble_one {
@@ -281,13 +285,21 @@
         border-radius: 80px;
     }
 
-    .datetime {
+    .datetime_one {
         font-size: 1.7rem;
+        padding-top: 12px;
+        padding-left: 40px;
+    }
+
+    .datetime_two {
+        font-size: 1.7rem;
+        padding-top: 12px;
+        padding-right: 40px;
     }
 
     /* CONVERSATION */
 
-    
+
     /* BUTTON SEND */
 
     .message-input {
@@ -302,7 +314,7 @@
         display: flex;
         align-items: center;
     }
-    
+
     textarea {
         width: calc(100% - 70px);
         height: 60px;
@@ -321,7 +333,7 @@
     }
 
     /* BUTTON SEND */
-    
+
 }
 
 
@@ -395,6 +407,13 @@
 /* --------------------------------------------------- */
 @media only screen and (min-width: 1200px) {
 
+    body {
+        p {
+            font-size: 1.1rem;
+            text-align: start;
+        }
+    }
+
     /* NAVBAR  */
     .navbar {
         padding: 10px 140px 10px 140px;
@@ -419,16 +438,12 @@
 
     /* NAVBAR  */
 
-    .container {
-        padding: 50px 50px 20px 140px;
-    }
-
-     /* NAV TWO */
-     .nav-two {
-        height: 100px;
+    /* NAV TWO */
+    .nav-two {
+        height: 80px;
         background-color: rgb(247, 245, 216);
         box-shadow: 2px 2px 10px 1px rgb(156, 156, 154);
-        padding: 0 110px 0 110px;
+        padding: 0 140px 0 140px;
         display: flex;
         align-items: center;
     }
@@ -437,82 +452,87 @@
         font-size: 50px;
     }
 
-    .avatar {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-    }
-
     .info_user {
         display: flex;
         flex-direction: column;
     }
 
+    h1 {
+        padding-left: 630px;
+    }
+
     span {
         font-family: "Lemon milk";
-        font-size: 2.5rem;
+        font-size: 1.3rem;
     }
 
     /* NAV TWO */
 
-    .container {
-        box-sizing: border-box;
-        width: 45%;
+
+    /* CONTAINER */
+    .all_container {
         display: flex;
-        flex-direction: column;
-        padding: 50px 50px 20px 50px;
-        margin: 0;
     }
 
-    /* ALL MESSAGE */
+    .container_one {
+        display: flex;
+        align-items: start;
+        flex-direction: row;
+        width: 30%;
+        padding: 0px 0 0 140px;
+    }
+
+    .container_two {
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        padding: 50px 140px 0 30px;
+        position: relative;
+        padding-bottom: 240px;
+    }
+
+    /* CONTAINER */
+
+
+    /* ALL MESSAGES */
 
     .description_announce {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        text-align: start;
-        gap: 40px;
-        width: 100%;
-        margin-bottom: 50px;
+        padding-top: 50px;
     }
 
     .text_announce p {
-        font-size: 1.3rem;
-        line-height: 2.3rem;
+        font-size: 1.1rem;
+        line-height: 1.6rem;
     }
 
     .look_announce {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
     }
 
     .img_announce img {
-        width: 120px;
-        height: 120px;
+        width: 90px;
+        height: 90px;
         border-radius: 50%;
-        display: none;
-    }
-
-    span {
-        font-family: "Lemon milk";
-        font-size: 1.8rem;
     }
 
     .icons_announce {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 40px;
+        gap: 30px;
     }
 
     .icons_announce i {
-        font-size: 45px;
+        font-size: 33px;
     }
 
-    /* ALL MESSAGE */
+    /* ALL MESSAGES */
 
 
 
     /* CONVERSATION */
+
+    /* .message_user_one {} */
 
     .message_user_two {
         display: flex;
@@ -522,40 +542,50 @@
     }
 
     .avatar {
-        margin-bottom: 20px;
+        width: 50px;
+        height: 50px;
+        margin-bottom: 10px;
     }
 
     .bubble_one {
-        width: 60vw;
+        width: 40vw;
         height: fit-content;
-        padding: 40px;
+        padding: 30px;
         background-color: white;
         box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-        border-radius: 80px;
+        border-radius: 60px;
     }
 
     .bubble_two {
-        width: 60vw;
+        width: 40vw;
         height: fit-content;
-        padding: 40px;
+        padding: 30px;
         background-color: white;
         box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-        border-radius: 80px;
+        border-radius: 60px;
     }
 
-    .datetime {
-        font-size: 1.7rem;
+    .datetime_one {
+        font-size: 1rem;
+        padding-top: 10px;
+        padding-left: 30px;
+    }
+
+    .datetime_two {
+        font-size: 1rem;
+        padding-top: 10px;
+        padding-right: 30px;
     }
 
     /* CONVERSATION */
 
-    
+
     /* BUTTON SEND */
 
     .message-input {
-        position: fixed;
+        position: absolute;
         bottom: 0;
-        left: 0;
+        left: 0; /* Alignez-le sur le côté gauche du conteneur */
         width: 100%;
         background-color: #ffffff;
         padding: 25px;
@@ -563,26 +593,54 @@
         background-color: rgb(27, 237, 177);
         display: flex;
         align-items: center;
+        z-index: 999; /* Pour s'assurer que la barre de saisie reste au-dessus du contenu défilant */
     }
-    
+
     textarea {
-        width: calc(100% - 70px);
-        height: 60px;
-        border: none;
-        outline: none;
-        border-radius: 5px;
-        resize: none;
-        font-size: 2.2rem;
-        background-color: rgb(27, 237, 177);
+        font-size: 1.3rem;
     }
 
     .fa-regular.fa-paper-plane {
-        font-size: 50px;
-        cursor: pointer;
-        padding: 5px;
+        font-size: 30px;
     }
 
     /* BUTTON SEND */
+
+
+    /* SCROLLBAR */
+    .scrollbar {
+        float: left;
+        height: 300px;
+        width: 65px;
+        overflow-y: scroll;
+        margin-bottom: 25px;
+    }
+
+    .force-overflow {
+        min-height: 450px;
+    }
+
+    #wrapper {
+        text-align: center;
+        width: 500px;
+        margin: auto;
+    }
+
+    #style-1::-webkit-scrollbar-track {
+        border: 1px solid black;
+        background-color: #F5F5F5;
+    }
+
+    #style-1::-webkit-scrollbar {
+        width: 20px;
+        background-color: #F5F5F5;
+    }
+
+    #style-1::-webkit-scrollbar-thumb {
+        background-color: #000000;
+    }
+
+    /* SCROLLBAR */
 }
 
 
