@@ -171,9 +171,9 @@
         border: none;
         border-radius: 55px;
         cursor: pointer;
-        margin-bottom: 10px;
+        margin-bottom: 30px;
         margin-top: 5px;
-        font-size: 3rem;
+        font-size: 2.5rem;
         width: 100%;
     }
 
@@ -182,19 +182,28 @@
         color: white;
     }
 
-    /* MODALE */
+     /* MODALE */
+     .text_click {
+        font-family: "Lemon Milk";
+    }
+
     #openModal {
         border: none;
-        background-color: rgb(27, 237, 177);     
-        font-size: 1.7rem;
+        background-color: rgb(27, 237, 177);
+        font-size: 1.2rem;
         font-family: "Lemon Milk";
         display: flex;
         align-items: start;
         margin-top: 0;
+        margin-bottom: 30px;
         border-radius: 20px;
         width: fit-content;
-        padding: 20px;
-        margin-bottom: 36px;
+        padding: 6px;
+        transition: transform 0.3s ease;
+    }
+
+    #openModal:hover {
+        transform: rotate(-2deg);
     }
 
     .modal {
@@ -207,7 +216,6 @@
         height: 100%;
         background-color: rgba(0, 0, 0, 0.5);
         overflow: auto;
-        z-index: 2;
     }
 
     .modal-content {
@@ -233,11 +241,6 @@
         cursor: pointer;
     }
     /* MODALE */
-
-    #map {
-        margin-top: 20px;
-        margin-bottom: 80px;
-    }
 
     .custom-popup {
         font-family: "Abordage";
@@ -289,12 +292,12 @@
         width: 100%;
         border: none;
         outline: none;
-        padding: 20px;
+        padding: 5px;
         color: rgb(123, 122, 122);
         border-bottom: 1px solid rgb(92, 91, 91);
         border-radius: 0;
         box-sizing: border-box;
-        margin-bottom: 36px;
+        margin-bottom: 10px;
         margin-right: 0px;
         margin-left: 0px;
         resize: vertical;
@@ -314,6 +317,8 @@
     #map {
         height: 400px;
         z-index: 1;
+        margin-top: 20px;
+        margin-bottom: 30px;
     }
 
     .scrolling-text-container {
@@ -452,10 +457,6 @@
         font-size: 1.3rem;
     }
 
-    /* input[type=text] {
-        width: 40%;
-    } */
-
     .foot_form {
         margin-top: 20px;
         font-size: 1.3rem;
@@ -470,6 +471,19 @@
     }
 
     /* FORM */
+
+        /* MODALE */
+        #openModal {
+            font-size: 0.8rem;
+        }
+    
+        .modal-content {
+            font-size: 2rem;
+        }
+    
+        .close {
+            font-size: 35px;
+        }
 }
 
 

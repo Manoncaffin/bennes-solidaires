@@ -37,6 +37,10 @@
         li {
             font-size: 2.6rem;
         }
+
+        ul {
+            margin: 0;
+        }
     }
 
     /* NAVBAR */
@@ -79,6 +83,10 @@
         display: flex;
         align-items: end;
         justify-content: center;
+    }
+
+    li {
+        list-style: none;
     }
 
     .burger-menu {
@@ -124,8 +132,8 @@
         padding-right: 10px;
     }
 
-    .dropdown-menu_one {
-        z-index: 100;
+    .dropdown-menu_one,
+    .dropdown-menu_two {
         border: 2px solid black;
         display: none;
         position: absolute;
@@ -139,19 +147,6 @@
 
     .dropdown:hover .dropdown-menu_one {
         display: block;
-    }
-
-    .dropdown-menu_two {
-        z-index: 100;
-        border: 2px solid black;
-        display: none;
-        position: absolute;
-        justify-content: center;
-        padding: 10px;
-        width: 280px;
-        margin-left: 20px;
-        background-color: rgb(243, 237, 79);
-        text-align: center;
     }
 
     .dropdown:hover .dropdown-menu_two {
@@ -253,6 +248,13 @@
         justify-content: space-between;
     }
 
+    .navbar .links a {
+        font-size: 1.5rem;
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: center;
+    }
+
     .burger-menu {
         display: none;
     }
@@ -302,6 +304,11 @@
 /* ----------------- SUP. OU ÉGALE ------------------- */
 /* --------------------------------------------------- */
 @media only screen and (min-width: 1200px) {
+    body {
+        p {
+            font-size: 1.25rem;
+        }
+    }
 
     /* NAVBAR  */
     .navbar {
@@ -315,7 +322,7 @@
         justify-content: space-between;
     }
 
-    .links {
+    .navbar .links a {
         font-size: 1.3rem;
     }
 
@@ -341,7 +348,13 @@
     }
 
     h2 {
-        font-size: 4rem;
+        font-size: 3rem;
+    }
+
+    .data_user {
+        li {
+        font-size: 1.25rem;
+    }
     }
 }
 
@@ -357,8 +370,26 @@
         font-size: 4.6rem;
     }
 
+    .navbar .links a {
+        font-size: 1.8rem;
+    }
+
     .circle_menu {
         width: 25px;
         height: 16px;
+    }
+
+    .dropdown-menu_one {
+        padding: 10px;
+        width: 340px;
+    }
+
+    .dropdown:hover .dropdown-menu_one {
+        display: block;
+    }
+
+    .dropdown-menu_two {
+        padding: 10px;
+        width: 340px;
     }
 }

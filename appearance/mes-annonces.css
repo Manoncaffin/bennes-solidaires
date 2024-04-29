@@ -170,20 +170,14 @@
         width: 100%;
     }
 
-    .update_announce:hover,
-    .delete_announce:hover {
-        background-color: black;
-        color: white;
-    }
-
     .container {
         box-sizing: border-box;
         border-radius: 5px;
-        padding: 50px;
         width: 100%;
         min-width: 980px;
-        max-width: 900px;
+        max-width: 999px;
         margin: 0 auto;
+        padding: 50px 50px 50px 50px;
     }
 
     /* INFOS TOP */
@@ -201,7 +195,7 @@
         width: fit-content;
         padding: 20px;
         height: fit-content;
-        border-radius: 40px;
+        border-radius: 20px;
         background-color: white;
         box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
         display: flex;
@@ -218,13 +212,13 @@
         width: 100%;
         padding: 35px 40px 30px 40px;
         height: fit-content;
-        border-radius: 40px;
+        border-radius: 20px;
         background-color: white;
         box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
         display: flex;
         align-items: center;
         text-decoration: underline;
-        font-size: 2.7rem;
+        font-size: 2.5rem;
     }
 
     .announce {
@@ -238,13 +232,12 @@
         width: 100%;
         padding: 35px 40px 30px 40px;
         height: 450px;
-        border-radius: 40px;
+        border-radius: 20px;
         background-color: white;
         box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
         display: flex;
         flex-direction: column;
         flex: 1;
-        /* Chaque div occupera la même part d'espace */
     }
 
     .text {
@@ -252,7 +245,7 @@
         flex-direction: column;
         margin-bottom: 10px;
         font-family: "Lemon Milk";
-        font-size: 2.2rem;
+        font-size: 2rem;
         text-align: start;
     }
 
@@ -324,10 +317,6 @@
         font-size: 1.2rem;
     }
 
-    .container {
-        padding: 50px 0 0 0;
-    }
-
     .container_menu {
         display: flex;
         flex-direction: column;
@@ -341,18 +330,36 @@
 
     /* NAVBAR */
 
+    .container {
+        padding: 30px 110px 30px 110px;
+        min-width: 999px;
+        max-width: 1999px;
+    }
+
 
     .form_profil p {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }
 
     .form_profil_large_one p {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
+        text-align: start;
     }
 
     .text {
-        font-size: 1.1rem;
+        font-size: 1.3rem;
         text-align: start;
+    }
+
+    .update_announce,
+    .delete_announce {
+        font-size: 1.3rem;
+    }
+
+    .update_announce:hover,
+    .delete_announce:hover {
+        background-color: black;
+        color: white;
     }
 }
 
@@ -388,7 +395,7 @@
     .container {
         box-sizing: border-box;
         border-radius: 5px;
-        padding: 20px 140px 20px 140px;
+        padding: 30px 140px 30px 140px;
         width: 100%;
         min-width: 980px;
         max-width: 2000px;
@@ -407,6 +414,11 @@
     .form_profil_large_one {
         margin-top: 35px;
     }
+
+    .form_profil_large_one p {
+        font-size: 1.3rem;
+    }
+
 
     /* INFOS TOP */
 
@@ -436,7 +448,7 @@
         flex-direction: column;
         margin-bottom: 10px;
         font-family: "Lemon Milk";
-        font-size: 0.8rem;
+        font-size: 1.1rem;
     }
 
     .form_profil_large_two {
@@ -444,6 +456,10 @@
         display: flex;
         justify-content: center;
         flex-direction: column;
+    }
+
+    .form_profil p {
+        font-size: 1.1rem;
     }
 
     .foot_form {
@@ -456,7 +472,6 @@
 
     .update_announce,
     .delete_announce{
-        font-size: 2rem;
         margin-bottom: 0;
         margin-top: 15px;
     }
@@ -505,16 +520,12 @@
         margin-bottom: 30px;
         gap: 30px;
     }
-
-    .text {
-        font-size: 1.1rem;
-    }
 }
 
 /* --------------------------------------------------- */
 /* --------------------------------------------------- */
-/* ------------- MEDIA MIN-WIDTH 1900PX --------------- */
+/* ------------- MEDIA MIN-WIDTH 1800PX --------------- */
 /* ----------------- SUP. OU ÉGALE ------------------- */
 /* --------------------------------------------------- */
-@media only screen and (min-width: 1900px) {
+@media only screen and (min-width: 1800px) {
 }
